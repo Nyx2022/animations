@@ -35,11 +35,13 @@
 		"@shikijs/themes": "^3.21.0",
 		"isomorphic-dompurify": "2.25.0",
 		"mode-watcher": "^1.1.0",
+		"motion-sv": "^0.1.9",
 		"package-manager-detector": "^1.6.0",
 		"runed": "^0.37.1",
 		"shadcn-svelte": "^1.1.0",
 		"shiki": "^3.21.0",
 		"svelte-sonner": "^1.0.7",
-		"svelte-toolbelt": "^0.10.6"
+		"svelte-toolbelt": "^0.10.6",
+		"svg-dotted-map": "^2.0.1"
 	}
 }

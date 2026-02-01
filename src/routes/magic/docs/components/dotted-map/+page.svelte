@@ -1,19 +1,18 @@
 <script lang="ts">
   import { page } from "$app/state";
   import { H1, H2, Paragraph, H3 } from "$lib/components/docs/markdown/index";
-  import AnimatedGradientTextRaw from "$lib/components/magic-ui/animated-gradient-text/animated-gradient-text.svelte?raw";
+  import DottedMapRaw from "$lib/components/magic-ui/dotted-map/dotted-map.svelte?raw";
   import type { CodeBlock } from "$lib/components/ui/code";
 
   import { PreviewComponent } from "$lib/components/ui/preview-component";
   import InstallComponent from "$lib/components/docs/base/InstallComponent.svelte";
   import APITable from "$lib/components/docs/base/APITable.svelte";
   import { CopyPageDropdown } from "$lib/components/docs/copy-page-dropdown";
-  import SingleCodeFilename from "$lib/components/ui/code/single-code-filename.svelte";
   import { data } from "./data";
 
   const code: CodeBlock = {
-    filename: "AnimatedGradientText.svelte",
-    filecode: AnimatedGradientTextRaw,
+    filename: "dotted-map.svelte",
+    filecode: DottedMapRaw,
     lang: "svelte",
     isExpand: true,
   };
@@ -44,29 +43,30 @@
   <H2 id="installation">Installation</H2>
   <InstallComponent
     {installUrl}
-    tailwindConfig={data.tailwind ? { code: data.tailwind } : undefined}
     codeBlocks={[code]}
     folderStructure={data.folderStructure}
     class="my-4"
   />
 
-  <H2 id="examples">Examples</H2>
-  {#each data.examples as example}
-    {@const ExampleComp = example.preview}
-    <div class="my-8">
-      <H3 id={example.name.toLowerCase().replace(/\s+/g, "-")}>
-        {example.name}
-      </H3>
-      {#if example.description}
-        <Paragraph>{example.description}</Paragraph>
-      {/if}
-      <div class="my-4">
-        <PreviewComponent code={example.code}>
-          <ExampleComp />
-        </PreviewComponent>
+  {#if data.examples && data.examples.length > 0}
+    <H2 id="examples">Examples</H2>
+    {#each data.examples as example}
+      {@const ExampleComp = example.preview}
+      <div class="my-8">
+        <H3 id={example.name.toLowerCase().replace(/\s+/g, "-")}>
+          {example.name}
+        </H3>
+        {#if example.description}
+          <Paragraph>{example.description}</Paragraph>
+        {/if}
+        <div class="my-4">
+          <PreviewComponent code={example.code}>
+            <ExampleComp />
+          </PreviewComponent>
+        </div>
       </div>
-    </div>
-  {/each}
+    {/each}
+  {/if}
 
   {#if data.props && data.props.length > 0}
     <H2 id="props">Props</H2>
