@@ -5,17 +5,8 @@
   import type { SVGAttributes } from "svelte/elements";
 
   interface DotPatternProps extends SVGAttributes<SVGSVGElement> {
-    /**
-     * The horizontal spacing between dots
-     */
     width?: number;
-    /**
-     * The vertical spacing between dots
-     */
     height?: number;
-    /**
-     * The x-offset of the entire pattern
-     */
     x?: number;
     /**
      * The y-offset of the entire pattern
@@ -89,8 +80,8 @@
           delay: Math.random() * 5,
           duration: Math.random() * 3 + 2,
         };
-      }
-    )
+      },
+    ),
   );
 </script>
 
@@ -99,7 +90,7 @@
   aria-hidden="true"
   class={cn(
     "pointer-events-none absolute inset-0 h-full w-full text-neutral-400/80",
-    className
+    className,
   )}
   {...props}
 >
@@ -134,4 +125,3 @@
     />
   {/each}
 </svg>
-

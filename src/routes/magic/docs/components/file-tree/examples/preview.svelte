@@ -1,7 +1,13 @@
 ﻿<script lang="ts">
-  import { Tree, Folder, File, CollapseButton, type TreeViewElement } from "$lib/components/magic-ui/file-tree";
+  import {
+    Tree,
+    Folder,
+    File,
+    CollapseButton,
+    type TreeViewElement,
+  } from "$lib/components/magic-ui/file-tree";
 
-  const elements: TreeViewElement[] = [
+  const ELEMENTS: TreeViewElement[] = [
     {
       id: "1",
       name: "src",
@@ -35,27 +41,54 @@
   ];
 </script>
 
-<div class="flex items-center justify-center w-full h-full min-h-[400px] p-6">
-  <div class="w-full max-w-md border rounded-lg p-4 bg-background">
-    <div class="mb-4 flex items-center justify-between">
-      <h3 class="text-lg font-semibold">Project Files</h3>
-      <CollapseButton {elements} class="text-sm">
-        Expand All
-      </CollapseButton>
-    </div>
-    <Tree {elements} initialSelectedId="6" initialExpandedItems={["1", "5"]}>
-      <Folder element="src" value="1">
-        <Folder element="lib" value="2">
-          <File value="3">index.ts</File>
-          <File value="4">utils.ts</File>
-        </Folder>
-        <Folder element="routes" value="5">
-          <File value="6">+page.svelte</File>
-          <File value="7">+layout.svelte</File>
-        </Folder>
+<div
+  class="bg-background relative flex h-75 w-70 md:min-w-32 flex-col items-center justify-center overflow-hidden rounded-lg border md:m-10"
+>
+  <Tree
+    class="bg-background overflow-hidden rounded-md p-2"
+    initialSelectedId="7"
+    initialExpandedItems={[
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+    ]}
+    elements={ELEMENTS}
+  >
+    <Folder element="src" value="1">
+      <Folder value="2" element="app">
+        <File value="3">
+          <p>layout.tsx</p>
+        </File>
+        <File value="4">
+          <p>page.tsx</p>
+        </File>
       </Folder>
-      <File value="8">package.json</File>
-      <File value="9">README.md</File>
-    </Tree>
-  </div>
+      <Folder value="5" element="components">
+        <Folder value="6" element="ui">
+          <File value="7">
+            <p>button.tsx</p>
+          </File>
+        </Folder>
+        <File value="8">
+          <p>header.tsx</p>
+        </File>
+        <File value="9">
+          <p>footer.tsx</p>
+        </File>
+      </Folder>
+      <Folder value="10" element="lib">
+        <File value="11">
+          <p>utils.ts</p>
+        </File>
+      </Folder>
+    </Folder>
+  </Tree>
 </div>

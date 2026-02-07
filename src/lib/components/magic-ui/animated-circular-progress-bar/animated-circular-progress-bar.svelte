@@ -21,8 +21,10 @@
 
   const circumference = 2 * Math.PI * 45;
   const percentPx = circumference / 100;
-  
-  const currentPercent = $derived(Math.round(((value - min) / (max - min)) * 100));
+
+  const currentPercent = $derived(
+    Math.round(((value - min) / (max - min)) * 100),
+  );
 </script>
 
 <div
@@ -40,12 +42,7 @@
     transform: translateZ(0);
   "
 >
-  <svg
-    fill="none"
-    class="size-full"
-    stroke-width="2"
-    viewBox="0 0 100 100"
-  >
+  <svg fill="none" class="size-full" stroke-width="2" viewBox="0 0 100 100">
     {#if currentPercent <= 90 && currentPercent >= 0}
       <circle
         cx="50"
@@ -89,9 +86,8 @@
   </svg>
   <span
     data-current-value={currentPercent}
-    class="animate-in fade-in absolute inset-0 m-auto size-fit delay-[var(--delay)] duration-[var(--transition-length)] ease-linear"
+    class="animate-in fade-in absolute inset-0 m-auto size-fit delay-(--delay) duration-(--transition-length) ease-linear"
   >
     {currentPercent}
   </span>
 </div>
-

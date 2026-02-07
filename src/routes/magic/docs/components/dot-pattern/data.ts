@@ -1,7 +1,9 @@
-﻿import type { CodeBlock } from "$lib/components/ui/code";
+﻿import DotPatternRaw from "$lib/components/magic-ui/dot-pattern/dot-pattern.svelte?raw";
+import IndexTs from '$lib/components/magic-ui/dot-pattern/index.ts?raw';
+
 import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
 import DotPatternLinearGradient from "./examples/dot-pattern-linear-gradient.svelte";
@@ -45,6 +47,30 @@ const seo: SEO = {
   keywords: ["Svelte", "Dot Pattern", "SV5 Animations", "Animation", "Web Design", "Background"],
 };
 
+let installBlock : InstallComponentDocs={
+  packages: ["motion-sv"],
+  installCode:[
+    {
+      filename: "dot-pattern.svelte",
+      filecode: DotPatternRaw,
+      lang: "svelte",
+      isExpand: true,
+    },
+    {
+      filename: "index.ts",
+      filecode: IndexTs,
+      lang: "typescript",
+    }
+  ],
+  folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── dot-pattern/
+                ├── dot-pattern.svelte
+                └── index.ts`,
+}
+
 export const data: ComponentDoc = {
   ...meta,
   preview: Preview,
@@ -74,11 +100,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `src/
-lib/
-  components/
-    magic-ui/
-      dot-pattern/
-        dot-pattern.svelte
-        index.ts`,
+  installBlock,
 };

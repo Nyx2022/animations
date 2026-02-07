@@ -1,2 +1,2 @@
-export { default as AnimatedThemeToggler } from "./animated-theme-toggler.svelte";
-
+import AnimatedThemeToggler from "./animated-theme-toggler.svelte";
+export { AnimatedThemeToggler };

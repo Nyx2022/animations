@@ -1,5 +1,7 @@
-﻿import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+﻿import AnimatedGridPattern from "$lib/components/magic-ui/animated-grid-pattern/animated-grid-pattern.svelte?raw";
+import IndexTs from "$lib/components/magic-ui/animated-grid-pattern/index.ts?raw";
+import type { SEO } from "$lib/types/seo";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
 
@@ -16,6 +18,30 @@ const seo: SEO = {
   title: "Animated Grid Pattern - SV5 Animations",
   description: "Learn how to create animated grid pattern effects in Svelte using the SV5 Animations library.",
   keywords: ["Svelte", "Animated Grid Pattern", "SV5 Animations", "Animation", "Web Design"],
+};
+
+let installBlock: InstallComponentDocs = {
+  packages: ["motion-sv"],
+  installCode: [
+    {
+      filename: "animated-grid-pattern.svelte",
+      filecode: AnimatedGridPattern,
+      lang: "svelte",
+      isExpand: true,
+    },
+    {
+      filename: "index.ts",
+      filecode: IndexTs,
+      lang: "typescript",
+    }
+  ],
+  folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── animated-grid-pattern/
+                ├── animated-grid-pattern.svelte
+                └── index.ts`,
 };
 
 export const data: ComponentDoc = {
@@ -47,7 +73,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `animated-grid-pattern/
-├── animated-grid-pattern.svelte
-└── index.ts`,
+  installBlock,
 };

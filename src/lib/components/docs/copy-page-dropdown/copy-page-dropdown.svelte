@@ -42,7 +42,7 @@
       {/snippet}
     </DropdownMenu.Trigger>
     <OpenInContent align="end">
-      <OpenInLabel class="font-normal!">Open In</OpenInLabel>
+      <!-- <OpenInLabel class="font-normal!">Open In</OpenInLabel> -->
       <OpenInChatGPT />
       <OpenInClaude />
       <OpenInScira />

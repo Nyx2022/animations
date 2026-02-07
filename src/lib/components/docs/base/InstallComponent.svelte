@@ -7,7 +7,7 @@
   };
 
   export type TailwindConfig = {
-    code: CodeBlock;
+    code: CodeBlock | undefined;
   };
 
   export type InstallComponentProps = {
@@ -117,7 +117,7 @@
         {/if}
 
         <!-- Tailwind CSS Configuration -->
-        {#if tailwindConfig}
+        {#if tailwindConfig?.code}
           <Step title="Add Tailwind CSS">
             <p class="mb-4">
               Add the following to your <code

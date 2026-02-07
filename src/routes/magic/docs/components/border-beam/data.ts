@@ -1,10 +1,17 @@
-﻿import type { Example } from "$lib/types/examples";
+﻿import BorderBeamRaw from "$lib/components/magic-ui/border-beam/border-beam.svelte?raw";
+import IndexTs from '$lib/components/magic-ui/border-beam/index.ts?raw';
+
+import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
-import BasicUsage from "./examples/border-beam-basic-usage.svelte";
-import BasicUsageRaw from "./examples/border-beam-basic-usage.svelte?raw";
+import BorderBeamTwo from "./examples/border-beam-two.svelte";
+import BorderBeamTwoRaw from "./examples/border-beam-two.svelte?raw";
+import BorderBeamReverse from "./examples/border-beam-reverse.svelte";
+import BorderBeamReverseRaw from "./examples/border-beam-reverse.svelte?raw";
+import BorderBeamSpring from "./examples/border-beam-spring.svelte";
+import BorderBeamSpringRaw from "./examples/border-beam-spring.svelte?raw";
 
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
@@ -17,24 +24,57 @@ export const meta: ComponentMeta = {
 
 const examples: Example[] = [
   {
-    name: "Basic Usage",
-    preview: BasicUsage,
+    name: "2 Border Beams",
+    preview: BorderBeamTwo,
     code: {
-      filename: "border-beam-basic-usage.svelte",
-      filecode: BasicUsageRaw,
+      filename: "border-beam-two.svelte",
+      filecode: BorderBeamTwoRaw,
       lang: "svelte",
     },
   },
   {
-    name: "Preview",
-    preview: Preview,
+    name: "Reverse",
+    preview: BorderBeamReverse,
     code: {
-      filename: "preview.svelte",
-      filecode: PreviewCode,
+      filename: "border-beam-reverse.svelte",
+      filecode: BorderBeamReverseRaw,
+      lang: "svelte",
+    },
+  },
+  {
+    name: "Spring",
+    preview: BorderBeamSpring,
+    code: {
+      filename: "border-beam-spring.svelte",
+      filecode: BorderBeamSpringRaw,
       lang: "svelte",
     },
   },
 ];
+
+let installBlock: InstallComponentDocs = {
+  packages: ["motion-sv"],
+  installCode: [
+    {
+      filename: "border-beam.svelte",
+      filecode: BorderBeamRaw,
+      lang: "svelte",
+      isExpand: true,
+    },
+    {
+      filename: "index.ts",
+      filecode: IndexTs,
+      lang: "typescript",
+    },
+  ],
+  folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── border-beam/
+                ├── border-beam.svelte
+                └── index.ts`,
+}
 
 const seo: SEO = {
   title: "Border Beam - SV5 Animations",
@@ -73,10 +113,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ border-beam/
-                â””â”€â”€ border-beam.svelte`,
+  installBlock,
 };

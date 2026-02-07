@@ -1,2 +1,2 @@
-export { default as BorderBeam } from "./border-beam.svelte";
-
+import BorderBeam from "./border-beam.svelte";
+export { BorderBeam };

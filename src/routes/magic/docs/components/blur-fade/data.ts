@@ -1,7 +1,9 @@
-﻿import type { CodeBlock } from "$lib/components/ui/code";
+﻿import BlurFadeRaw from "$lib/components/magic-ui/blur-fade/blur-fade.svelte?raw";
+import IndexTs from '$lib/components/magic-ui/blur-fade/index.ts?raw';
+
 import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
 import Example1 from "./examples/blur-fade-basic.svelte";
@@ -56,6 +58,30 @@ const seo: SEO = {
   keywords: ["Svelte", "Blur Fade", "SV5 Animations", "Animation", "Web Design"],
 };
 
+let installBlock : InstallComponentDocs={
+  installCode:[
+    {
+      filename: 'blur-fade.svelte',
+      filecode: BlurFadeRaw,
+      lang: 'svelte',
+      isExpand: true,
+    },
+    {
+      filename: 'index.ts',
+      filecode: IndexTs,
+      lang: 'typescript',
+    }
+  ],
+  packages: ["@lucide/svelte","motion-sv"],
+   folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── blur-fade/
+                ├── blur-fade.svelte
+                └── index.ts`,
+}
+
 export const data: ComponentDoc = {
   ...meta,
   preview: Preview,
@@ -86,11 +112,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `src/
-└── lib/
-    └── components/
-        └── magic-ui/
-            └── blur-fade/
-                ├── blur-fade.svelte
-                └── index.ts`,
+  installBlock,
 };

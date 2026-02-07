@@ -1,11 +1,15 @@
-﻿import type { CodeBlock } from "$lib/components/ui/code";
+﻿import CoolModeRaw from "$lib/components/magic-ui/cool-mode/cool-mode.svelte?raw";
+import IndexTs from '$lib/components/magic-ui/cool-mode/index.ts?raw';
+
 import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
 import CoolModeCustomImg from "./examples/cool-mode-custom-img.svelte";
 import CoolModeCustomImgRaw from "./examples/cool-mode-custom-img.svelte?raw";
+
+
 
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
@@ -29,10 +33,33 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-  title: "Cool Mode - SV5 Animations",
+  title: "Cool Mode - Svelte 5 Animations",
   description: "Learn how to add interactive particle effects to Svelte components with cool-mode.",
-  keywords: ["Svelte", "Cool Mode", "SV5 Animations", "Animation", "Web Design", "Particles", "Interactive"],
+  keywords: ["Svelte", "Cool Mode", "Svelte 5 Animations", "Animation", "Web Design", "Particles", "Interactive"],
 };
+
+let installBlock: InstallComponentDocs = {
+  installCode:[
+    {
+      filename: "cool-mode.svelte",
+      filecode: CoolModeRaw,
+      lang: "svelte",
+      isExpand: true,
+    },
+    {
+      filename: "index.ts",
+      filecode: IndexTs,
+      lang: "typescript",
+    }
+  ],
+    folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── cool-mode/
+                ├── cool-mode.svelte
+                └── index.ts`,
+}
 
 export const data: ComponentDoc = {
   ...meta,
@@ -67,11 +94,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `src/
-└── lib/
-    └── components/
-        └── magic-ui/
-            └── cool-mode/
-                ├── cool-mode.svelte
-                └── index.ts`,
+  installBlock,
 };

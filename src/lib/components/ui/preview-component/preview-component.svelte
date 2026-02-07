@@ -39,13 +39,13 @@
     <Tabs.List class="bg-transparent">
       <Tabs.Trigger
         value="preview"
-        class="pl-0 border-none bg-transparent! text-base "
+        class="pl-0 border-none shadow-none! bg-transparent! text-base "
       >
         Preview
       </Tabs.Trigger>
       <Tabs.Trigger
         value="code"
-        class="group border-none bg-transparent! text-base "
+        class="group border-none shadow-none! bg-transparent! text-base "
       >
         Code
       </Tabs.Trigger>

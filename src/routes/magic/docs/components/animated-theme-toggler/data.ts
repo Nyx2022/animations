@@ -1,24 +1,60 @@
-﻿import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+﻿import  AnimatedThemeTogglerRaw from "$lib/components/magic-ui/animated-theme-toggler/animated-theme-toggler.svelte?raw";
+
+import IndexTs from '$lib/components/magic-ui/animated-theme-toggler/index.ts?raw';
+
+import type { SEO } from "$lib/types/seo";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
 
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
   id: "animated-theme-toggler",
-  title: "Animated Theme Toggler",
-  description: "A smooth animated theme toggler that uses the View Transition API to create a circular reveal effect when switching between light and dark themes.",
+  title: "Theme Toggler",
+  description: "An Animated theme toggler component, fully customizable using Tailwind CSS.",
   category: "animation",
-  badge: "new",
 };
 
 
 const seo: SEO = {
-  title: "Animated Theme Toggler - SV5 Animations",
-  description: "Learn how to create smooth theme switching effects in Svelte using the SV5 Animations library with View Transition API.",
-  keywords: ["Svelte", "Animated Theme Toggler", "SV5 Animations", "Animation", "Web Design", "View Transition API"],
+  title: "Theme Toggler - Svelte 5 Animations",
+  description: "An Animated theme toggler component, fully customizable using Tailwind CSS.",
+  keywords: ["Svelte", "Theme Toggler", "Svelte 5 Animations", "Animation", "Web Design", "View Transition API"],
 };
 
+
+let installBlock : InstallComponentDocs={
+  packages: ["@lucide/svelte"],
+  installCode: [
+    {
+      filename: 'animated-theme-toggler.svelte',
+      filecode: AnimatedThemeTogglerRaw,
+      lang: 'svelte',
+      isExpand: true,
+    },
+    {
+      filename: 'index.ts',
+      filecode: IndexTs,
+      lang: 'typescript',
+    }
+  ],
+  tailwind: {
+    filename: "src/routes/layout.css",
+    filecode: `::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}`,
+    lang: "css",
+  },
+  folderStructure: `src
+  ├── lib
+  │   └── components
+  │       └── magic-ui
+  │           └── animated-theme-toggler
+  │               ├── animated-theme-toggler.svelte
+  │               └── index.ts`
+}
 export const data: ComponentDoc = {
   ...meta,
   preview: Preview,
@@ -40,9 +76,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `
-animated-theme-toggler/
-├── animated-theme-toggler.svelte
-└── index.ts
-`,
+  installBlock,
 };

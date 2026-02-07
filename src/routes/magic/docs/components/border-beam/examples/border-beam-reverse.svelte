@@ -1,4 +1,4 @@
-﻿<script lang="ts">
+<script lang="ts">
   import { BorderBeam } from "$lib/components/magic-ui/border-beam";
   import Button from "$lib/components/ui/button/button.svelte";
   import * as Card from "$lib/components/ui/card/index.js";
@@ -35,5 +35,10 @@
     <Button variant="outline">Register</Button>
     <Button>Login</Button>
   </Card.Footer>
-  <BorderBeam duration={8} size={100} />
+  <BorderBeam
+    duration={4}
+    size={300}
+    reverse
+    class="from-transparent via-green-500 to-transparent"
+  />
 </Card.Root>

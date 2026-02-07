@@ -1,6 +1,12 @@
-﻿import type { Example } from "$lib/types/examples";
+﻿import FileTreeRaw from "$lib/components/magic-ui/file-tree/file-tree.svelte?raw";
+import FolderRaw from "$lib/components/magic-ui/file-tree/folder.svelte?raw";
+import FileRaw from "$lib/components/magic-ui/file-tree/file.svelte?raw";
+import CollapseButtonRaw from "$lib/components/magic-ui/file-tree/collapse-button.svelte?raw";
+import IndexTs from '$lib/components/magic-ui/file-tree/index.ts?raw';
+
+import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
 
@@ -20,6 +26,47 @@ const seo: SEO = {
   description: "Learn how to create interactive file tree components in Svelte with expandable folders and animations.",
   keywords: ["Svelte", "File Tree", "SV5 Animations", "Animation", "Web Design", "Tree View"],
 };
+
+let installBlock : InstallComponentDocs={
+  installCode:[
+    {
+      filename: "file-tree.svelte",
+      filecode: FileTreeRaw,
+      lang: "svelte",
+      isExpand: true,
+    },
+    {
+      filename: "folder.svelte",
+      filecode: FolderRaw,
+      lang: "svelte",
+    },
+    {
+      filename: "file.svelte",
+      filecode: FileRaw,
+      lang: "svelte",
+    },
+    {
+      filename: "collapse-button.svelte",
+      filecode: CollapseButtonRaw,
+      lang: "svelte",
+    },
+    {
+      filename: "index.ts",
+      filecode: IndexTs,
+      lang: "typescript",
+    }
+  ],
+  folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── file-tree/
+                ├── file-tree.svelte
+                ├── folder.svelte
+                ├── file.svelte
+                ├── collapse-button.svelte
+                └── index.ts`,
+}
 
 export const data: ComponentDoc = {
   ...meta,
@@ -75,14 +122,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `src/
-lib/
-  components/
-    magic-ui/
-      file-tree/
-        file-tree.svelte
-        folder.svelte
-        file.svelte
-        collapse-button.svelte
-        index.ts`,
+  installBlock,
 };

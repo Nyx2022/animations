@@ -1,9 +1,3 @@
-/**
- * Magic UI Component Registry
- *
- * Single source of truth for all Magic UI components.
- * Used for sidebar navigation and prev/next navigation.
- */
 
 export type BadgeType = "New" | "Updated" | "Beta";
 
@@ -15,23 +9,17 @@ export interface MagicComponent {
   desc?: string;
 }
 
-/**
- * All Magic UI components
- * Add new components here as they are created
- */
 export const magicUIComponents: MagicComponent[] = [
   {
     id: "animated-beam",
     name: "Animated Beam",
     href: "/magic/docs/components/animated-beam",
-    badge: "New",
     desc: "An animated beam of light which travels along a path.",
   },
   {
     id: "animated-circular-progress-bar",
     name: "Animated Circular Progress Bar",
     href: "/magic/docs/components/animated-circular-progress-bar",
-    badge: "New",
     desc: "A component that displays a circular gauge with a percentage value",
   },
   {
@@ -44,32 +32,31 @@ export const magicUIComponents: MagicComponent[] = [
     id: "animated-grid-pattern",
     name: "Animated Grid Pattern",
     href: "/magic/docs/components/animated-grid-pattern",
-    badge: "New",
     desc:'A animated background grid pattern made with SVGs, fully customizable using Tailwind CSS.'
   },
   {
     id: "animated-theme-toggler",
     name: "Animated Theme Toggler",
     href: "/magic/docs/components/animated-theme-toggler",
-    badge: "New",
+    desc:'An Animated theme toggler component, fully customizable using Tailwind CSS.'
   },
   {
     id: "text-animate",
     name: "Text Animate",
     href: "/magic/docs/components/text-animate",
-    badge: "New",
+    desc:'A text animation component that animates text using a variety of different animations.'
   },
   {
     id: "blur-fade",
     name: "Blur Fade",
     href: "/magic/docs/components/blur-fade",
-    badge: "New",
+    desc:'Blur fade in and out animation. Used to smoothly fade in and out content.'
   },
   {
     id: "border-beam",
     name: "Border Beam",
     href: "/magic/docs/components/border-beam",
-    badge: "New",
+    desc:'An animated beam of light which travels along the border of its container.'
   },
   {
     id: "cool-mode",

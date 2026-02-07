@@ -1,13 +1,10 @@
 ﻿<script lang="ts">
   import { CoolMode } from "$lib/components/magic-ui/cool-mode";
+  import { Button } from "$lib/components/ui/button";
 </script>
 
 <div class="relative flex justify-center">
   <CoolMode>
-    <button
-      class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-    >
-      Click Me!
-    </button>
+    <Button>Click Me!</Button>
   </CoolMode>
 </div>

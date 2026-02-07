@@ -1,2 +1,2 @@
-export { default as AnimatedGridPattern } from "./animated-grid-pattern.svelte";
-
+import AnimatedGridPattern from "./animated-grid-pattern.svelte";
+export { AnimatedGridPattern };

@@ -1,7 +1,11 @@
-﻿import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+﻿import AnimatedCircularProgressBar from "$lib/components/magic-ui/animated-circular-progress-bar/animated-circular-progress-bar.svelte?raw";
+import IndexTs from "$lib/components/magic-ui/animated-circular-progress-bar/index.ts?raw";
+import type { SEO } from "$lib/types/seo";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
+
+// Main Component
 
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
@@ -14,9 +18,32 @@ export const meta: ComponentMeta = {
 
 
 const seo: SEO = {
-  title: "Animated Circular Progress Bar - SV5 Animations",
-  description: "Learn how to create animated circular progress bar effects in Svelte using the SV5 Animations library.",
-  keywords: ["Svelte", "Animated Circular Progress Bar", "SV5 Animations", "Animation", "Web Design"],
+  title: "Animated Circular Progress Bar - Svelte 5 Animations",
+  description: "Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.",
+  keywords: ["Svelte", "Animated Circular Progress Bar", "Svelte 5 Animations", "Animation", "Web Design"],
+};
+
+let installBlock : InstallComponentDocs = {
+  folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── animated-circular-progress-bar/
+                ├── animated-circular-progress-bar.svelte
+                └── index.ts`,
+installCode : [
+  {
+    filename: "animated-circular-progress-bar.svelte",
+    filecode: AnimatedCircularProgressBar,
+    lang: "svelte",
+    isExpand: true,
+  },
+  {
+    filename: "index.ts",
+    filecode: IndexTs,
+    lang: "typescript",
+  }
+]
 };
 
 export const data: ComponentDoc = {
@@ -44,9 +71,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `
-animated-circular-progress-bar/
-├── animated-circular-progress-bar.svelte
-└── index.ts
-`,
+  installBlock,
 };
