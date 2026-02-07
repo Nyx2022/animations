@@ -40,7 +40,12 @@
       <span class="text-sm text-foreground py-0 my-0">
         {title}
       </span>
-      <span class="mt-1 text-sm pr-2 line-clamp-1 text-foreground/45">
+      <span
+        class={[
+          "mt-1 text-sm line-clamp-1 text-foreground/45",
+          align === "left" && "pr-2",
+        ]}
+      >
         {label}
       </span>
     </div>

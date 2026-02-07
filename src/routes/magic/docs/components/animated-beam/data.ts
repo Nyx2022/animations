@@ -1,12 +1,76 @@
 ﻿import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import AnimatedBeamWithCurvature from "./examples/animated-beam-with-curvature.svelte";
 import AnimatedBeamWithCurvatureRaw from "./examples/animated-beam-with-curvature.svelte?raw";
 import AnimatedBeamReverseDirection from "./examples/animated-beam-reverse-direction.svelte";
 import AnimatedBeamReverseDirectionRaw from "./examples/animated-beam-reverse-direction.svelte?raw";
+
+// Preview
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
+import Circle from "./examples/circle.svelte?raw";
+import OpenaiIcon from "./examples/openai-icon.svelte?raw";
+import UserIcon from "./examples/user-icon.svelte?raw";
+
+// Main Component
+import AnimatedBeamRaw from "$lib/components/magic-ui/animated-beam/animated-beam.svelte?raw";
+import Index from "$lib/components/magic-ui/animated-beam/index.ts?raw";
+import Types from "$lib/components/magic-ui/animated-beam/types.ts?raw";
+import UseGradientCoordinates from "$lib/components/magic-ui/animated-beam/use-gradient-coordinates.svelte.ts?raw";
+import UsePathCalculator from "$lib/components/magic-ui/animated-beam/use-path-calculator.svelte.ts?raw";
+import UseResizeObserver from "$lib/components/magic-ui/animated-beam/use-resize-observer.svelte.ts?raw";
+
+let installBlock: InstallComponentDocs = {
+  installCode:[
+    {
+      filename: "animated-beam.svelte",
+      filecode: AnimatedBeamRaw,
+      lang: "svelte",
+      isExpand: true,
+    },
+    {
+      filename: "index.ts",
+      filecode: Index,
+      lang: "typescript",
+    },
+    {
+      filename: "types.ts",
+      filecode: Types,
+      lang: "typescript",
+    },
+    {
+      filename: "use-gradient-coordinates.svelte.ts",
+      filecode: UseGradientCoordinates,
+      lang: "typescript",
+      isExpand: true,
+    },
+    {
+      filename: "use-path-calculator.svelte.ts",
+      filecode: UsePathCalculator,
+      lang: "typescript",
+      isExpand: true,
+    },
+    {
+      filename: "use-resize-observer.svelte.ts",
+      filecode: UseResizeObserver,
+      lang: "typescript",
+      isExpand: true,
+    },
+  ],
+  packages: ["motion-sv"],
+  folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── animated-beam/
+                ├── animated-beam.svelte
+                ├── types.ts
+                ├── use-gradient-coordinates.svelte.ts
+                ├── use-path-calculator.svelte.ts
+                ├── use-resize-observer.svelte.ts
+                └── index.ts`,
+};
 
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
@@ -44,16 +108,38 @@ const seo: SEO = {
   keywords: ["Svelte", "Animated Beam", "SV5 Animations", "Animation", "Web Design"],
 };
 
+
+
 export const data: ComponentDoc = {
   ...meta,
   preview: Preview,
-  previewCode: {
+  previewCode: [
+    {
     filename: "animated-beam.svelte",
     filecode: PreviewCode,
     lang: "svelte",
     hideLines: true,
     highlight: [2],
   },
+  {
+    filename: "circle.svelte",
+    filecode: Circle,
+    lang: "svelte",
+    hideLines: true,
+  },
+  {
+    filename: "openai-icon.svelte",
+    filecode: OpenaiIcon,
+    lang: "svelte",
+    hideLines: true,
+  },
+  {
+    filename: "user-icon.svelte",
+    filecode: UserIcon,
+    lang: "svelte",
+    hideLines: true,
+  },
+  ],
   examples,
   seo,
   props: [
@@ -81,10 +167,5 @@ export const data: ComponentDoc = {
       ],
     },
   ],
-  folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ animated-beam/
-                â””â”€â”€ animated-beam.svelte`,
+  installBlock,
 };

@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "animated-theme-toggler",
+	"title": "Animated Theme Toggler",
+	"type": "registry:block",
+	"description": "A smooth animated theme toggler that uses the View Transition API to create a circular reveal effect when switching between light and dark themes.",
+	"devDependencies": [
+		"@lucide/svelte@^0.561.0"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n  import { onMount } from \"svelte\";\r\n  import { Moon, Sun } from \"@lucide/svelte\";\r\n  import { cn } from \"$UTILS$\";\r\n\r\n  interface AnimatedThemeTogglerProps {\r\n    class?: string;\r\n    duration?: number;\r\n  }\r\n\r\n  let {\r\n    class: className,\r\n    duration = 400,\r\n    ...props\r\n  }: AnimatedThemeTogglerProps = $props();\r\n\r\n  let isDark = $state(false);\r\n  let buttonRef: HTMLButtonElement | null = $state(null);\r\n\r\n  onMount(() => {\r\n    const updateTheme = () => {\r\n      isDark = document.documentElement.classList.contains(\"dark\");\r\n    };\r\n\r\n    updateTheme();\r\n\r\n    const observer = new MutationObserver(updateTheme);\r\n    observer.observe(document.documentElement, {\r\n      attributes: true,\r\n      attributeFilter: [\"class\"],\r\n    });\r\n\r\n    return () => observer.disconnect();\r\n  });\r\n\r\n  const toggleTheme = async () => {\r\n    if (!buttonRef) return;\r\n\r\n    // Check if View Transition API is supported\r\n    if (!document.startViewTransition) {\r\n      // Fallback for browsers that don't support View Transition API\r\n      const newTheme = !isDark;\r\n      isDark = newTheme;\r\n      document.documentElement.classList.toggle(\"dark\");\r\n      localStorage.setItem(\"theme\", newTheme ? \"dark\" : \"light\");\r\n      return;\r\n    }\r\n\r\n    await document.startViewTransition(() => {\r\n      const newTheme = !isDark;\r\n      isDark = newTheme;\r\n      document.documentElement.classList.toggle(\"dark\");\r\n      localStorage.setItem(\"theme\", newTheme ? \"dark\" : \"light\");\r\n    }).ready;\r\n\r\n    const { top, left, width, height } = buttonRef.getBoundingClientRect();\r\n    const x = left + width / 2;\r\n    const y = top + height / 2;\r\n    const maxRadius = Math.hypot(\r\n      Math.max(left, window.innerWidth - left),\r\n      Math.max(top, window.innerHeight - top)\r\n    );\r\n\r\n    document.documentElement.animate(\r\n      {\r\n        clipPath: [\r\n          `circle(0px at ${x}px ${y}px)`,\r\n          `circle(${maxRadius}px at ${x}px ${y}px)`,\r\n        ],\r\n      },\r\n      {\r\n        duration,\r\n        easing: \"ease-in-out\",\r\n        pseudoElement: \"::view-transition-new(root)\",\r\n      }\r\n    );\r\n  };\r\n</script>\r\n\r\n<button\r\n  bind:this={buttonRef}\r\n  onclick={toggleTheme}\r\n  class={cn(className)}\r\n  {...props}\r\n>\r\n  {#if isDark}\r\n    <Sun />\r\n  {:else}\r\n    <Moon />\r\n  {/if}\r\n  <span class=\"sr-only\">Toggle theme</span>\r\n</button>\r\n\r\n",
+			"type": "registry:component",
+			"target": "magic/animated-theme-toggler/animated-theme-toggler.svelte"
+		},
+		{
+			"content": "export { default as AnimatedThemeToggler } from \"./animated-theme-toggler.svelte\";\r\n\r\n",
+			"type": "registry:file",
+			"target": "magic/animated-theme-toggler/index.ts"
+		}
+	]
+}

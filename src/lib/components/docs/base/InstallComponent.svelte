@@ -14,7 +14,7 @@
     installUrl: string;
     dependencies?: DependencyItem[];
     tailwindConfig?: TailwindConfig;
-    codeBlocks?: CodeBlock[];
+    codeBlocks?: CodeBlock[] | CodeBlock;
     class?: string;
     folderStructure?: string;
     packages?: string[];
@@ -99,15 +99,19 @@
           </Step>
         {/if}
 
-        {#if codeBlocks.length > 0}
+        {#if codeBlocks}
           <Step title="Copy the Source Code" titleBaseClass="mb-0">
             <p class="mb-4 text-sm">
               Copy and paste the following code into your project:
             </p>
             <div class="space-y-4">
-              {#each codeBlocks as codeBlock}
-                <SingleCodeFilename code={codeBlock} />
-              {/each}
+              {#if Array.isArray(codeBlocks)}
+                {#each codeBlocks as codeBlock}
+                  <SingleCodeFilename code={codeBlock} />
+                {/each}
+              {:else}
+                <SingleCodeFilename code={codeBlocks} />
+              {/if}
             </div>
           </Step>
         {/if}

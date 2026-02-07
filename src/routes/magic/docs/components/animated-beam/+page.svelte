@@ -1,26 +1,16 @@
 ﻿<script lang="ts">
   import { page } from "$app/state";
   import { H1, H2, Paragraph, H3 } from "$lib/components/docs/markdown/index";
-  import Raw from "$lib/components/magic-ui/animated-beam/animated-beam.svelte?raw";
-  import type { CodeBlock } from "$lib/components/ui/code";
 
   import { PreviewComponent } from "$lib/components/ui/preview-component";
   import InstallComponent from "$lib/components/docs/base/InstallComponent.svelte";
   import APITable from "$lib/components/docs/base/APITable.svelte";
   import { CopyPageDropdown } from "$lib/components/docs/copy-page-dropdown";
-  import SingleCodeFilename from "$lib/components/ui/code/single-code-filename.svelte";
   import { data } from "./data";
 
-  const code: CodeBlock = {
-    filename: ".svelte",
-    filecode: Raw,
-    lang: "svelte",
-    isExpand: true,
-  };
-
-  const PreviewComp = $derived(data.preview);
-  const installUrl = $derived(`/r/${data.id}.json`);
-  const llmsTxtUrl = $derived(`/llms.txt`);
+  let PreviewComp = $derived(data.preview);
+  let installUrl = $derived(`${page.url.origin}/r/${data.id}.json`);
+  let llmsTxtUrl = $derived(`${page.url}/llms.txt`);
 </script>
 
 <div>
@@ -44,9 +34,9 @@
   <H2 id="installation">Installation</H2>
   <InstallComponent
     {installUrl}
-    tailwindConfig={data.tailwind ? { code: data.tailwind } : undefined}
-    codeBlocks={[code]}
-    folderStructure={data.folderStructure}
+    codeBlocks={data.installBlock?.installCode}
+    packages={data.installBlock?.packages}
+    folderStructure={data.installBlock?.folderStructure}
     class="my-4"
   />
 

@@ -29,4 +29,3 @@ export interface GradientCoordinates {
   y1: string[];
   y2: string[];
 }
-

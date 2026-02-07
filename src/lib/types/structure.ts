@@ -29,9 +29,17 @@ export type PropsTable = {
   props: PropDef[];
 };
 
+export type InstallComponentDocs ={
+  installCode?: CodeBlock | CodeBlock[];
+  tailwind?: CodeBlock;
+  folderStructure?: string;
+  packages?: string[];
+}
+
 
 export type ComponentDoc = ComponentMeta & {
   preview?: Component;
+  installBlock?: InstallComponentDocs;
   previewCode?: CodeBlock | CodeBlock[];
   examples?: Example[];
   seo: SEO;

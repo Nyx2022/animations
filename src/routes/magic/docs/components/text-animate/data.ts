@@ -1,4 +1,3 @@
-import type { CodeBlock } from "$lib/components/ui/code";
 import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
 import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
