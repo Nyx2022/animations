@@ -45,11 +45,11 @@
   }: ComponentProps<typeof Sidebar.Root> = $props();
 </script>
 
-<Sidebar.Root {...restProps} bind:ref class="mt-16">
-  <Sidebar.Header>
-    <!-- <VersionSwitcher versions={data.versions} defaultVersion={data.versions[0]} /> -->
-    <!-- <SearchForm /> -->
-  </Sidebar.Header>
+<Sidebar.Root class="mt-16" {...restProps} bind:ref>
+  <!-- <Sidebar.Header>
+    <VersionSwitcher versions={data.versions} defaultVersion={data.versions[0]} />
+    <SearchForm />
+  </Sidebar.Header> -->
   <ScrollArea class="max-h-[calc(100vh-6rem)]">
     <Sidebar.Content>
       <!-- We create a Sidebar.Group for each parent. -->

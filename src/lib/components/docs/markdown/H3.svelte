@@ -18,8 +18,8 @@
 <h3
   {...restProps}
   class={cn(
-    "mt-10 scroll-m-24 text-xl font-medium text-foreground font-display",
-    className
+    "mt-4 scroll-m-24 text-xl font-medium text-foreground font-display",
+    className,
   )}
 >
   {@render children?.()}

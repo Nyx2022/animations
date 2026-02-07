@@ -1,5 +1,6 @@
 <script lang="ts">
   import { cn } from "$lib/utils";
+  import { ChevronLeftIcon, ChevronRightIcon } from "@lucide/svelte";
 
   type ComponentProps = {
     label: string;
@@ -23,15 +24,32 @@
   {href}
   {...rest}
   class={cn(
-    "group relative flex flex-col rounded-xl border border-border bg-card px-4 py-3 shadow-sm transition-[background-color] duration-150 ease-out hover:bg-card-muted",
-    align === "right" && "sm:text-right",
-    forceSecondColumn && "sm:col-start-2"
+    "group relative flex flex-col rounded-lg border border-border bg-background hover:bg-muted/50 px-4 py-3 shadow-sm transition-[background-color] duration-150 ease-out",
+    forceSecondColumn && "col-start-2",
   )}
 >
-  <span class="text-xs tracking-wide text-foreground/45 uppercase">
-    {label}
-  </span>
-  <span class="text-lg font-medium text-foreground">
-    {title}
-  </span>
+  <div class={cn("flex items-start gap-1", align === "right" && "justify-end")}>
+    {#if align === "left"}
+      <span>
+        <ChevronLeftIcon
+          class="h-4 w-4 text-foreground/50 group-hover:text-foreground transition-colors duration-150 ease-out mt-0.5"
+        />
+      </span>
+    {/if}
+    <div class={cn("flex flex-col", align === "right" && "text-right")}>
+      <span class="text-sm text-foreground py-0 my-0">
+        {title}
+      </span>
+      <span class="mt-1 text-sm pr-2 line-clamp-1 text-foreground/45">
+        {label}
+      </span>
+    </div>
+    {#if align === "right"}
+      <span>
+        <ChevronRightIcon
+          class="h-4 w-4 text-foreground/50 group-hover:text-foreground transition-colors duration-150 ease-out mt-0.5"
+        />
+      </span>
+    {/if}
+  </div>
 </a>

@@ -10,18 +10,22 @@
   let toc = new UseToc();
 
   // Extract component ID from URL path
-  const componentId = $derived(() => {
+  let componentId = $derived.by(() => {
     const path = page.url.pathname;
     const parts = path.split("/");
     return parts[parts.length - 1] || "";
   });
 
-  const navigation = $derived(() => {
-    const id = componentId();
-    const { prev, next } = getPrevNext(id);
+  let navigation = $derived.by(() => {
+    let id = componentId;
+    let { prev, next } = getPrevNext(id);
     return {
-      previous: prev ? { title: prev.name, href: prev.href } : null,
-      next: next ? { title: next.name, href: next.href } : null,
+      previous: prev
+        ? { title: prev.name, href: prev.href, desc: prev.desc }
+        : null,
+      next: next
+        ? { title: next.name, href: next.href, desc: next.desc }
+        : null,
     };
   });
 </script>
@@ -37,7 +41,7 @@
     {@render children()}
 
     <!-- Prev/Next Navigation -->
-    <DocsNavigation previous={navigation().previous} next={navigation().next} />
+    <DocsNavigation previous={navigation.previous} next={navigation.next} />
   </main>
 
   <aside class="sticky top-24 hidden w-56 shrink-0 xl:block">

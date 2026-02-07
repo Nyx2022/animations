@@ -12,6 +12,7 @@ export interface MagicComponent {
   name: string;
   href: string;
   badge?: BadgeType;
+  desc?: string;
 }
 
 /**
@@ -24,6 +25,7 @@ export const magicUIComponents: MagicComponent[] = [
     name: "Animated Beam",
     href: "/magic/docs/components/animated-beam",
     badge: "New",
+    desc: "A component for creating animated beam effects between two elements with customizable gradients and paths.",
   },
   {
     id: "animated-circular-progress-bar",
@@ -71,18 +73,21 @@ export const magicUIComponents: MagicComponent[] = [
     name: "Cool Mode",
     href: "/magic/docs/components/cool-mode",
     badge: "New",
+    desc: "Add a fun particle effect that follows mouse interactions, with support for emojis, images, and custom shapes.",
   },
   {
     id: "dot-pattern",
     name: "Dot Pattern",
     href: "/magic/docs/components/dot-pattern",
     badge: "New",
+    desc: "A customizable dot pattern background component with optional glow animations and mask effects.",
   },
   {
     id: "file-tree",
     name: "File Tree",
     href: "/magic/docs/components/file-tree",
     badge: "New",
+    desc: "A component for creating file tree views with folder and file icons.",
   },
 ];
 
