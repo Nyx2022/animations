@@ -6,5 +6,99 @@
 		"description": "An animated gradient background which transitions between colors for text.",
 		"registryDependencies": [],
 		"relativeUrl": "animated-gradient-text.json"
+	},
+	{
+		"name": "text-animate",
+		"title": "Text Animate",
+		"type": "registry:block",
+		"description": "Animate text with various effects like blur, slide, scale, and fade with granular control over words, characters, or lines.",
+		"registryDependencies": [
+			"motion-sv"
+		],
+		"relativeUrl": "text-animate.json"
+	},
+	{
+		"name": "animated-beam",
+		"title": "Animated Beam",
+		"type": "registry:block",
+		"description": "A component for creating animated beam effects between two elements with customizable gradients and paths.",
+		"registryDependencies": [
+			"motion-sv"
+		],
+		"relativeUrl": "animated-beam.json"
+	},
+	{
+		"name": "animated-theme-toggler",
+		"title": "Animated Theme Toggler",
+		"type": "registry:block",
+		"description": "A smooth animated theme toggler that uses the View Transition API to create a circular reveal effect when switching between light and dark themes.",
+		"registryDependencies": [],
+		"relativeUrl": "animated-theme-toggler.json"
+	},
+	{
+		"name": "animated-circular-progress-bar",
+		"title": "Animated Circular Progress Bar",
+		"type": "registry:block",
+		"description": "A circular progress bar component with animated transitions between primary and secondary colors.",
+		"registryDependencies": [],
+		"relativeUrl": "animated-circular-progress-bar.json"
+	},
+	{
+		"name": "animated-grid-pattern",
+		"title": "Animated Grid Pattern",
+		"type": "registry:block",
+		"description": "An animated grid pattern component that creates a dynamic background with moving squares that fade in and out.",
+		"registryDependencies": [
+			"motion-sv"
+		],
+		"relativeUrl": "animated-grid-pattern.json"
+	},
+	{
+		"name": "blur-fade",
+		"title": "Blur Fade",
+		"type": "registry:block",
+		"description": "A component that animates content with blur and fade effects, supporting directional movement and intersection observer triggering.",
+		"registryDependencies": [
+			"motion-sv"
+		],
+		"relativeUrl": "blur-fade.json"
+	},
+	{
+		"name": "border-beam",
+		"title": "Border Beam",
+		"type": "registry:block",
+		"description": "A component for creating animated border beam effects around elements with customizable gradients, duration, and direction.",
+		"registryDependencies": [
+			"motion-sv"
+		],
+		"relativeUrl": "border-beam.json"
+	},
+	{
+		"name": "file-tree",
+		"title": "File Tree",
+		"type": "registry:block",
+		"description": "An interactive file tree component with expandable folders, selectable files, and smooth animations.",
+		"registryDependencies": [
+			"motion-sv"
+		],
+		"relativeUrl": "file-tree.json"
+	},
+	{
+		"name": "dot-pattern",
+		"title": "Dot Pattern",
+		"type": "registry:block",
+		"description": "A customizable dot pattern background component with optional glow animations and mask effects.",
+		"registryDependencies": [
+			"motion-sv"
+		],
+		"relativeUrl": "dot-pattern.json"
+	},
+	{
+		"name": "cool-mode",
+		"title": "Cool Mode",
+		"type": "registry:block",
+		"description": "Add a fun particle effect that follows mouse interactions, with support for emojis, images, and custom shapes.",
+		"registryDependencies": [],
+		"relativeUrl": "cool-mode.json"
 	}
 ]

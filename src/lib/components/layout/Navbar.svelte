@@ -247,8 +247,17 @@
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-            <!-- Components Menu -->
             <NavigationMenuItem>
+              <NavigationMenuLink
+                href="/magic/docs/components/animated-gradient-text"
+                class="text-muted-foreground hover:text-primary focus:text-primary data-active:bg-accent/50 data-active:text-accent-foreground bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-transparent focus:bg-transparent"
+              >
+                Components
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+
+            <!-- Components Menu -->
+            <!-- <NavigationMenuItem>
               <NavigationMenuTrigger
                 class="text-muted-foreground hover:text-primary focus:text-primary data-[state=open]:text-primary bg-transparent px-4 py-2 text-sm font-medium hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent"
               >
@@ -301,7 +310,7 @@
                   {/each}
                 </ul>
               </NavigationMenuContent>
-            </NavigationMenuItem>
+            </NavigationMenuItem> -->
           </NavigationMenuList>
         </NavigationMenuRoot>
       </div>

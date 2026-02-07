@@ -7,16 +7,17 @@
   };
 
   export type TailwindConfig = {
-    code: CodeBlock;
+    code: CodeBlock | undefined;
   };
 
   export type InstallComponentProps = {
     installUrl: string;
     dependencies?: DependencyItem[];
     tailwindConfig?: TailwindConfig;
-    codeBlocks?: CodeBlock[];
+    codeBlocks?: CodeBlock[] | CodeBlock;
     class?: string;
     folderStructure?: string;
+    packages?: string[];
   };
 </script>
 
@@ -35,6 +36,7 @@
     codeBlocks = [],
     class: className,
     folderStructure = "",
+    packages = [],
   }: InstallComponentProps = $props();
 
   let activeTab = $state("cli");
@@ -42,9 +44,21 @@
 
 <div class={cn("w-full", className)}>
   <Tabs.Root bind:value={activeTab}>
-    <Tabs.List class="w-fit">
-      <Tabs.Trigger value="cli">CLI</Tabs.Trigger>
-      <Tabs.Trigger value="manual">Manual</Tabs.Trigger>
+    <Tabs.List
+      class="text-foreground h-auto gap-2 rounded-none bg-transparent px-0 py-1"
+    >
+      <Tabs.Trigger
+        value="cli"
+        class="hover:bg-accent border-none px-4 bg-transparent! hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+      >
+        CLI
+      </Tabs.Trigger>
+      <Tabs.Trigger
+        value="manual"
+        class="hover:bg-accent border-none px-4 bg-transparent! hover:text-foreground data-[state=active]:after:bg-primary data-[state=active]:hover:bg-accent relative after:absolute after:inset-x-0 after:bottom-0 after:-mb-1 after:h-0.5 data-[state=active]:bg-transparent data-[state=active]:shadow-none"
+      >
+        Manual
+      </Tabs.Trigger>
     </Tabs.List>
 
     <Tabs.Content value="cli" class="mt-4">
@@ -55,7 +69,16 @@
     </Tabs.Content>
 
     <Tabs.Content value="manual" class="mt-4" data-toc-ignore="true">
-      <Steps>
+      <Steps class="mb-2">
+        {#if packages.length > 0}
+          <Step title="Install dependencies">
+            <p class="mb-4">
+              Install the required packages for this component:
+            </p>
+            <PMCommand command="add" args={packages} />
+          </Step>
+        {/if}
+
         {#if dependencies.length > 0}
           <Step title="Install Dependencies">
             <p class="mb-4">Install the following dependencies:</p>
@@ -76,21 +99,25 @@
           </Step>
         {/if}
 
-        {#if codeBlocks.length > 0}
+        {#if codeBlocks}
           <Step title="Copy the Source Code" titleBaseClass="mb-0">
             <p class="mb-4 text-sm">
               Copy and paste the following code into your project:
             </p>
             <div class="space-y-4">
-              {#each codeBlocks as codeBlock}
-                <SingleCodeFilename code={codeBlock} />
-              {/each}
+              {#if Array.isArray(codeBlocks)}
+                {#each codeBlocks as codeBlock}
+                  <SingleCodeFilename code={codeBlock} />
+                {/each}
+              {:else}
+                <SingleCodeFilename code={codeBlocks} />
+              {/if}
             </div>
           </Step>
         {/if}
 
         <!-- Tailwind CSS Configuration -->
-        {#if tailwindConfig}
+        {#if tailwindConfig?.code}
           <Step title="Add Tailwind CSS">
             <p class="mb-4">
               Add the following to your <code

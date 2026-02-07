@@ -33,7 +33,7 @@
   </Paragraph>
 
   <!-- Preview Component -->
-  <div class="my-6">
+  <div class="mt-6 mb-8">
     <PreviewComponent code={data.previewCode}>
       {#if PreviewComp}
         <PreviewComp />
@@ -50,17 +50,17 @@
     class="my-4"
   />
 
-  <H2 id="examples">Examples</H2>
+  <H2 id="examples" class="mt-10">Examples</H2>
   {#each data.examples as example}
     {@const ExampleComp = example.preview}
-    <div class="my-8">
-      <H3 id={example.name.toLowerCase().replace(/\s+/g, "-")}>
+    <div class="mt-0 mb-6">
+      <H3 class="mt-4" id={example.name.toLowerCase().replace(/\s+/g, "-")}>
         {example.name}
       </H3>
       {#if example.description}
         <Paragraph>{example.description}</Paragraph>
       {/if}
-      <div class="my-4">
+      <div class="mt-2 mb-2">
         <PreviewComponent code={example.code}>
           <ExampleComp />
         </PreviewComponent>
@@ -69,16 +69,16 @@
   {/each}
 
   {#if data.props && data.props.length > 0}
-    <H2 id="props">Props</H2>
+    <H2 id="props" class="mt-6">Props</H2>
     {#each data.props as propsTable}
-      <div class="my-4">
+      <div>
         <H3 id={propsTable.name.toLowerCase().replace(/\s+/g, "-")}>
           {propsTable.name}
         </H3>
         {#if propsTable.desc}
-          <Paragraph>{propsTable.desc}</Paragraph>
+          <Paragraph class="mt-2 font-light">{propsTable.desc}</Paragraph>
         {/if}
-        <div class="my-4">
+        <div class="my-0">
           <APITable
             headers={["Prop", "Type", "Default"]}
             keys={["name", "type", "default"]}

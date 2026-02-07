@@ -1,0 +1,14 @@
+﻿<script lang="ts">
+  import { DotPattern } from "$lib/components/magic-ui/dot-pattern";
+  import { cn } from "$lib/utils";
+</script>
+
+<div
+  class="bg-background relative flex h-125 w-70 md:min-w-2xl flex-col items-center justify-center overflow-hidden rounded-lg border"
+>
+  <DotPattern
+    class={cn(
+      "mask-[radial-gradient(300px_circle_at_center,white,transparent)]",
+    )}
+  />
+</div>

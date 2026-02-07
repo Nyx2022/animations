@@ -1,0 +1,25 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "blur-fade",
+	"title": "Blur Fade",
+	"type": "registry:block",
+	"description": "A component that animates content with blur and fade effects, supporting directional movement and intersection observer triggering.",
+	"dependencies": [
+		"motion-sv@^0.1.9"
+	],
+	"registryDependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\r\n  import { onMount } from \"svelte\";\r\n  import { motion, AnimatePresence, type Variants } from \"motion-sv\";\r\n  import { cn } from \"$UTILS$\";\r\n  import type { Snippet } from \"svelte\";\r\n\r\n  type MarginType = string;\r\n\r\n  interface BlurFadeProps {\r\n    children: Snippet;\r\n    class?: string;\r\n    variant?: {\r\n      hidden: { y: number };\r\n      visible: { y: number };\r\n    };\r\n    duration?: number;\r\n    delay?: number;\r\n    offset?: number;\r\n    direction?: \"up\" | \"down\" | \"left\" | \"right\";\r\n    inView?: boolean;\r\n    inViewMargin?: MarginType;\r\n    blur?: string;\r\n  }\r\n\r\n  let {\r\n    children,\r\n    class: className,\r\n    variant,\r\n    duration = 0.4,\r\n    delay = 0,\r\n    offset = 6,\r\n    direction = \"down\",\r\n    inView = false,\r\n    inViewMargin = \"-50px\",\r\n    blur = \"6px\",\r\n  }: BlurFadeProps = $props();\r\n\r\n  let containerRef: HTMLDivElement | null = $state(null);\r\n  let isInView = $state(false);\r\n\r\n  const defaultVariants = $derived.by(() => {\r\n    return {\r\n      hidden: {\r\n        [direction === \"left\" || direction === \"right\" ? \"x\" : \"y\"]:\r\n          direction === \"right\" || direction === \"down\" ? -offset : offset,\r\n        opacity: 0,\r\n        filter: `blur(${blur})`,\r\n      },\r\n      visible: {\r\n        [direction === \"left\" || direction === \"right\" ? \"x\" : \"y\"]: 0,\r\n        opacity: 1,\r\n        filter: `blur(0px)`,\r\n      },\r\n    } as Variants;\r\n  });\r\n\r\n  const combinedVariants = $derived(variant || defaultVariants);\r\n  const shouldAnimate = $derived(!inView || isInView);\r\n\r\n  onMount(() => {\r\n    if (!inView) {\r\n      isInView = true;\r\n      return;\r\n    }\r\n\r\n    if (!containerRef) return;\r\n\r\n    const observer = new IntersectionObserver(\r\n      ([entry]) => {\r\n        if (entry.isIntersecting) {\r\n          isInView = true;\r\n          observer.disconnect();\r\n        }\r\n      },\r\n      {\r\n        threshold: 0.1,\r\n        rootMargin: inViewMargin\r\n      }\r\n    );\r\n\r\n    observer.observe(containerRef);\r\n\r\n    return () => observer.disconnect();\r\n  });\r\n</script>\r\n\r\n<div bind:this={containerRef}>\r\n  <AnimatePresence>\r\n    <motion.div\r\n      initial=\"hidden\"\r\n      animate={shouldAnimate ? \"visible\" : \"hidden\"}\r\n      exit=\"hidden\"\r\n      variants={combinedVariants}\r\n      transition={{\r\n        delay: 0.04 + delay,\r\n        duration,\r\n        ease: \"easeOut\",\r\n      }}\r\n      class={cn(className)}\r\n    >\r\n      {@render children()}\r\n    </motion.div>\r\n  </AnimatePresence>\r\n</div>\r\n\r\n",
+			"type": "registry:component",
+			"target": "magic/blur-fade/blur-fade.svelte"
+		},
+		{
+			"content": "export { default as BlurFade } from \"./blur-fade.svelte\";\r\n\r\n",
+			"type": "registry:file",
+			"target": "magic/blur-fade/index.ts"
+		}
+	]
+}
