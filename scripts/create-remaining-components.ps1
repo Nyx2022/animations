@@ -26,9 +26,11 @@ Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "  Creating All Components" -ForegroundColor Cyan
 Write-Host "========================================`n" -ForegroundColor Cyan
 
+$scriptPath = Join-Path $PSScriptRoot "create-component.ps1"
+
 foreach ($component in $components) {
     Write-Host "`nProcessing: $($component.name)..." -ForegroundColor Yellow
-    & .\scripts\create-component.ps1 -ComponentName $component.name -ExampleCount $component.examples
+    & $scriptPath -ComponentName $component.name -ExampleCount $component.examples
     Write-Host "`n----------------------------------------`n"
 }
 

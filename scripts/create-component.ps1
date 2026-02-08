@@ -8,8 +8,9 @@ param(
 
 # Convert component name to different formats
 $kebabCase = $ComponentName.ToLower() -replace '_', '-'
-$pascalCase = (Get-Culture).TextInfo.ToTitleCase($ComponentName -replace '-', ' ' -replace '_', ' ') -replace ' ', ''
-$titleCase = (Get-Culture).TextInfo.ToTitleCase($ComponentName -replace '-', ' ' -replace '_', ' ')
+$tempName = ($ComponentName -replace '-', ' ' -replace '_', ' ')
+$pascalCase = (Get-Culture).TextInfo.ToTitleCase($tempName) -replace ' ', ''
+$titleCase = (Get-Culture).TextInfo.ToTitleCase($tempName)
 
 # Base directory
 $baseDir = "src\routes\magic\docs\components\$kebabCase"

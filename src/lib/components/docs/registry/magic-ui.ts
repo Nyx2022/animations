@@ -100,11 +100,71 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "A component for creating file tree views with folder and file icons.",
 	},
 	{
+		id: "flickering-grid",
+		name: "Flickering Grid",
+		href: "/magic/docs/components/flickering-grid",
+		desc: "",
+	},
+	{
+		id: "grid-pattern",
+		name: "Grid Pattern",
+		href: "/magic/docs/components/grid-pattern",
+		desc: "",
+	},
+	{
+		id: "hero-video-dialog",
+		name: "Hero Video Dialog",
+		href: "/magic/docs/components/hero-video-dialog",
+		desc: "",
+	},
+	{
+		id: "hyper-text",
+		name: "Hyper Text",
+		href: "/magic/docs/components/hyper-text",
+		desc: "",
+	},
+	{
+		id: "interactive-hover-button",
+		name: "Interactive Hover Button",
+		href: "/magic/docs/components/interactive-hover-button",
+		desc: "",
+	},
+	{
+		id: "light-rays",
+		name: "Light Rays",
+		href: "/magic/docs/components/light-rays",
+		desc: "",
+	},
+	{
+		id: "line-shadow-text",
+		name: "Line Shadow Text",
+		href: "/magic/docs/components/line-shadow-text",
+		desc: "",
+	},
+	{
 		id: "marquee",
 		name: "Marquee",
 		href: "/magic/docs/components/marquee",
 		badge: "New",
 		desc: "An infinite scrolling component that can be used to display text, images, or videos.",
+	},
+	{
+		id: "morphing-text",
+		name: "Morphing Text",
+		href: "/magic/docs/components/morphing-text",
+		desc: "",
+	},
+	{
+		id: "neon-gradient-card",
+		name: "Neon Gradient Card",
+		href: "/magic/docs/components/neon-gradient-card",
+		desc: "",
+	},
+	{
+		id: "number-ticker",
+		name: "Number Ticker",
+		href: "/magic/docs/components/number-ticker",
+		desc: "",
 	},
 	{
 		id: "pixel-image",
@@ -114,6 +174,42 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "A component that displays your image with a pixelated effect, enhancing the visual appeal of any image in your website.",
 	},
 	{
+		id: "pulsating-button",
+		name: "Pulsating Button",
+		href: "/magic/docs/components/pulsating-button",
+		desc: "",
+	},
+	{
+		id: "rainbow-button",
+		name: "Rainbow Button",
+		href: "/magic/docs/components/rainbow-button",
+		desc: "",
+	},
+	{
+		id: "ripple",
+		name: "Ripple",
+		href: "/magic/docs/components/ripple",
+		desc: "",
+	},
+	{
+		id: "ripple-button",
+		name: "Ripple Button",
+		href: "/magic/docs/components/ripple-button",
+		desc: "",
+	},
+	{
+		id: "scroll-progress",
+		name: "Scroll Progress",
+		href: "/magic/docs/components/scroll-progress",
+		desc: "",
+	},
+	{
+		id: "shimmer-button",
+		name: "Shimmer Button",
+		href: "/magic/docs/components/shimmer-button",
+		desc: "",
+	},
+	{
 		id: "shine-border",
 		name: "Shine Border",
 		href: "/magic/docs/components/shine-border",
@@ -121,11 +217,23 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "Shine border is an animated background border effect.",
 	},
 	{
+		id: "shiny-button",
+		name: "Shiny Button",
+		href: "/magic/docs/components/shiny-button",
+		desc: "",
+	},
+	{
 		id: "striped-pattern",
 		name: "Striped Pattern",
 		href: "/magic/docs/components/striped-pattern",
 		badge: "New",
 		desc: "A background striped pattern made with SVGs, fully customizable using Tailwind CSS.",
+	},
+	{
+		id: "terminal",
+		name: "Terminal",
+		href: "/magic/docs/components/terminal",
+		desc: "",
 	},
 	{
 		id: "text-animate",
@@ -139,6 +247,24 @@ export const magicUIComponents: MagicComponent[] = [
 		href: "/magic/docs/components/typing-animation",
 		badge: "New",
 		desc: "A text component that displays a typewriter animation effect.",
+	},
+	{
+		id: "video-text",
+		name: "Video Text",
+		href: "/magic/docs/components/video-text",
+		desc: "",
+	},
+	{
+		id: "warp-background",
+		name: "Warp Background",
+		href: "/magic/docs/components/warp-background",
+		desc: "",
+	},
+	{
+		id: "word-rotate",
+		name: "Word Rotate",
+		href: "/magic/docs/components/word-rotate",
+		desc: "",
 	},
 ];
 
