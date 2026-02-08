@@ -295,6 +295,231 @@
 					}
 				}
 			}
+		},
+		{
+			"name": "animated-list",
+			"type": "registry:block",
+			"title": "Animated List",
+			"description": "A component that animates list items with smooth layout transitions, revealing items one by one from top to bottom.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/animated-list/animated-list.svelte",
+					"type": "registry:component",
+					"target": "magic/animated-list/animated-list.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/animated-list/index.ts",
+					"type": "registry:file",
+					"target": "magic/animated-list/index.ts"
+				}
+			],
+			"registryDependencies": ["motion-sv"]
+		},
+		{
+			"name": "animated-shiny-text",
+			"type": "registry:block",
+			"title": "Animated Shiny Text",
+			"description": "A shimmering text effect component that creates a moving shine animation across text.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/animated-shiny-text/animated-shiny-text.svelte",
+					"type": "registry:component",
+					"target": "magic/animated-shiny-text/animated-shiny-text.svelte"
+				}
+			],
+			"registryDependencies": [],
+			"cssVars": {
+				"theme": {
+					"animate-shiny-text": "shiny-text 8s infinite"
+				}
+			},
+			"css": {
+				"@keyframes shiny-text": {
+					"0%, 90%, 100%": {
+						"background-position": "calc(-100% - var(--shiny-width)) 0"
+					},
+					"30%, 60%": {
+						"background-position": "calc(100% + var(--shiny-width)) 0"
+					}
+				}
+			}
+		},
+		{
+			"name": "aurora-text",
+			"type": "registry:block",
+			"title": "Aurora Text",
+			"description": "A text component with animated aurora gradient effect that smoothly transitions between customizable colors.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/aurora-text/aurora-text.svelte",
+					"type": "registry:component",
+					"target": "magic/aurora-text/aurora-text.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/aurora-text/index.ts",
+					"type": "registry:file",
+					"target": "magic/aurora-text/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"cssVars": {
+				"theme": {
+					"animate-aurora": "aurora 10s linear infinite"
+				}
+			},
+			"css": {
+				"@keyframes aurora": {
+					"0%": {
+						"background-position": "0% 50%"
+					},
+					"50%": {
+						"background-position": "100% 50%"
+					},
+					"100%": {
+						"background-position": "0% 50%"
+					}
+				}
+			}
+		},
+		{
+			"name": "avatar-circles",
+			"type": "registry:block",
+			"title": "Avatar Circles",
+			"description": "A component that displays overlapping avatar circles with optional count indicator for showing team members or contributors.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/avatar-circles/avatar-circles.svelte",
+					"type": "registry:component",
+					"target": "magic/avatar-circles/avatar-circles.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/avatar-circles/index.ts",
+					"type": "registry:file",
+					"target": "magic/avatar-circles/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "dotted-map",
+			"type": "registry:block",
+			"title": "Dotted Map",
+			"description": "A world map component rendered with dots, supporting custom markers with staggered entrance animations.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/dotted-map/dotted-map.svelte",
+					"type": "registry:component",
+					"target": "magic/dotted-map/dotted-map.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/dotted-map/index.ts",
+					"type": "registry:file",
+					"target": "magic/dotted-map/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["svg-dotted-map"]
+		},
+		{
+			"name": "marquee",
+			"type": "registry:block",
+			"title": "Marquee",
+			"description": "A smooth scrolling marquee component with support for horizontal and vertical directions, pause on hover, and reverse animation.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/marquee/marquee.svelte",
+					"type": "registry:component",
+					"target": "magic/marquee/marquee.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/marquee/index.ts",
+					"type": "registry:file",
+					"target": "magic/marquee/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"cssVars": {
+				"theme": {
+					"animate-marquee": "marquee var(--duration) linear infinite",
+					"animate-marquee-vertical": "marquee-vertical var(--duration) linear infinite"
+				}
+			},
+			"css": {
+				"@keyframes marquee": {
+					"from": {
+						"transform": "translateX(0)"
+					},
+					"to": {
+						"transform": "translateX(calc(-100% - var(--gap)))"
+					}
+				},
+				"@keyframes marquee-vertical": {
+					"from": {
+						"transform": "translateY(0)"
+					},
+					"to": {
+						"transform": "translateY(calc(-100% - var(--gap)))"
+					}
+				}
+			}
+		},
+		{
+			"name": "pixel-image",
+			"type": "registry:block",
+			"title": "Pixel Image",
+			"description": "An image component that reveals itself through a pixelated grid animation with optional grayscale to color transition.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/pixel-image/pixel-image.svelte",
+					"type": "registry:component",
+					"target": "magic/pixel-image/pixel-image.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/pixel-image/index.ts",
+					"type": "registry:file",
+					"target": "magic/pixel-image/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "striped-pattern",
+			"type": "registry:block",
+			"title": "Striped Pattern",
+			"description": "An SVG-based striped pattern background component with configurable direction and stripe dimensions.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/striped-pattern/striped-pattern.svelte",
+					"type": "registry:component",
+					"target": "magic/striped-pattern/striped-pattern.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/striped-pattern/index.ts",
+					"type": "registry:file",
+					"target": "magic/striped-pattern/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "typing-animation",
+			"type": "registry:block",
+			"title": "Typing Animation",
+			"description": "A typewriter effect component that types out text with customizable speed, cursor styles, and support for cycling through multiple words.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/typing-animation/typing-animation.svelte",
+					"type": "registry:component",
+					"target": "magic/typing-animation/typing-animation.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/typing-animation/index.ts",
+					"type": "registry:file",
+					"target": "magic/typing-animation/index.ts"
+				}
+			],
+			"registryDependencies": ["motion-sv"],
+			"dependencies": ["runed"]
 		}
 	]
 }

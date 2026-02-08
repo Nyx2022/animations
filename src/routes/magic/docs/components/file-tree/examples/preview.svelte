@@ -42,10 +42,10 @@
 </script>
 
 <div
-	class="bg-background relative flex h-75 w-70 flex-col items-center justify-center overflow-hidden rounded-lg border md:m-10 md:min-w-32"
+	class="bg-background relative mx-auto flex h-80 w-70 flex-col items-center justify-center overflow-hidden rounded-lg border md:m-6 md:mx-auto"
 >
 	<Tree
-		class="bg-background overflow-hidden rounded-md p-2"
+		class="bg-background mx-auto overflow-hidden rounded-md p-4"
 		initialSelectedId="7"
 		initialExpandedItems={["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]}
 		elements={ELEMENTS}

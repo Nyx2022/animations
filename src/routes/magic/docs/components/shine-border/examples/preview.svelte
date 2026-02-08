@@ -6,7 +6,7 @@
 	import { Label } from "$lib/components/ui/label";
 </script>
 
-<Card.Root class="relative w-full min-w-87.5 overflow-hidden">
+<Card.Root class="relative mx-auto max-w-87 overflow-hidden">
 	<ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
 	<Card.Header>
 		<Card.Title>Login</Card.Title>

@@ -8,7 +8,7 @@
 	import { mode } from "mode-watcher";
 </script>
 
-<Card.Root class="relative w-full min-w-87.5 overflow-hidden">
+<Card.Root class="relative mx-auto max-w-87 overflow-hidden">
 	<ShineBorder shineColor={mode.current === "dark" ? "white" : "black"} />
 	<Card.Header>
 		<Card.Title>Login</Card.Title>

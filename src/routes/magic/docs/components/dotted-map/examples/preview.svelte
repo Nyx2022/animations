@@ -80,7 +80,7 @@
 	];
 </script>
 
-<div class="relative h-[500px] w-full overflow-hidden rounded-lg border">
-	<div class="to-background absolute inset-0 bg-radial from-transparent to-70%" />
+<div class="relative mx-auto h-125 w-full">
+	<div class="to-background absolute inset-0 bg-radial from-transparent to-70%"></div>
 	<DottedMap {markers} />
 </div>

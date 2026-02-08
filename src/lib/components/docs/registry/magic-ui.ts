@@ -88,6 +88,27 @@ export const magicUIComponents: MagicComponent[] = [
 		badge: "New",
 		desc: "Shine border is an animated background border effect.",
 	},
+	{
+		id: "marquee",
+		name: "Marquee",
+		href: "/magic/docs/components/marquee",
+		badge: "New",
+		desc: "An infinite scrolling component that can be used to display text, images, or videos.",
+	},
+	{
+		id: "pixel-image",
+		name: "Pixel Image",
+		href: "/magic/docs/components/pixel-image",
+		badge: "New",
+		desc: "A component that displays your image with a pixelated effect, enhancing the visual appeal of any image in your website.",
+	},
+	{
+		id: "striped-pattern",
+		name: "Striped Pattern",
+		href: "/magic/docs/components/striped-pattern",
+		badge: "New",
+		desc: "A background striped pattern made with SVGs, fully customizable using Tailwind CSS.",
+	},
 ];
 
 /**

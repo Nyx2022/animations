@@ -24,7 +24,7 @@
 
 	<!-- Preview Component -->
 	<div class="my-6">
-		<PreviewComponent code={data.previewCode}>
+		<PreviewComponent code={data.previewCode} isCentered>
 			{#if PreviewComp}
 				<PreviewComp />
 			{/if}
@@ -46,7 +46,7 @@
 		{#each data.examples as example}
 			<div class="my-6">
 				<H3 id={example.name.toLowerCase().replace(/\s+/g, "-")}>{example.name}</H3>
-				<PreviewComponent code={example.code}>
+				<PreviewComponent code={example.code} isCentered>
 					<example.preview />
 				</PreviewComponent>
 			</div>

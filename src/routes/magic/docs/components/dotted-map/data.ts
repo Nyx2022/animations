@@ -1,4 +1,7 @@
-import type { ComponentDoc, ComponentMeta } from "$lib/types/structure";
+﻿import DottedMapRaw from "$lib/components/magic-ui/dotted-map/dotted-map.svelte?raw";
+import IndexTs from "$lib/components/magic-ui/dotted-map/index.ts?raw";
+
+import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import type { SEO } from "$lib/types/seo";
 import type { Example } from "$lib/types/examples";
 import Preview from "./examples/preview.svelte";
@@ -34,6 +37,30 @@ const examples: Example[] = [
 		},
 	},
 ];
+
+let installBlock: InstallComponentDocs = {
+	installCode: [
+		{
+			filename: "dotted-map.svelte",
+			filecode: DottedMapRaw,
+			lang: "svelte",
+			isExpand: true,
+		},
+		{
+			filename: "index.ts",
+			filecode: IndexTs,
+			lang: "typescript",
+		},
+	],
+	packages: ["svg-dotted-map"],
+	folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── dotted-map/
+                ├── dotted-map.svelte
+                └── index.ts`,
+};
 
 export const data: ComponentDoc = {
 	...meta,
@@ -128,11 +155,5 @@ export const data: ComponentDoc = {
 			],
 		},
 	],
-	folderStructure: `src/
-└── lib/
-    └── components/
-        └── magic-ui/
-            └── dotted-map/
-                ├── dotted-map.svelte
-                └── index.ts`,
+	installBlock,
 };

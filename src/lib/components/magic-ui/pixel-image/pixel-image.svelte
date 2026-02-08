@@ -42,7 +42,7 @@
 	const MIN_GRID = 1;
 	const MAX_GRID = 16;
 
-	const { rows, cols } = $derived.by(() => {
+	let dimensions = $derived.by(() => {
 		const isValidGrid = (grid?: Grid) => {
 			if (!grid) return false;
 			const { rows, cols } = grid;
@@ -60,16 +60,16 @@
 	});
 
 	let pieces = $derived.by(() => {
-		const total = rows * cols;
+		const total = dimensions.rows * dimensions.cols;
 		return Array.from({ length: total }, (_, index) => {
-			const row = Math.floor(index / cols);
-			const col = index % cols;
+			const row = Math.floor(index / dimensions.cols);
+			const col = index % dimensions.cols;
 
 			const clipPath = `polygon(
-        ${col * (100 / cols)}% ${row * (100 / rows)}%,
-        ${(col + 1) * (100 / cols)}% ${row * (100 / rows)}%,
-        ${(col + 1) * (100 / cols)}% ${(row + 1) * (100 / rows)}%,
-        ${col * (100 / cols)}% ${(row + 1) * (100 / rows)}%
+        ${col * (100 / dimensions.cols)}% ${row * (100 / dimensions.rows)}%,
+        ${(col + 1) * (100 / dimensions.cols)}% ${row * (100 / dimensions.rows)}%,
+        ${(col + 1) * (100 / dimensions.cols)}% ${(row + 1) * (100 / dimensions.rows)}%,
+        ${col * (100 / dimensions.cols)}% ${(row + 1) * (100 / dimensions.rows)}%
       )`;
 
 			const delay = Math.random() * maxAnimationDelay;

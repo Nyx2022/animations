@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/state";
 	import { H1, H2, Paragraph, H3 } from "$lib/components/docs/markdown/index";
-	import DottedMapRaw from "$lib/components/magic-ui/dotted-map/dotted-map.svelte?raw";
-	import type { CodeBlock } from "$lib/components/ui/code";
 
 	import { PreviewComponent } from "$lib/components/ui/preview-component";
 	import InstallComponent from "$lib/components/docs/base/InstallComponent.svelte";
@@ -10,16 +8,9 @@
 	import { CopyPageDropdown } from "$lib/components/docs/copy-page-dropdown";
 	import { data } from "./data";
 
-	const code: CodeBlock = {
-		filename: "dotted-map.svelte",
-		filecode: DottedMapRaw,
-		lang: "svelte",
-		isExpand: true,
-	};
-
-	const PreviewComp = $derived(data.preview);
-	const installUrl = $derived(`${page.url.origin}/r/${data.id}.json`);
-	const llmsTxtUrl = $derived(`${page.url}/llms.txt`);
+	let PreviewComp = $derived(data.preview);
+	let installUrl = $derived(`${page.url.origin}/r/${data.id}.json`);
+	let llmsTxtUrl = $derived(`${page.url}/llms.txt`);
 </script>
 
 <div>
@@ -33,18 +24,17 @@
 
 	<!-- Preview Component -->
 	<div class="my-6">
-		<PreviewComponent code={data.previewCode}>
-			{#if PreviewComp}
-				<PreviewComp />
-			{/if}
+		<PreviewComponent code={data.previewCode} isCentered={false}>
+			<PreviewComp />
 		</PreviewComponent>
 	</div>
 
 	<H2 id="installation">Installation</H2>
 	<InstallComponent
 		{installUrl}
-		codeBlocks={[code]}
-		folderStructure={data.folderStructure}
+		codeBlocks={data.installBlock?.installCode}
+		folderStructure={data.installBlock?.folderStructure}
+		packages={data.installBlock?.packages}
 		class="my-4"
 	/>
 
@@ -60,7 +50,7 @@
 					<Paragraph>{example.description}</Paragraph>
 				{/if}
 				<div class="my-4">
-					<PreviewComponent code={example.code}>
+					<PreviewComponent code={example.code} isCentered={true}>
 						<ExampleComp />
 					</PreviewComponent>
 				</div>

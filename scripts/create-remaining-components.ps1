@@ -1,7 +1,4 @@
 $components = @(
-    @{ name = "marquee"; examples = 2 },
-    @{ name = "pixel-image"; examples = 2 },
-    @{ name = "shine-border"; examples = 2 },
     @{ name = "striped-pattern"; examples = 2 },
     @{ name = "typing-animation"; examples = 2 }
 )
