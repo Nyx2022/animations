@@ -11,27 +11,35 @@ An animated background border effect that creates a radiant shine animation arou
 ::::tabs{sync="pm"}
 
 :::tab{label="npm"}
+
 ```bash
 npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.json
 ```
+
 :::
 
 :::tab{label="pnpm"}
+
 ```bash
 pnpm dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.json
 ```
+
 :::
 
 :::tab{label="yarn"}
+
 ```bash
 yarn dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.json
 ```
+
 :::
 
 :::tab{label="bun"}
+
 ```bash
 bunx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.json
 ```
+
 :::
 
 ::::
@@ -83,13 +91,13 @@ The `ShineBorder` component uses `position: absolute` with `inset: 0`, so:
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `borderWidth` | `number` | `1` | Width of the border in pixels |
-| `duration` | `number` | `14` | Duration of the shine animation cycle in seconds |
-| `shineColor` | `string \| string[]` | `"#000000"` | Color(s) of the shine effect. Accepts a single color or array of colors for gradient |
-| `class` | `string` | `""` | Additional CSS classes to apply |
-| `style` | `string` | `undefined` | Additional inline styles |
+| Prop          | Type                 | Default     | Description                                                                          |
+| ------------- | -------------------- | ----------- | ------------------------------------------------------------------------------------ |
+| `borderWidth` | `number`             | `1`         | Width of the border in pixels                                                        |
+| `duration`    | `number`             | `14`        | Duration of the shine animation cycle in seconds                                     |
+| `shineColor`  | `string \| string[]` | `"#000000"` | Color(s) of the shine effect. Accepts a single color or array of colors for gradient |
+| `class`       | `string`             | `""`        | Additional CSS classes to apply                                                      |
+| `style`       | `string`             | `undefined` | Additional inline styles                                                             |
 
 ## Examples
 
@@ -100,9 +108,7 @@ A vibrant multi-color shine effect using an array of colors for a gradient appea
 ```svelte
 <div class="relative overflow-hidden rounded-lg border">
   <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
-  <div class="p-6">
-    Rainbow shine border effect
-  </div>
+  <div class="p-6">Rainbow shine border effect</div>
 </div>
 ```
 
@@ -118,9 +124,7 @@ A single-color shine effect that adapts to light/dark mode using `mode-watcher`.
 
 <div class="relative overflow-hidden rounded-lg border">
   <ShineBorder shineColor={mode.current === "dark" ? "white" : "black"} />
-  <div class="p-6">
-    Theme-adaptive monotone shine
-  </div>
+  <div class="p-6">Theme-adaptive monotone shine</div>
 </div>
 ```
 
@@ -130,14 +134,8 @@ Adjust the animation speed and border thickness for different visual effects.
 
 ```svelte
 <div class="relative overflow-hidden rounded-2xl">
-  <ShineBorder
-    shineColor="#3B82F6"
-    duration={8}
-    borderWidth={2}
-  />
-  <div class="p-6">
-    Faster animation with thicker border
-  </div>
+  <ShineBorder shineColor="#3B82F6" duration={8} borderWidth={2} />
+  <div class="p-6">Faster animation with thicker border</div>
 </div>
 ```
 
@@ -146,7 +144,7 @@ Adjust the animation speed and border thickness for different visual effects.
 Apply the shine effect to buttons for interactive highlights.
 
 ```svelte
-<button class="relative overflow-hidden rounded-full px-6 py-3 bg-transparent">
+<button class="relative overflow-hidden rounded-full bg-transparent px-6 py-3">
   <ShineBorder shineColor={["#06B6D4", "#8B5CF6"]} duration={10} />
   <span class="relative z-10">Shiny Button</span>
 </button>
