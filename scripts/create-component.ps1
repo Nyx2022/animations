@@ -163,13 +163,13 @@ let installBlock : InstallComponentDocs={
       lang: "typescript",
     }
   ],
-  folderStructure: `src/
+  folderStructure: ``src/
 └── lib/
     └── components/
         └── magic-ui/
             └── $kebabCase/
                 ├── $kebabCase.svelte
-                └── index.ts`,
+                └── index.ts``,
 };
 
 export const data: ComponentDoc = {
@@ -259,18 +259,7 @@ export const GET: RequestHandler = async () => {
 Set-Content -Path "$baseDir\llms.txt\+server.ts" -Value $serverTs -Encoding UTF8
 
 # Create example files
-$previewSvelte = @"
-<script lang="ts">
-  import __PASCAL_CASE__ from "`$lib/components/magic-ui/$kebabCase/$kebabCase.svelte";
-</script>
-
-<div class="flex items-center justify-center w-full h-full min-h-[200px]">
-  <__PASCAL_CASE__>
-    Preview Example
-  </__PASCAL_CASE__>
-</div>
-"@
-$previewSvelte = $previewSvelte -replace '__PASCAL_CASE__', $pascalCase
+$previewSvelte = ""
 
 Set-Content -Path "$baseDir\examples\preview.svelte" -Value $previewSvelte -Encoding UTF8
 
