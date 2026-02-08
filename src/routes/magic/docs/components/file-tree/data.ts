@@ -22,9 +22,9 @@ export const meta: ComponentMeta = {
 const examples: Example[] = [];
 
 const seo: SEO = {
-  title: "File Tree - SV5 Animations",
+  title: "File Tree - Svelte 5 Animations",
   description: "Learn how to create interactive file tree components in Svelte with expandable folders and animations.",
-  keywords: ["Svelte", "File Tree", "SV5 Animations", "Animation", "Web Design", "Tree View"],
+  keywords: ["Svelte", "File Tree", "Svelte 5 Animations", "Animation", "Web Design", "Tree View"],
 };
 
 let installBlock : InstallComponentDocs={

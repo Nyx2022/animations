@@ -15,9 +15,9 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-  title: "Animated Grid Pattern - SV5 Animations",
-  description: "Learn how to create animated grid pattern effects in Svelte using the SV5 Animations library.",
-  keywords: ["Svelte", "Animated Grid Pattern", "SV5 Animations", "Animation", "Web Design"],
+  title: "Animated Grid Pattern - Svelte 5 Animations",
+  description: "Learn how to create animated grid pattern effects in Svelte using the Svelte 5 Animations library.",
+  keywords: ["Svelte", "Animated Grid Pattern", "Svelte 5 Animations", "Animation", "Web Design"],
 };
 
 let installBlock: InstallComponentDocs = {

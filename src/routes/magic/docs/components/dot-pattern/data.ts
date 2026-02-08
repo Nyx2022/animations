@@ -42,9 +42,9 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-  title: "Dot Pattern - SV5 Animations",
+  title: "Dot Pattern - Svelte 5 Animations",
   description: "Learn how to create customizable dot pattern backgrounds in Svelte with animations.",
-  keywords: ["Svelte", "Dot Pattern", "SV5 Animations", "Animation", "Web Design", "Background"],
+  keywords: ["Svelte", "Dot Pattern", "Svelte 5 Animations", "Animation", "Web Design", "Background"],
 };
 
 let installBlock : InstallComponentDocs={

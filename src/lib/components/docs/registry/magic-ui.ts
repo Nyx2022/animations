@@ -79,6 +79,13 @@ export const magicUIComponents: MagicComponent[] = [
     badge: "New",
     desc: "A component for creating file tree views with folder and file icons.",
   },
+  {
+    id: "dotted-map",
+    name: "Dotted Map",
+    href: "/magic/docs/components/dotted-map",
+    badge: "New",
+    desc: "A component for creating dotted map with custom dots and lines.",
+  },
 ];
 
 /**

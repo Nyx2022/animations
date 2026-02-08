@@ -77,9 +77,9 @@ let installBlock: InstallComponentDocs = {
 }
 
 const seo: SEO = {
-  title: "Border Beam - SV5 Animations",
-  description: "Learn how to create border beam effects in Svelte using the SV5 Animations library.",
-  keywords: ["Svelte", "Border Beam", "SV5 Animations", "Animation", "Web Design"],
+  title: "Border Beam - Svelte 5 Animations",
+  description: "Learn how to create border beam effects in Svelte using the Svelte 5 Animations library.",
+  keywords: ["Svelte", "Border Beam", "Svelte 5 Animations", "Animation", "Web Design"],
 };
 
 export const data: ComponentDoc = {

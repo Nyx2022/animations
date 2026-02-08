@@ -16,10 +16,10 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: 'Dotted Map - SV5 Animations',
+	title: 'Dotted Map - Svelte 5 Animations',
 	description:
-		'Learn how to create interactive dotted world maps with markers in Svelte using the SV5 Animations library.',
-	keywords: ['Svelte', 'Dotted Map', 'World Map', 'SV5 Animations', 'Visualization', 'SVG']
+		'Learn how to create interactive dotted world maps with markers in Svelte using the Svelte 5 Animations library.',
+	keywords: ['Svelte', 'Dotted Map', 'World Map', 'Svelte 5 Animations', 'Visualization', 'SVG']
 };
 
 const examples: Example[] = [

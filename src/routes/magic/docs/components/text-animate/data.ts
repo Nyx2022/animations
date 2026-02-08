@@ -115,9 +115,9 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-  title: "Text Animate - SV5 Animations",
-  description: "Learn how to create animated text effects in Svelte with blur, slide, scale, and fade animations using the SV5 Animations library.",
-  keywords: ["Svelte", "Text Animation", "SV5 Animations", "Motion", "Web Design", "Framer Motion"],
+  title: "Text Animate - Svelte 5 Animations",
+  description: "Learn how to create animated text effects in Svelte with blur, slide, scale, and fade animations using the Svelte 5 Animations library.",
+  keywords: ["Svelte", "Text Animation", "Svelte 5 Animations", "Motion", "Web Design", "Framer Motion"],
 };
 
 export const data: ComponentDoc = {

@@ -53,9 +53,9 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-  title: "Blur Fade - SV5 Animations",
-  description: "Learn how to create blur fade effects in Svelte using the SV5 Animations library.",
-  keywords: ["Svelte", "Blur Fade", "SV5 Animations", "Animation", "Web Design"],
+  title: "Blur Fade - Svelte 5 Animations",
+  description: "Learn how to create blur fade effects in Svelte using the Svelte 5 Animations library.",
+  keywords: ["Svelte", "Blur Fade", "Svelte 5 Animations", "Animation", "Web Design"],
 };
 
 let installBlock : InstallComponentDocs={

@@ -16,9 +16,9 @@ export const meta: ComponentMeta = {
 
 
 const seo: SEO = {
-  title: " - SV5 Animations",
-  description: "Learn how to create  effects in Svelte using the SV5 Animations library.",
-  keywords: ["Svelte", "", "SV5 Animations", "Animation", "Web Design"],
+  title: " - Svelte 5 Animations",
+  description: "Learn how to create  effects in Svelte using the Svelte 5 Animations library.",
+  keywords: ["Svelte", "", "Svelte 5 Animations", "Animation", "Web Design"],
 };
 
 export const data: ComponentDoc = {

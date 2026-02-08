@@ -29,9 +29,9 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-  title: "Animated Gradient Text - SV5 Animations",
-  description: "Learn how to create animated gradient text effects in Svelte using the SV5 Animations library.",
-  keywords: ["Svelte", "Animated Gradient Text", "SV5 Animations", "CSS Effects", "Web Design"],
+  title: "Animated Gradient Text - Svelte 5 Animations",
+  description: "Learn how to create animated gradient text effects in Svelte using the Svelte 5 Animations library.",
+  keywords: ["Svelte", "Animated Gradient Text", "Svelte 5 Animations", "CSS Effects", "Web Design"],
 };
 
 const tailwind: CodeBlock = {
