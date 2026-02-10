@@ -2,10 +2,7 @@
 	import { cn } from "$lib/utils";
 	import type { Snippet } from "svelte";
 
-	interface PulsatingButtonProps extends Omit<
-		svelte.JSX.HTMLAttributes<HTMLButtonElement>,
-		"children"
-	> {
+	interface PulsatingButtonProps {
 		children: Snippet;
 		class?: string;
 		pulseColor?: string;
@@ -19,11 +16,6 @@
 		duration = "1.5s",
 		...props
 	}: PulsatingButtonProps = $props();
-
-	const buttonStyle = $derived(`
-    --pulse-color: ${pulseColor};
-    --duration: ${duration};
-  `);
 </script>
 
 <button
@@ -31,13 +23,13 @@
 		"bg-primary text-primary-foreground relative flex cursor-pointer items-center justify-center rounded-lg px-4 py-2 text-center",
 		className
 	)}
-	style={buttonStyle}
+	style="--pulse-color: {pulseColor}; --duration: {duration};"
 	{...props}
 >
 	<div class="relative z-10">
 		{@render children()}
 	</div>
 	<div
-		class="absolute top-1/2 left-1/2 size-full -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-lg bg-inherit"
-	/>
+		class="animate-pulse-ring absolute top-1/2 left-1/2 size-full -translate-x-1/2 -translate-y-1/2 rounded-lg bg-inherit"
+	></div>
 </button>

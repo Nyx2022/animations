@@ -71,7 +71,9 @@
 												{#if item.badge}
 													<Badge
 														variant="secondary"
-														class="ml-auto px-1.5 py-0 text-[10px]"
+														class={item.badge === "Beta"
+															? "ml-auto border-yellow-500/30 bg-yellow-500/20 px-1.5 py-0 text-[10px] text-yellow-600 dark:bg-yellow-500/20 dark:text-yellow-400"
+															: "ml-auto px-1.5 py-0 text-[10px]"}
 													>
 														{item.badge}
 													</Badge>

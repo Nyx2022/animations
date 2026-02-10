@@ -123,7 +123,7 @@
 
 <MotionComponent
 	bind:this={elementRef}
-	class={cn("overflow-hidden py-2 text-4xl font-bold", className)}
+	class={cn("overflow-hidden py-2 text-4xl font-medium", className)}
 	onmouseenter={handleAnimationTrigger}
 >
 	<AnimatePresence>

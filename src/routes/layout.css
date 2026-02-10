@@ -120,6 +120,8 @@
 	--animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
 	--animate-blink-cursor: blink-cursor 1.2s step-end infinite;
 	--animate-shine: shine var(--duration) infinite linear;
+	--animate-line-shadow: line-shadow 15s linear infinite;
+	--animate-pulse-ring: pulse-ring var(--duration) ease-out infinite;
 }
 
 ::view-transition-old(root),
@@ -208,5 +210,23 @@
 	}
 	to {
 		background-position: 0% 0%;
+	}
+}
+
+@keyframes line-shadow {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 100% -100%;
+	}
+}
+
+@keyframes pulse-ring {
+	0% {
+		box-shadow: 0 0 0 0 var(--pulse-color);
+	}
+	100% {
+		box-shadow: 0 0 0 8px transparent;
 	}
 }
