@@ -49,7 +49,7 @@
 			</Tabs.Trigger>
 		</Tabs.List>
 	</Tabs.Root>
-	<div class="mt-1">
+	<div class="mt-1" data-toc-ignore>
 		{#if value === "preview"}
 			<!-- <ComponentView> -->
 			<div

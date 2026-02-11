@@ -1,25 +1,13 @@
 <script lang="ts">
-	import { onMount } from "svelte";
 	import { cn } from "$lib/utils";
+	import { watch } from "runed";
 	import type { Snippet } from "svelte";
 	import type { HTMLButtonAttributes } from "svelte/elements";
 
 	interface RippleButtonProps extends HTMLButtonAttributes {
-		/**
-		 * Button content
-		 */
 		children: Snippet;
-		/**
-		 * Additional CSS classes
-		 */
 		class?: string;
-		/**
-		 * Ripple color
-		 */
 		rippleColor?: string;
-		/**
-		 * Animation duration
-		 */
 		duration?: string;
 	}
 
@@ -50,7 +38,7 @@
 		buttonRipples = [...buttonRipples, newRipple];
 	};
 
-	$effect(() => {
+	watch([() => buttonRipples, () => duration], () => {
 		if (buttonRipples.length > 0) {
 			const lastRipple = buttonRipples[buttonRipples.length - 1];
 			const timeout = setTimeout(() => {
@@ -63,7 +51,7 @@
 
 <button
 	class={cn(
-		"bg-background text-primary relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 px-4 py-2 text-center",
+		"bg-muted text-primary relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 px-4 py-2 text-center",
 		className
 	)}
 	onclick={handleClick}
@@ -73,18 +61,20 @@
 		{@render children()}
 	</div>
 	<span class="pointer-events-none absolute inset-0">
-		{#each buttonRipples as ripple (ripple.key)}
+		{#each buttonRipples as ripple}
 			<span
-				class="animate-rippling bg-background absolute rounded-full opacity-30"
+				class="animate-rippling absolute rounded-full"
 				style="
-          width: {ripple.size}px;
-          height: {ripple.size}px;
-          top: {ripple.y}px;
-          left: {ripple.x}px;
-          background-color: {rippleColor};
-          transform: scale(0);
-        "
-			/>
+					--duration: {duration};
+					width: {ripple.size}px;
+					height: {ripple.size}px;
+					top: {ripple.y}px;
+					left: {ripple.x}px;
+					background-color: {rippleColor};
+					transform: scale(0);
+				"
+			>
+			</span>
 		{/each}
 	</span>
 </button>

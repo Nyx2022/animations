@@ -37,6 +37,13 @@
 	--sidebar-accent-foreground: oklch(0.205 0 0);
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
+
+	/* Rainbow Button */
+	--color-1: hsl(0 100% 63%);
+	--color-2: hsl(270 100% 63%);
+	--color-3: hsl(210 100% 63%);
+	--color-4: hsl(195 100% 63%);
+	--color-5: hsl(90 100% 63%);
 }
 
 .dark {
@@ -71,6 +78,13 @@
 	--sidebar-accent-foreground: oklch(0.985 0 0);
 	--sidebar-border: oklch(1 0 0 / 10%);
 	--sidebar-ring: oklch(0.556 0 0);
+
+	/* Rainbow Button */
+	--color-1: hsl(0 100% 63%);
+	--color-2: hsl(270 100% 63%);
+	--color-3: hsl(210 100% 63%);
+	--color-4: hsl(195 100% 63%);
+	--color-5: hsl(90 100% 63%);
 }
 
 @theme inline {
@@ -110,6 +124,13 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 
+	/* Rainbow Button */
+	--color-1: var(--color-1);
+	--color-2: var(--color-2);
+	--color-3: var(--color-3);
+	--color-4: var(--color-4);
+	--color-5: var(--color-5);
+
 	/* Font */
 	--font-sans: "Geist", sans-serif;
 
@@ -122,6 +143,11 @@
 	--animate-shine: shine var(--duration) infinite linear;
 	--animate-line-shadow: line-shadow 15s linear infinite;
 	--animate-pulse-ring: pulse-ring var(--duration) ease-out infinite;
+	--animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+	--animate-ripple: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s) infinite;
+	--animate-rippling: rippling var(--duration) ease-out;
+	--animate-shimmer-slide: shimmer-slide var(--speed) ease-in-out infinite alternate;
+	--animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
 }
 
 ::view-transition-old(root),
@@ -228,5 +254,56 @@
 	}
 	100% {
 		box-shadow: 0 0 0 8px transparent;
+	}
+}
+
+@keyframes rainbow {
+	0% {
+		background-position: 0%;
+	}
+	100% {
+		background-position: 200%;
+	}
+}
+@keyframes ripple {
+	0%,
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+	}
+	50% {
+		transform: translate(-50%, -50%) scale(0.9);
+	}
+}
+
+@keyframes rippling {
+	0% {
+		opacity: 1;
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(2);
+		opacity: 0;
+	}
+}
+
+@keyframes shimmer-slide {
+	to {
+		transform: translate(calc(100cqw - 100%), 0);
+	}
+}
+@keyframes spin-around {
+	0% {
+		transform: translateZ(0) rotate(0);
+	}
+	15%,
+	35% {
+		transform: translateZ(0) rotate(90deg);
+	}
+	65%,
+	85% {
+		transform: translateZ(0) rotate(270deg);
+	}
+	100% {
+		transform: translateZ(0) rotate(360deg);
 	}
 }

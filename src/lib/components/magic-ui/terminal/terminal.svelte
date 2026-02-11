@@ -1,7 +1,8 @@
 <script lang="ts">
-	import { onMount, setContext, getContext } from "svelte";
+	import { onMount, setContext } from "svelte";
 	import { cn } from "$lib/utils";
 	import type { Snippet } from "svelte";
+	import { watch } from "runed";
 
 	interface TerminalProps {
 		children: Snippet;
@@ -24,24 +25,30 @@
 	const sequenceHasStarted = $derived(sequence ? !startOnView || isInView : false);
 
 	// Set context for child components - always set it, check sequence inside
-	const useSequence = sequence;
-	setContext(
-		"terminal-sequence",
-		useSequence
-			? {
-					get activeIndex() {
-						return activeIndex;
-					},
-					get sequenceStarted() {
-						return sequenceHasStarted;
-					},
-					completeItem: (index: number) => {
-						if (index === activeIndex) {
-							activeIndex = activeIndex + 1;
+	let useSequence = $derived(sequence);
+	watch(
+		() => useSequence,
+		() => {
+			// setContext("terminal-sequence", val);
+			setContext(
+				"terminal-sequence",
+				useSequence
+					? {
+							get activeIndex() {
+								return activeIndex;
+							},
+							get sequenceStarted() {
+								return sequenceHasStarted;
+							},
+							completeItem: (index: number) => {
+								if (index === activeIndex) {
+									activeIndex = activeIndex + 1;
+								}
+							},
 						}
-					},
-				}
-			: null
+					: null
+			);
+		}
 	);
 
 	onMount(() => {

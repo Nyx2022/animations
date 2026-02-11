@@ -1,26 +1,21 @@
 <script lang="ts">
-	import { motion, type Transition } from "motion-sv";
+	import { motion, type MotionProps, type Transition } from "motion-sv";
 	import { cn } from "$lib/utils";
 	import type { Snippet } from "svelte";
 	import type { HTMLButtonAttributes } from "svelte/elements";
 
 	interface ShinyButtonProps extends HTMLButtonAttributes {
-		/**
-		 * Button content
-		 */
 		children: Snippet;
-		/**
-		 * Additional CSS classes
-		 */
 		class?: string;
 	}
 
 	let { children, class: className, ...props }: ShinyButtonProps = $props();
 
-	const animationProps = {
+	let animationProps: MotionProps = {
 		initial: { "--x": "100%", scale: 0.8 },
 		animate: { "--x": "-100%", scale: 1 },
-		whileTap: { scale: 0.95 },
+		// whileTap: { scale: 0.95 },
+		whilePress: { scale: 0.95 },
 		transition: {
 			repeat: Infinity,
 			repeatType: "loop",
@@ -35,7 +30,7 @@
 				damping: 5,
 				mass: 0.5,
 			},
-		} as Transition,
+		},
 	};
 </script>
 
@@ -45,23 +40,18 @@
 		className
 	)}
 	{...animationProps}
-	{...props}
 >
 	<span
 		class="relative block size-full text-sm tracking-wide text-[rgb(0,0,0,65%)] uppercase dark:font-light dark:text-[rgb(255,255,255,90%)]"
-		style:mask-image="linear-gradient(-75deg,var(--primary) calc(var(--x) + 20%),transparent
-		calc(var(--x) + 30%),var(--primary) calc(var(--x) + 100%))"
+		style="mask-image: linear-gradient(-75deg,var(--primary) calc(var(--x) + 20%),transparent calc(var(--x) + 30%),var(--primary) calc(var(--x) + 100%));"
 	>
 		{@render children()}
 	</span>
 	<span
-		style:mask="linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box
-		exclude,linear-gradient(rgb(0,0,0), rgb(0,0,0))"
-		style:-webkit-mask="linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box
-		exclude,linear-gradient(rgb(0,0,0), rgb(0,0,0))"
-		style:background-image="linear-gradient(-75deg,var(--primary)/10%
-		calc(var(--x)+20%),var(--primary)/50% calc(var(--x)+25%),var(--primary)/10%
-		calc(var(--x)+100%))"
+		style="mask: linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box exclude,linear-gradient(rgb(0,0,0), rgb(0,0,0));
+		-webkit-mask: linear-gradient(rgb(0,0,0), rgb(0,0,0)) content-box exclude,linear-gradient(rgb(0,0,0), rgb(0,0,0));
+		background-image: linear-gradient(-75deg,var(--primary)/10% calc(var(--x)+20%),var(--primary)/50% calc(var(--x)+25%),var(--primary)/10% calc(var(--x)+100%))"
 		class="absolute inset-0 z-10 block rounded-[inherit] p-px"
-	/>
+	>
+	</span>
 </motion.button>

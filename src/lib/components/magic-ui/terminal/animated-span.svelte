@@ -26,13 +26,13 @@
 	let hasStarted = $state(false);
 
 	// Get sequence context if available
-	const sequence = getContext<{
+	let sequence = getContext<{
 		activeIndex: number;
 		sequenceStarted: boolean;
 		completeItem: (index: number) => void;
 	} | null>("terminal-sequence");
 
-	const shouldAnimate = $derived(
+	let shouldAnimate = $derived(
 		sequence && itemIndex !== undefined ? hasStarted : startOnView ? isInView : true
 	);
 

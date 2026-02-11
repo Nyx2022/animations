@@ -232,13 +232,13 @@ export const magicUIComponents: MagicComponent[] = [
 		badge: "New",
 		desc: "Shine border is an animated background border effect.",
 	},
-	{
-		id: "shiny-button",
-		name: "Shiny Button",
-		href: "/magic/docs/components/shiny-button",
-		badge: "Beta",
-		desc: "",
-	},
+	// {
+	// 	id: "shiny-button",
+	// 	name: "Shiny Button",
+	// 	href: "/magic/docs/components/shiny-button",
+	// 	badge: "Beta",
+	// 	desc: "",
+	// },
 	{
 		id: "striped-pattern",
 		name: "Striped Pattern",
@@ -246,13 +246,13 @@ export const magicUIComponents: MagicComponent[] = [
 		badge: "New",
 		desc: "A background striped pattern made with SVGs, fully customizable using Tailwind CSS.",
 	},
-	{
-		id: "terminal",
-		name: "Terminal",
-		href: "/magic/docs/components/terminal",
-		badge: "Beta",
-		desc: "",
-	},
+	// {
+	// 	id: "terminal",
+	// 	name: "Terminal",
+	// 	href: "/magic/docs/components/terminal",
+	// 	badge: "Beta",
+	// 	desc: "",
+	// },
 	{
 		id: "text-animate",
 		name: "Text Animate",
