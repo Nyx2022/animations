@@ -11,12 +11,10 @@ import PreviewCode from "./examples/preview.svelte?raw";
 export const meta: ComponentMeta = {
 	id: "ripple",
 	title: "Ripple",
-	description: "A description for Ripple component.",
+	description: "An animated ripple effect typically used behind elements to emphasize them.",
 	category: "animation",
 	badge: "new",
 };
-
-const examples: Example[] = [];
 
 const seo: SEO = {
 	title: "Ripple - Svelte 5 Animations",
@@ -39,13 +37,32 @@ let installBlock: InstallComponentDocs = {
 			lang: "typescript",
 		},
 	],
+	tailwind: {
+		filename: "src/routes/layout.css",
+		lang: "css",
+		filecode: `@theme inline {
+  --animate-ripple: ripple var(--duration, 2s) ease calc(var(--i, 0) * 0.2s)
+    infinite;
+
+  @keyframes ripple {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+  }
+}`,
+		highlight: [2, [4, 14]],
+	},
 	folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ ripple/
-                â”œâ”€â”€ ripple.svelte
-                â””â”€â”€ index.ts`,
+	├── lib/
+	│   └── components/
+	│       └── magic-ui/
+	│           └── ripple/
+	│               ├── ripple.svelte
+	│               └── index.ts`,
 };
 
 export const data: ComponentDoc = {
@@ -58,7 +75,6 @@ export const data: ComponentDoc = {
 		hideLines: true,
 		highlight: [2],
 	},
-	examples,
 	seo,
 	props: [
 		{
@@ -70,6 +86,24 @@ export const data: ComponentDoc = {
 					type: "string",
 					default: '""',
 					description: "Additional CSS classes to apply",
+				},
+				{
+					name: "mainCircleSize",
+					type: "number",
+					default: "210",
+					description: "The size of the main circle",
+				},
+				{
+					name: "mainCircleOpacity",
+					type: "number",
+					default: "0.24",
+					description: "The opacity of the main circle",
+				},
+				{
+					name: "numCircles",
+					type: "number",
+					default: "8",
+					description: "The number of ripple circles",
 				},
 			],
 		},

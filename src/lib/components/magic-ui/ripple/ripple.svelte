@@ -3,21 +3,9 @@
 	import type { HTMLAttributes } from "svelte/elements";
 
 	interface RippleProps extends HTMLAttributes<HTMLDivElement> {
-		/**
-		 * The size of the main circle
-		 */
 		mainCircleSize?: number;
-		/**
-		 * The opacity of the main circle
-		 */
 		mainCircleOpacity?: number;
-		/**
-		 * The number of ripple circles
-		 */
 		numCircles?: number;
-		/**
-		 * Additional CSS classes
-		 */
 		class?: string;
 	}
 
@@ -32,7 +20,7 @@
 
 <div
 	class={cn(
-		"pointer-events-none absolute inset-0 [mask-image:linear-gradient(to_bottom,white,transparent)] select-none",
+		"pointer-events-none absolute inset-0 mask-[linear-gradient(to_bottom,white,transparent)] select-none",
 		className
 	)}
 	{...props}
@@ -43,7 +31,24 @@
 		{@const animationDelay = `${i * 0.06}s`}
 		<div
 			class="animate-ripple bg-foreground/25 absolute rounded-full border shadow-xl"
-			style:--i={i}
+			style="
+				--i: {i};
+				width: {size}px;
+				height: {size}px;
+				opacity: {opacity};
+				animation-delay: {animationDelay};
+				border-style: solid;
+				border-width: 1px;
+				border-color: var(--foreground);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) scale(1);"
+		></div>
+	{/each}
+</div>
+
+<!--
+style:--i={i}
 			style:width="{size}px"
 			style:height="{size}px"
 			style:opacity
@@ -54,6 +59,4 @@
 			style:top="50%"
 			style:left="50%"
 			style:transform="translate(-50%, -50%) scale(1)"
-		/>
-	{/each}
-</div>
+ -->

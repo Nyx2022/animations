@@ -7,16 +7,29 @@ import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/typ
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
 
+import RainbowButtonOutline from "./examples/rainbow-button-outline.svelte";
+import RainbowButtonOutlineRaw from "./examples/rainbow-button-outline.svelte?raw";
+
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
 	id: "rainbow-button",
 	title: "Rainbow Button",
-	description: "A description for Rainbow Button component.",
+	description: "An animated button with a rainbow effect.",
 	category: "animation",
 	badge: "new",
 };
 
-const examples: Example[] = [];
+const examples: Example[] = [
+	{
+		name: "Outline Variant",
+		preview: RainbowButtonOutline,
+		code: {
+			filename: "rainbow-button-outline.svelte",
+			filecode: RainbowButtonOutlineRaw,
+			lang: "svelte",
+		},
+	},
+];
 
 const seo: SEO = {
 	title: "Rainbow Button - Svelte 5 Animations",
@@ -38,14 +51,43 @@ let installBlock: InstallComponentDocs = {
 			filecode: IndexTs,
 			lang: "typescript",
 		},
+		{
+			filename: "src/routes/layout.css",
+			filecode: `:root {
+  --color-1: 0 100% 63%;
+  --color-2: 270 100% 63%;
+  --color-3: 210 100% 63%;
+  --color-4: 195 100% 63%;
+  --color-5: 90 100% 63%;
+}`,
+			lang: "css",
+			highlight: [[2, 6]],
+		},
 	],
+	tailwind: {
+		filename: "src/routes/layout.css",
+		lang: "css",
+		filecode: `@theme inline {
+  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+
+  @keyframes rainbow {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 200%;
+    }
+  }
+}`,
+		highlight: [2, [4, 14]],
+	},
 	folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ rainbow-button/
-                â”œâ”€â”€ rainbow-button.svelte
-                â””â”€â”€ index.ts`,
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── rainbow-button/
+                ├── rainbow-button.svelte
+                └── index.ts`,
 };
 
 export const data: ComponentDoc = {
@@ -60,19 +102,5 @@ export const data: ComponentDoc = {
 	},
 	examples,
 	seo,
-	props: [
-		{
-			name: "RainbowButton",
-			desc: "A component for Rainbow Button.",
-			props: [
-				{
-					name: "class",
-					type: "string",
-					default: '""',
-					description: "Additional CSS classes to apply",
-				},
-			],
-		},
-	],
 	installBlock,
 };

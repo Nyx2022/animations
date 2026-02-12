@@ -2,6 +2,7 @@
 	import { motion } from "motion-sv";
 	import { cn } from "$lib/utils";
 	import type { Snippet } from "svelte";
+	import type { HTMLAttributes } from "svelte/elements";
 
 	interface BeamProps {
 		width: string | number;
@@ -10,10 +11,7 @@
 		duration: number;
 	}
 
-	interface WarpBackgroundProps extends Omit<
-		svelte.JSX.HTMLAttributes<HTMLDivElement>,
-		"children"
-	> {
+	interface WarpBackgroundProps extends HTMLAttributes<HTMLDivElement> {
 		children: Snippet;
 		class?: string;
 		perspective?: number;
@@ -66,11 +64,11 @@
 <div class={cn("relative rounded border p-20", className)} {...props}>
 	<div
 		style={containerStyle}
-		class="[container-type:size] pointer-events-none absolute top-0 left-0 size-full overflow-hidden [clipPath:inset(0)] [perspective:var(--perspective)] [transform-style:preserve-3d]"
+		class="@container-[size] pointer-events-none absolute top-0 left-0 size-full overflow-hidden [clipPath:inset(0)] perspective-(--perspective) transform-3d"
 	>
 		<!-- top side -->
 		<div
-			class="[container-type:inline-size] absolute z-20 [height:100cqmax] [width:100cqi] [transform-origin:50%_0%] [transform:rotateX(-90deg)] [background-size:var(--beam-size)_var(--beam-size)] [background:linear-gradient(var(--grid-color)_0_1px,_transparent_1px_var(--beam-size))_50%_-0.5px_/var(--beam-size)_var(--beam-size),linear-gradient(90deg,_var(--grid-color)_0_1px,_transparent_1px_var(--beam-size))_50%_50%_/var(--beam-size)_var(--beam-size)] [transform-style:preserve-3d]"
+			class="@container absolute z-20 h-[100cqmax] w-[100cqi] origin-[50%_0%] transform-[rotateX(-90deg)] bg-size-[var(--beam-size)_var(--beam-size)] [background:linear-gradient(var(--grid-color)_0_1px,transparent_1px_var(--beam-size))_50%_-0.5px_/var(--beam-size)_var(--beam-size),linear-gradient(90deg,var(--grid-color)_0_1px,transparent_1px_var(--beam-size))_50%_50%_/var(--beam-size)_var(--beam-size)] transform-3d"
 		>
 			{#each topBeams as beam, index}
 				{@const hue = Math.floor(Math.random() * 360)}
@@ -82,7 +80,7 @@
 						"--aspect-ratio": `${ar}`,
 						"--background": `linear-gradient(hsl(${hue} 80% 60%), transparent)`,
 					}}
-					class="absolute top-0 left-[var(--x)] [aspect-ratio:1/var(--aspect-ratio)] [width:var(--width)] [background:var(--background)]"
+					class="absolute top-0 left-(--x) aspect-[1/var(--aspect-ratio)] w-(--width) [background:var(--background)]"
 					initial={{ y: "100cqmax", x: "-50%" }}
 					animate={{ y: "-100%", x: "-50%" }}
 					transition={{
@@ -96,7 +94,7 @@
 		</div>
 		<!-- bottom side -->
 		<div
-			class="[container-type:inline-size] absolute top-full [height:100cqmax] [width:100cqi] [transform-origin:50%_0%] [transform:rotateX(-90deg)] [background-size:var(--beam-size)_var(--beam-size)] [background:linear-gradient(var(--grid-color)_0_1px,_transparent_1px_var(--beam-size))_50%_-0.5px_/var(--beam-size)_var(--beam-size),linear-gradient(90deg,_var(--grid-color)_0_1px,_transparent_1px_var(--beam-size))_50%_50%_/var(--beam-size)_var(--beam-size)] [transform-style:preserve-3d]"
+			class="@container absolute top-full h-[100cqmax] w-[100cqi] origin-[50%_0%] transform-[rotateX(-90deg)] bg-size-[var(--beam-size)_var(--beam-size)] [background:linear-gradient(var(--grid-color)_0_1px,transparent_1px_var(--beam-size))_50%_-0.5px_/var(--beam-size)_var(--beam-size),linear-gradient(90deg,var(--grid-color)_0_1px,transparent_1px_var(--beam-size))_50%_50%_/var(--beam-size)_var(--beam-size)] transform-3d"
 		>
 			{#each bottomBeams as beam, index}
 				{@const hue = Math.floor(Math.random() * 360)}
@@ -108,7 +106,7 @@
 						"--aspect-ratio": `${ar}`,
 						"--background": `linear-gradient(hsl(${hue} 80% 60%), transparent)`,
 					}}
-					class="absolute top-0 left-[var(--x)] [aspect-ratio:1/var(--aspect-ratio)] [width:var(--width)] [background:var(--background)]"
+					class="absolute top-0 left-(--x) aspect-[1/var(--aspect-ratio)] w-(--width) [background:var(--background)]"
 					initial={{ y: "100cqmax", x: "-50%" }}
 					animate={{ y: "-100%", x: "-50%" }}
 					transition={{
@@ -122,7 +120,7 @@
 		</div>
 		<!-- left side -->
 		<div
-			class="[container-type:inline-size] absolute top-0 left-0 [height:100cqmax] [width:100cqh] [transform-origin:0%_0%] [transform:rotate(90deg)_rotateX(-90deg)] [background-size:var(--beam-size)_var(--beam-size)] [background:linear-gradient(var(--grid-color)_0_1px,_transparent_1px_var(--beam-size))_50%_-0.5px_/var(--beam-size)_var(--beam-size),linear-gradient(90deg,_var(--grid-color)_0_1px,_transparent_1px_var(--beam-size))_50%_50%_/var(--beam-size)_var(--beam-size)] [transform-style:preserve-3d]"
+			class="@container absolute top-0 left-0 h-[100cqmax] w-[100cqh] origin-[0%_0%] transform-[rotate(90deg)_rotateX(-90deg)] bg-size-[var(--beam-size)_var(--beam-size)] [background:linear-gradient(var(--grid-color)_0_1px,transparent_1px_var(--beam-size))_50%_-0.5px_/var(--beam-size)_var(--beam-size),linear-gradient(90deg,var(--grid-color)_0_1px,transparent_1px_var(--beam-size))_50%_50%_/var(--beam-size)_var(--beam-size)] transform-3d"
 		>
 			{#each leftBeams as beam, index}
 				{@const hue = Math.floor(Math.random() * 360)}
@@ -134,7 +132,7 @@
 						"--aspect-ratio": `${ar}`,
 						"--background": `linear-gradient(hsl(${hue} 80% 60%), transparent)`,
 					}}
-					class="absolute top-0 left-[var(--x)] [aspect-ratio:1/var(--aspect-ratio)] [width:var(--width)] [background:var(--background)]"
+					class="absolute top-0 left-(--x) aspect-[1/var(--aspect-ratio)] w-(--width) [background:var(--background)]"
 					initial={{ y: "100cqmax", x: "-50%" }}
 					animate={{ y: "-100%", x: "-50%" }}
 					transition={{
@@ -148,7 +146,7 @@
 		</div>
 		<!-- right side -->
 		<div
-			class="[container-type:inline-size] absolute top-0 right-0 [height:100cqmax] [width:100cqh] [transform-origin:100%_0%] [transform:rotate(-90deg)_rotateX(-90deg)] [background-size:var(--beam-size)_var(--beam-size)] [background:linear-gradient(var(--grid-color)_0_1px,_transparent_1px_var(--beam-size))_50%_-0.5px_/var(--beam-size)_var(--beam-size),linear-gradient(90deg,_var(--grid-color)_0_1px,_transparent_1px_var(--beam-size))_50%_50%_/var(--beam-size)_var(--beam-size)] [transform-style:preserve-3d]"
+			class="@container absolute top-0 right-0 h-[100cqmax] w-[100cqh] origin-[100%_0%] transform-[rotate(-90deg)_rotateX(-90deg)] bg-size-[var(--beam-size)_var(--beam-size)] [background:linear-gradient(var(--grid-color)_0_1px,transparent_1px_var(--beam-size))_50%_-0.5px_/var(--beam-size)_var(--beam-size),linear-gradient(90deg,var(--grid-color)_0_1px,transparent_1px_var(--beam-size))_50%_50%_/var(--beam-size)_var(--beam-size)] transform-3d"
 		>
 			{#each rightBeams as beam, index}
 				{@const hue = Math.floor(Math.random() * 360)}
@@ -160,7 +158,7 @@
 						"--aspect-ratio": `${ar}`,
 						"--background": `linear-gradient(hsl(${hue} 80% 60%), transparent)`,
 					}}
-					class="absolute top-0 left-[var(--x)] [aspect-ratio:1/var(--aspect-ratio)] [width:var(--width)] [background:var(--background)]"
+					class="absolute top-0 left-(--x) aspect-[1/var(--aspect-ratio)] w-(--width) [background:var(--background)]"
 					initial={{ y: "100cqmax", x: "-50%" }}
 					animate={{ y: "-100%", x: "-50%" }}
 					transition={{

@@ -1,7 +1,6 @@
 ﻿import RippleButtonRaw from "$lib/components/magic-ui/ripple-button/ripple-button.svelte?raw";
 import IndexTs from "$lib/components/magic-ui/ripple-button/index.ts?raw";
 
-import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
 import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
 import Preview from "./examples/preview.svelte";
@@ -11,12 +10,10 @@ import PreviewCode from "./examples/preview.svelte?raw";
 export const meta: ComponentMeta = {
 	id: "ripple-button",
 	title: "Ripple Button",
-	description: "A description for Ripple Button component.",
+	description: "An animated button with ripple useful for user engagement.",
 	category: "animation",
 	badge: "new",
 };
-
-const examples: Example[] = [];
 
 const seo: SEO = {
 	title: "Ripple Button - Svelte 5 Animations",
@@ -39,14 +36,50 @@ let installBlock: InstallComponentDocs = {
 			lang: "typescript",
 		},
 	],
+	tailwind: {
+		filename: "src/routes/layout.css",
+		lang: "css",
+		highlight: [2, [4, 14]],
+		filecode: `@theme inline {
+  --animate-rippling: rippling var(--duration) ease-out;
+
+  @keyframes rippling {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+}`,
+	},
 	folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ ripple-button/
-                â”œâ”€â”€ ripple-button.svelte
-                â””â”€â”€ index.ts`,
+	├── lib/
+	│   └── components/
+	│       └── magic-ui/
+	│           └── ripple-button/
+	│               ├── ripple-button.svelte
+	│               └── index.ts`,
 };
+
+/*
+interface RippleButtonProps extends HTMLButtonAttributes {
+		children: Snippet;
+		class?: string;
+		rippleColor?: string;
+		duration?: string;
+	}
+
+	let {
+		class: className,
+		children,
+		rippleColor = "#ffffff",
+		duration = "600ms",
+		onclick,
+		...props
+	}: RippleButtonProps = $props();
+ */
 
 export const data: ComponentDoc = {
 	...meta,
@@ -58,7 +91,6 @@ export const data: ComponentDoc = {
 		hideLines: true,
 		highlight: [2],
 	},
-	examples,
 	seo,
 	props: [
 		{
@@ -70,6 +102,24 @@ export const data: ComponentDoc = {
 					type: "string",
 					default: '""',
 					description: "Additional CSS classes to apply",
+				},
+				{
+					name: "rippleColor",
+					type: "string",
+					default: '"#ffffff"',
+					description: "Color of the ripple effect",
+				},
+				{
+					name: "duration",
+					type: "string",
+					default: '"600ms"',
+					description: "Duration of the ripple effect",
+				},
+				{
+					name: "children",
+					type: "Snippet",
+					default: "required",
+					description: "The content of the button",
 				},
 			],
 		},

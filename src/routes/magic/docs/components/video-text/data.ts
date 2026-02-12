@@ -11,12 +11,10 @@ import PreviewCode from "./examples/preview.svelte?raw";
 export const meta: ComponentMeta = {
 	id: "video-text",
 	title: "Video Text",
-	description: "A description for Video Text component.",
+	description: "A text component with a video background.",
 	category: "animation",
 	badge: "new",
 };
-
-const examples: Example[] = [];
 
 const seo: SEO = {
 	title: "Video Text - Svelte 5 Animations",
@@ -40,13 +38,45 @@ let installBlock: InstallComponentDocs = {
 		},
 	],
 	folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ video-text/
-                â”œâ”€â”€ video-text.svelte
-                â””â”€â”€ index.ts`,
+	├── lib/
+	│   └── components/
+	│       └── magic-ui/
+	│           └── video-text/
+	│               ├── video-text.svelte
+	│               └── index.ts`,
 };
+
+/*
+interface VideoTextProps {
+		src: string;
+		content: string;
+		class?: string;
+		autoPlay?: boolean;
+		muted?: boolean;
+		loop?: boolean;
+		preload?: "auto" | "metadata" | "none";
+		fontSize?: string | number;
+		fontWeight?: string | number;
+		textAnchor?: string;
+		dominantBaseline?: string;
+		fontFamily?: string;
+	}
+
+	let {
+		src,
+		content,
+		class: className = "",
+		autoPlay = true,
+		muted = true,
+		loop = true,
+		preload = "auto",
+		fontSize = 20,
+		fontWeight = "bold",
+		textAnchor = "middle",
+		dominantBaseline = "middle",
+		fontFamily = "sans-serif",
+	}: VideoTextProps = $props();
+ */
 
 export const data: ComponentDoc = {
 	...meta,
@@ -58,7 +88,6 @@ export const data: ComponentDoc = {
 		hideLines: true,
 		highlight: [2],
 	},
-	examples,
 	seo,
 	props: [
 		{
@@ -70,6 +99,72 @@ export const data: ComponentDoc = {
 					type: "string",
 					default: '""',
 					description: "Additional CSS classes to apply",
+				},
+				{
+					name: "src",
+					type: "string",
+					default: "",
+					description: "Source URL of the video",
+				},
+				{
+					name: "content",
+					type: "string",
+					default: "",
+					description: "Text content to display",
+				},
+				{
+					name: "autoPlay",
+					type: "boolean",
+					default: "true",
+					description: "Whether to autoplay the video",
+				},
+				{
+					name: "muted",
+					type: "boolean",
+					default: "true",
+					description: "Whether to mute the video",
+				},
+				{
+					name: "loop",
+					type: "boolean",
+					default: "true",
+					description: "Whether to loop the video",
+				},
+				{
+					name: "preload",
+					type: '"auto" | "metadata" | "none"',
+					default: '"auto"',
+					description: "Preload behavior of the video",
+				},
+				{
+					name: "fontSize",
+					type: "string | number",
+					default: "20",
+					description: "Font size of the text",
+				},
+				{
+					name: "fontWeight",
+					type: "string | number",
+					default: '"bold"',
+					description: "Font weight of the text",
+				},
+				{
+					name: "textAnchor",
+					type: "string",
+					default: '"middle"',
+					description: "Text anchor alignment",
+				},
+				{
+					name: "dominantBaseline",
+					type: "string",
+					default: '"middle"',
+					description: "Dominant baseline alignment",
+				},
+				{
+					name: "fontFamily",
+					type: "string",
+					default: '"sans-serif"',
+					description: "Font family of the text",
 				},
 			],
 		},

@@ -1,1 +1,2 @@
-export { default as ScrollProgress } from "./scroll-progress.svelte";
+import ScrollProgress from "./scroll-progress.svelte";
+export { ScrollProgress };

@@ -1,1 +1,2 @@
-export { default as VideoText } from "./video-text.svelte";
+import VideoText from "./video-text.svelte";
+export { VideoText };

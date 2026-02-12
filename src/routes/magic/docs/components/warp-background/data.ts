@@ -40,12 +40,12 @@ let installBlock: InstallComponentDocs = {
 		},
 	],
 	folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ warp-background/
-                â”œâ”€â”€ warp-background.svelte
-                â””â”€â”€ index.ts`,
+	lib/
+	├── components/
+	│   └── magic-ui/
+	│       └── warp-background/
+	│           ├── warp-background.svelte
+	│           └── index.ts`,
 };
 
 export const data: ComponentDoc = {
@@ -70,6 +70,54 @@ export const data: ComponentDoc = {
 					type: "string",
 					default: '""',
 					description: "Additional CSS classes to apply",
+				},
+				{
+					name: "perspective",
+					type: "number",
+					default: "100",
+					description: "Perspective value for the 3D effect",
+				},
+				{
+					name: "beamsPerSide",
+					type: "number",
+					default: "3",
+					description: "Number of beams per side",
+				},
+				{
+					name: "beamSize",
+					type: "number",
+					default: "5",
+					description: "Size of each beam",
+				},
+				{
+					name: "beamDelayMax",
+					type: "number",
+					default: "3",
+					description: "Maximum delay for each beam",
+				},
+				{
+					name: "beamDelayMin",
+					type: "number",
+					default: "0",
+					description: "Minimum delay for each beam",
+				},
+				{
+					name: "beamDuration",
+					type: "number",
+					default: "3",
+					description: "Duration of each beam animation",
+				},
+				{
+					name: "gridColor",
+					type: "string",
+					default: '"var(--border)"',
+					description: "Color of the grid",
+				},
+				{
+					name: "children",
+					type: "Snippet",
+					default: "required",
+					description: "The content to wrap",
 				},
 			],
 		},

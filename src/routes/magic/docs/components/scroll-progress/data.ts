@@ -40,12 +40,12 @@ let installBlock: InstallComponentDocs = {
 		},
 	],
 	folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ scroll-progress/
-                â”œâ”€â”€ scroll-progress.svelte
-                â””â”€â”€ index.ts`,
+	├── lib/
+	│   └── components/
+	│       └── magic-ui/
+	│           └── scroll-progress/
+	│               ├── scroll-progress.svelte
+	│               └── index.ts`,
 };
 
 export const data: ComponentDoc = {
