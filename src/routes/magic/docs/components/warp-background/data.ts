@@ -19,7 +19,7 @@ export const meta: ComponentMeta = {
 const examples: Example[] = [];
 
 const seo: SEO = {
-	title: "Warp Background - Svelte 5 Animations",
+	title: "Warp Background",
 	description:
 		"Learn how to create Warp Background effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Warp Background", "Svelte 5 Animations", "Animation", "Web Design"],

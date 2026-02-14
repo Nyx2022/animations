@@ -32,7 +32,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Rainbow Button - Svelte 5 Animations",
+	title: "Rainbow Button",
 	description:
 		"Learn how to create Rainbow Button effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Rainbow Button", "Svelte 5 Animations", "Animation", "Web Design"],

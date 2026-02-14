@@ -19,7 +19,7 @@ export const meta: ComponentMeta = {
 const examples: Example[] = [];
 
 const seo: SEO = {
-	title: "Scroll Progress - Svelte 5 Animations",
+	title: "Scroll Progress",
 	description:
 		"Learn how to create Scroll Progress effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Scroll Progress", "Svelte 5 Animations", "Animation", "Web Design"],

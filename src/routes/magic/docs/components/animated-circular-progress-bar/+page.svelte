@@ -7,12 +7,14 @@
 	import { CopyPageDropdown } from "$lib/components/docs/copy-page-dropdown";
 	import { data } from "./data";
 	import { page } from "$app/state";
+	import SEO from "$lib/seo/SEO.svelte";
 
 	let PreviewComp = $derived(data.preview);
 	let installUrl = $derived(`${page.url.origin}/r/${data.id}.json`);
 	let llmsTxtUrl = $derived(`${page.url}/llms.txt`);
 </script>
 
+<SEO title={data.seo.title} description={data.seo.description} keywords={data.seo.keywords} />
 <div>
 	<div class="flex flex-col justify-between gap-4 md:flex-row md:items-center">
 		<H1 id="introduction">{data.title}</H1>

@@ -19,7 +19,7 @@ export const meta: ComponentMeta = {
 const examples: Example[] = [];
 
 const seo: SEO = {
-	title: "Terminal - Svelte 5 Animations",
+	title: "Terminal",
 	description:
 		"Learn how to create Terminal effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Terminal", "Svelte 5 Animations", "Animation", "Web Design"],

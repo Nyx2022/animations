@@ -15,7 +15,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: " - Svelte 5 Animations",
+	title: "",
 	description: "Learn how to create  effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "", "Svelte 5 Animations", "Animation", "Web Design"],
 };

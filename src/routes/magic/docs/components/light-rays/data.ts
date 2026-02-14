@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Light Rays - Svelte 5 Animations",
+	title: "Light Rays",
 	description:
 		"Learn how to create Light Rays effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Light Rays", "Svelte 5 Animations", "Animation", "Web Design"],

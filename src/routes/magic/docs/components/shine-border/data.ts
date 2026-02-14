@@ -34,7 +34,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "ShineBorder - Svelte 5 Animations",
+	title: "ShineBorder",
 	description: "Shine border is an animated background border effect.",
 	keywords: ["Svelte", "ShineBorder", "Svelte 5 Animations", "Animation", "Web Design"],
 };

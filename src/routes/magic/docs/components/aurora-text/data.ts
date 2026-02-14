@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Aurora Text - Svelte 5 Animations",
+	title: "Aurora Text",
 	description:
 		"Learn how to create aurora text effects in Svelte using the Svelte 5 Animations library.",
 	keywords: [

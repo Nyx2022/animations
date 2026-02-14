@@ -16,7 +16,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Theme Toggler - Svelte 5 Animations",
+	title: "Theme Toggler",
 	description: "An Animated theme toggler component, fully customizable using Tailwind CSS.",
 	keywords: [
 		"Svelte",

@@ -29,7 +29,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Animated Gradient Text - Svelte 5 Animations",
+	title: "Animated Gradient Text",
 	description:
 		"Learn how to create animated gradient text effects in Svelte using the Svelte 5 Animations library.",
 	keywords: [

@@ -32,7 +32,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Cool Mode - Svelte 5 Animations",
+	title: "Cool Mode",
 	description:
 		"Learn how to add interactive particle effects to Svelte components with cool-mode.",
 	keywords: [

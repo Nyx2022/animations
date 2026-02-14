@@ -10,6 +10,7 @@
 	import { CopyPageDropdown } from "$lib/components/docs/copy-page-dropdown";
 	import SingleCodeFilename from "$lib/components/ui/code/single-code-filename.svelte";
 	import { data } from "./data";
+	import SEO from "$lib/seo/SEO.svelte";
 
 	const code: CodeBlock = {
 		filename: "AnimatedGradientText.svelte",
@@ -23,6 +24,7 @@
 	const llmsTxtUrl = $derived(`${page.url}/llms.txt`);
 </script>
 
+<SEO title={data.seo.title} description={data.seo.description} keywords={data.seo.keywords} />
 <div>
 	<div class="flex flex-col justify-between gap-4 md:flex-row md:items-center">
 		<H1 id="introduction">{data.title}</H1>

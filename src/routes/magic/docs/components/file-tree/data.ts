@@ -23,7 +23,7 @@ export const meta: ComponentMeta = {
 const examples: Example[] = [];
 
 const seo: SEO = {
-	title: "File Tree - Svelte 5 Animations",
+	title: "File Tree",
 	description:
 		"Learn how to create interactive file tree components in Svelte with expandable folders and animations.",
 	keywords: [

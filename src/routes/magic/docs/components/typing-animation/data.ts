@@ -87,7 +87,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Typing Animation - Svelte 5 Animations",
+	title: "Typing Animation",
 	description:
 		"Learn how to create typing animation effects in Svelte using the Svelte 5 Animations library with customizable cursor styles and animation controls.",
 	keywords: [

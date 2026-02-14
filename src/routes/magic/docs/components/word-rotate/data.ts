@@ -16,7 +16,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Word Rotate - Svelte 5 Animations",
+	title: "Word Rotate",
 	description:
 		"Learn how to create Word Rotate effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Word Rotate", "Svelte 5 Animations", "Animation", "Web Design"],

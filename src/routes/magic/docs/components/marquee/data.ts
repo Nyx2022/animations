@@ -61,7 +61,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Marquee - Svelte 5 Animations",
+	title: "Marquee",
 	description:
 		"Learn how to create infinite scrolling marquee effects in Svelte using the Svelte 5 Animations library.",
 	keywords: [

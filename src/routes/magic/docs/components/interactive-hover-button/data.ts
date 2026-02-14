@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Interactive Hover Button - Svelte 5 Animations",
+	title: "Interactive Hover Button",
 	description:
 		"Learn how to create Interactive Hover Button effects in Svelte using the Svelte 5 Animations library.",
 	keywords: [

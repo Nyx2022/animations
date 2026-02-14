@@ -20,7 +20,7 @@ export const meta: ComponentMeta = {
 const examples: Example[] = [];
 
 const seo: SEO = {
-	title: "Striped Pattern - Svelte 5 Animations",
+	title: "Striped Pattern",
 	description:
 		"A background striped pattern made with SVGs, fully customizable using Tailwind CSS.",
 	keywords: ["Svelte", "", "Svelte 5 Animations", "Animation", "Web Design"],

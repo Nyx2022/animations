@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Morphing Text - Svelte 5 Animations",
+	title: "Morphing Text",
 	description:
 		"Learn how to create Morphing Text effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Morphing Text", "Svelte 5 Animations", "Animation", "Web Design"],

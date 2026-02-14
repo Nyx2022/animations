@@ -104,7 +104,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Animated Beam - Svelte 5 Animations",
+	title: "Animated Beam",
 	description:
 		"Learn how to create animated beam effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Animated Beam", "Svelte 5 Animations", "Animation", "Web Design"],

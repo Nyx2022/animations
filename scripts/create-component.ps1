@@ -145,7 +145,7 @@ $dataTs += @"
 ];
 
 const seo: SEO = {
-  title: "$titleCase - Svelte 5 Animations",
+  title: "$titleCase",
   description: "Learn how to create $titleCase effects in Svelte using the Svelte 5 Animations library.",
   keywords: ["Svelte", "$titleCase", "Svelte 5 Animations", "Animation", "Web Design"],
 };

@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Avatar Circles - Svelte 5 Animations",
+	title: "Avatar Circles",
 	description:
 		"Learn how to create stacked avatar circles in Svelte using the Svelte 5 Animations library.",
 	keywords: [

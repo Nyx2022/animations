@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Neon Gradient Card - Svelte 5 Animations",
+	title: "Neon Gradient Card",
 	description:
 		"Learn how to create Neon Gradient Card effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Neon Gradient Card", "Svelte 5 Animations", "Animation", "Web Design"],
