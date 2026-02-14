@@ -43,7 +43,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Dot Pattern - Svelte 5 Animations",
+	title: "Dot Pattern",
 	description:
 		"Learn how to create customizable dot pattern backgrounds in Svelte with animations.",
 	keywords: [

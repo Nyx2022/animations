@@ -33,7 +33,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Flickering Grid - Svelte 5 Animations",
+	title: "Flickering Grid",
 	description:
 		"A flickering grid background made with SVGs, fully customizable using Tailwind CSS.",
 	keywords: ["Svelte", "Flickering Grid", "Svelte 5 Animations", "Animation", "Web Design"],

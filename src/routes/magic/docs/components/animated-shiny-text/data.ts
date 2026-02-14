@@ -19,7 +19,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Animated Shiny Text - Svelte 5 Animations",
+	title: "Animated Shiny Text",
 	description:
 		"Learn how to create shimmering text effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Animated Shiny Text", "Svelte 5 Animations", "Animation", "Web Design"],

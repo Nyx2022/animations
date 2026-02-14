@@ -116,7 +116,7 @@ const examples: Example[] = [
 ];
 
 const seo: SEO = {
-	title: "Text Animate - Svelte 5 Animations",
+	title: "Text Animate",
 	description:
 		"Learn how to create animated text effects in Svelte with blur, slide, scale, and fade animations using the Svelte 5 Animations library.",
 	keywords: [

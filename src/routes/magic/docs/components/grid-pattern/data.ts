@@ -19,7 +19,7 @@ export const meta: ComponentMeta = {
 const examples: Example[] = [];
 
 const seo: SEO = {
-	title: "Grid Pattern - Svelte 5 Animations",
+	title: "Grid Pattern",
 	description:
 		"Learn how to create grid pattern effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Grid Pattern", "Svelte 5 Animations", "Animation", "Web Design"],

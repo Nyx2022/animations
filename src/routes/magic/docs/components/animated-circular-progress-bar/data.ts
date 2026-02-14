@@ -18,7 +18,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Animated Circular Progress Bar - Svelte 5 Animations",
+	title: "Animated Circular Progress Bar",
 	description:
 		"Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.",
 	keywords: [

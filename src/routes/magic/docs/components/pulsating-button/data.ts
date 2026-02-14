@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Pulsating Button - Svelte 5 Animations",
+	title: "Pulsating Button",
 	description:
 		"Learn how to create Pulsating Button effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Pulsating Button", "Svelte 5 Animations", "Animation", "Web Design"],

@@ -16,7 +16,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Hyper Text - Svelte 5 Animations",
+	title: "Hyper Text",
 	description:
 		"Learn how to create Hyper Text effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Hyper Text", "Svelte 5 Animations", "Animation", "Web Design"],

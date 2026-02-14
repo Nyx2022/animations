@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Video Text - Svelte 5 Animations",
+	title: "Video Text",
 	description:
 		"Learn how to create Video Text effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Video Text", "Svelte 5 Animations", "Animation", "Web Design"],

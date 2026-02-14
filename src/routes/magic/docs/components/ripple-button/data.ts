@@ -16,7 +16,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Ripple Button - Svelte 5 Animations",
+	title: "Ripple Button",
 	description:
 		"Learn how to create Ripple Button effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Ripple Button", "Svelte 5 Animations", "Animation", "Web Design"],

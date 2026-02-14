@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Line Shadow Text - Svelte 5 Animations",
+	title: "Line Shadow Text",
 	description:
 		"Learn how to create Line Shadow Text effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Line Shadow Text", "Svelte 5 Animations", "Animation", "Web Design"],

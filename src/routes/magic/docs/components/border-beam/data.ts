@@ -78,7 +78,7 @@ let installBlock: InstallComponentDocs = {
 };
 
 const seo: SEO = {
-	title: "Border Beam - Svelte 5 Animations",
+	title: "Border Beam",
 	description:
 		"Learn how to create border beam effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Border Beam", "Svelte 5 Animations", "Animation", "Web Design"],

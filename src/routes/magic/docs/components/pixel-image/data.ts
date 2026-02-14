@@ -20,7 +20,7 @@ export const meta: ComponentMeta = {
 const examples: Example[] = [];
 
 const seo: SEO = {
-	title: "Pixel Image - Svelte 5 Animations",
+	title: "Pixel Image",
 	description:
 		"Learn how to create pixelated image reveal effects in Svelte with configurable grids, staggered animations, and grayscale-to-color transitions.",
 	keywords: [

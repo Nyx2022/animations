@@ -17,7 +17,7 @@ export const meta: ComponentMeta = {
 };
 
 const seo: SEO = {
-	title: "Ripple - Svelte 5 Animations",
+	title: "Ripple",
 	description:
 		"Learn how to create Ripple effects in Svelte using the Svelte 5 Animations library.",
 	keywords: ["Svelte", "Ripple", "Svelte 5 Animations", "Animation", "Web Design"],
