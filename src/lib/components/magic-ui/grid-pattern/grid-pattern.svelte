@@ -3,13 +3,7 @@
 	import type { SVGAttributes } from "svelte/elements";
 
 	interface GridPatternProps extends SVGAttributes<SVGSVGElement> {
-		/**
-		 * The width of each grid cell
-		 */
 		width?: number;
-		/**
-		 * The height of each grid cell
-		 */
 		height?: number;
 		/**
 		 * The x-offset of the pattern
@@ -26,10 +20,7 @@
 		/**
 		 * Stroke dash array for dashed lines
 		 */
-		strokeDasharray?: string;
-		/**
-		 * Additional CSS classes
-		 */
+		strokeDashArray?: string;
 		class?: string;
 	}
 
@@ -38,7 +29,7 @@
 		height = 40,
 		x = -1,
 		y = -1,
-		strokeDasharray = "0",
+		strokeDashArray = "0",
 		squares,
 		class: className,
 		...props
@@ -57,7 +48,7 @@
 >
 	<defs>
 		<pattern {id} {width} {height} patternUnits="userSpaceOnUse" {x} {y}>
-			<path d={`M.5 ${height}V.5H${width}`} fill="none" stroke-dasharray={strokeDasharray} />
+			<path d={`M.5 ${height}V.5H${width}`} fill="none" stroke-dasharray={strokeDashArray} />
 		</pattern>
 	</defs>
 	<rect width="100%" height="100%" stroke-width={0} fill={`url(#${id})`} />

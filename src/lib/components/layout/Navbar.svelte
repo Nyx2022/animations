@@ -5,10 +5,8 @@
 
 	import BookOpenIcon from "@lucide/svelte/icons/book-open";
 	import SparklesIcon from "@lucide/svelte/icons/sparkles";
-	import FileTextIcon from "@lucide/svelte/icons/file-text";
 	import HomeIcon from "@lucide/svelte/icons/home";
 	import ZapIcon from "@lucide/svelte/icons/zap";
-	import BoxesIcon from "@lucide/svelte/icons/boxes";
 	import type { Component } from "svelte";
 	import {
 		NavigationMenuContent,
@@ -233,7 +231,7 @@
 			</Popover>
 			<!-- Main nav  -->
 			<div class="flex items-center gap-6">
-				<a href="/" class="text-primary hover:text-primary/90"> Svelte 5 Animations </a>
+				<a href="/" class="text-primary hover:text-primary/90"> Svelte Animations </a>
 				<!-- Navigation menu  -->
 				<NavigationMenuRoot class="max-md:hidden" delayDuration={0}>
 					<NavigationMenuList class="gap-1 ">
