@@ -9,7 +9,10 @@
 		{
 			"files": "*.svelte",
 			"options": {
-				"parser": "svelte"
+				"parser": "svelte",
+				"tabWidth": 2,
+				"printWidth": 80,
+				"useTabs": false
 			}
 		},
 		{

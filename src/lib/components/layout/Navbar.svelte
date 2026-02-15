@@ -21,6 +21,7 @@
 	import { Popover, PopoverContent, PopoverTrigger } from "$lib/components/ui/popover";
 	// import AppSearchbar from "./app-searchbar.svelte";
 	import LightSwitch from "../ui/light-switch/light-switch.svelte";
+	import DocsSearchNavigation from "../docs/navigation/DocsSearchNavigation.svelte";
 	// import McpDialog from "./mcp-dialog.svelte";
 
 	type MobileNavigationSubItem = {
@@ -320,6 +321,7 @@
 			<div class="hidden md:block">
 				<!-- <McpDialog /> -->
 				<!-- <AppSearchbar /> -->
+				<DocsSearchNavigation />
 			</div>
 			<Button
 				variant="ghost"
