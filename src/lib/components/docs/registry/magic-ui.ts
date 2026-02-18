@@ -64,6 +64,13 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "A component to display overlapping avatar circles, commonly used for showing multiple users.",
 	},
 	{
+		id: "bento-grid",
+		name: "Bento Grid",
+		href: "/magic/docs/components/bento-grid",
+		badge: "New",
+		desc: "",
+	},
+	{
 		id: "blur-fade",
 		name: "Blur Fade",
 		href: "/magic/docs/components/blur-fade",
@@ -76,10 +83,31 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "An animated beam of light which travels along the border of its container.",
 	},
 	{
+		id: "confetti",
+		name: "Confetti",
+		href: "/magic/docs/components/confetti",
+		badge: "New",
+		desc: "",
+	},
+	{
 		id: "cool-mode",
 		name: "Cool Mode",
 		href: "/magic/docs/components/cool-mode",
 		desc: "Add a fun particle effect that follows mouse interactions, with support for emojis, images, and custom shapes.",
+	},
+	{
+		id: "dither-shader",
+		name: "Dither Shader",
+		href: "/magic/docs/components/dither-shader",
+		badge: "New",
+		desc: "",
+	},
+	{
+		id: "dock",
+		name: "Dock",
+		href: "/magic/docs/components/dock",
+		badge: "New",
+		desc: "",
 	},
 	{
 		id: "dot-pattern",
@@ -126,10 +154,24 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "A text animation that scrambles letters before revealing the final text.",
 	},
 	{
+		id: "icon-cloud",
+		name: "Icon Cloud",
+		href: "/magic/docs/components/icon-cloud",
+		badge: "New",
+		desc: "",
+	},
+	{
 		id: "interactive-hover-button",
 		name: "Interactive Hover Button",
 		href: "/magic/docs/components/interactive-hover-button",
 		desc: "A visually engaging button component that responds to hover with dynamic transitions",
+	},
+	{
+		id: "lens",
+		name: "Lens",
+		href: "/magic/docs/components/lens",
+		badge: "New",
+		desc: "",
 	},
 	{
 		id: "light-rays",
@@ -144,6 +186,13 @@ export const magicUIComponents: MagicComponent[] = [
 		href: "/magic/docs/components/line-shadow-text",
 		badge: "New",
 		desc: "A text component with a moving line shadow.",
+	},
+	{
+		id: "magic-card",
+		name: "Magic Card",
+		href: "/magic/docs/components/magic-card",
+		badge: "New",
+		desc: "",
 	},
 	{
 		id: "marquee",
@@ -179,11 +228,32 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "Animate numbers to count up or down to a target number",
 	},
 	{
+		id: "orbiting-circles",
+		name: "Orbiting Circles",
+		href: "/magic/docs/components/orbiting-circles",
+		badge: "New",
+		desc: "",
+	},
+	{
 		id: "pixel-image",
 		name: "Pixel Image",
 		href: "/magic/docs/components/pixel-image",
 		badge: "New",
 		desc: "A component that displays your image with a pixelated effect, enhancing the visual appeal of any image in your website.",
+	},
+	{
+		id: "pointer",
+		name: "Pointer",
+		href: "/magic/docs/components/pointer",
+		badge: "New",
+		desc: "",
+	},
+	{
+		id: "progressive-blur",
+		name: "Progressive Blur",
+		href: "/magic/docs/components/progressive-blur",
+		badge: "New",
+		desc: "",
 	},
 	{
 		id: "pulsating-button",
@@ -196,6 +266,13 @@ export const magicUIComponents: MagicComponent[] = [
 		name: "Rainbow Button",
 		href: "/magic/docs/components/rainbow-button",
 		desc: "An animated button with a rainbow effect.",
+	},
+	{
+		id: "retro-grid",
+		name: "Retro Grid",
+		href: "/magic/docs/components/retro-grid",
+		badge: "New",
+		desc: "",
 	},
 	{
 		id: "ripple",
@@ -235,6 +312,20 @@ export const magicUIComponents: MagicComponent[] = [
 	// 	badge: "Beta",
 	// 	desc: "",
 	// },
+	{
+		id: "smooth-cursor",
+		name: "Smooth Cursor",
+		href: "/magic/docs/components/smooth-cursor",
+		badge: "New",
+		desc: "",
+	},
+	{
+		id: "stagger-text",
+		name: "Stagger Text",
+		href: "/magic/docs/components/stagger-text",
+		badge: "New",
+		desc: "",
+	},
 	{
 		id: "striped-pattern",
 		name: "Striped Pattern",

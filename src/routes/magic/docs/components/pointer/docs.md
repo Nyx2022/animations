@@ -1,0 +1,29 @@
+﻿# Pointer
+
+A description for Pointer component.
+
+## Installation
+
+```bash
+npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/pointer.json
+```
+
+## Usage
+
+```svelte
+<script lang="ts">
+  import Pointer from "$lib/components/magic-ui/pointer/pointer.svelte";
+</script>
+
+<Pointer>
+  <!-- Your content here -->
+</Pointer>
+```
+
+## Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `class` | `string` | `""` | Additional CSS classes to apply |
+
+## Examples
