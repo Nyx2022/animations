@@ -82,13 +82,13 @@ export const magicUIComponents: MagicComponent[] = [
 		href: "/magic/docs/components/border-beam",
 		desc: "An animated beam of light which travels along the border of its container.",
 	},
-	{
-		id: "confetti",
-		name: "Confetti",
-		href: "/magic/docs/components/confetti",
-		badge: "New",
-		desc: "",
-	},
+	// {
+	// 	id: "confetti",
+	// 	name: "Confetti",
+	// 	href: "/magic/docs/components/confetti",
+	// 	badge: "Beta",
+	// 	desc: "",
+	// },
 	{
 		id: "cool-mode",
 		name: "Cool Mode",
