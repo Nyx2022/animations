@@ -10,6 +10,7 @@
 		orientation = "vertical",
 		scrollbarXClasses = "",
 		scrollbarYClasses = "",
+		fadeEffect = true,
 		children,
 		...restProps
 	}: WithoutChild<ScrollAreaPrimitive.RootProps> & {
@@ -17,6 +18,7 @@
 		scrollbarXClasses?: string | undefined;
 		scrollbarYClasses?: string | undefined;
 		viewportRef?: HTMLElement | null;
+		fadeEffect?: boolean;
 	} = $props();
 </script>
 
@@ -33,8 +35,10 @@
 		data-slot="scroll-area-viewport"
 		class={[
 			"ring-ring/10 dark:ring-ring/20 dark:outline-ring/40 outline-ring/50 size-full rounded-[inherit] transition-[color,box-shadow] focus-visible:ring-4 focus-visible:outline-1",
-			"no-scrollbar data-[orientation=horizontal]:overflow-x-auto data-[orientation=vertical]:overflow-y-auto",
-			"data-[orientation=horizontal]:scroll-fade-effect-x data-[orientation=vertical]:scroll-fade-effect-y no-scrollbar",
+			fadeEffect &&
+				"no-scrollbar data-[orientation=horizontal]:overflow-x-auto data-[orientation=vertical]:overflow-y-auto",
+			fadeEffect &&
+				"data-[orientation=horizontal]:scroll-fade-effect-x data-[orientation=vertical]:scroll-fade-effect-y no-scrollbar",
 		]}
 	>
 		{@render children?.()}

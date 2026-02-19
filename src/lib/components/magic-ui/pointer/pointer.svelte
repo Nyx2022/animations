@@ -1,113 +1,109 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { motion, AnimatePresence } from "motion-sv";
-  import { cn } from "$lib/utils";
-  import type { Snippet } from "svelte";
-  import type { HTMLMotionProps } from "motion-sv";
+	import { motion, AnimatePresence, useMotionValue } from "motion-sv";
+	import { cn } from "$lib/utils";
+	import { type Snippet } from "svelte";
+	import { watch } from "runed";
+	// import type { HTMLMotionProps } from "motion-sv";
 
-  interface PointerProps extends Omit<HTMLMotionProps<"div">, "children"> {
-    children?: Snippet;
-    class?: string;
-  }
+	interface PointerProps {
+		children?: Snippet;
+		class?: string;
+	}
 
-  let {
-    children,
-    class: className,
-    style,
-    ...props
-  }: PointerProps = $props();
+	let { children, class: className }: PointerProps = $props();
 
-  let x = $state(0);
-  let y = $state(0);
-  let isActive = $state(false);
-  let containerRef: HTMLDivElement | null = $state(null);
+	const x = useMotionValue(0);
+	const y = useMotionValue(0);
+	let isActive = $state(false);
+	let containerRef: HTMLDivElement | null = $state(null);
 
-  onMount(() => {
-    if (typeof window !== "undefined" && containerRef) {
-      // Get the parent element directly from the ref
-      const parentElement = containerRef.parentElement;
+	watch([() => x, () => y], () => {
+		if (typeof window !== "undefined" && containerRef) {
+			// Get the parent element directly from the ref
+			const parentElement = containerRef.parentElement;
 
-      if (parentElement) {
-        // Add cursor-none to parent
-        parentElement.style.cursor = "none";
+			if (parentElement) {
+				console.log("Parent element found:", parentElement);
 
-        // Add event listeners to parent
-        const handleMouseMove = (e: MouseEvent) => {
-          x = e.clientX;
-          y = e.clientY;
-          isActive = true;
-        };
+				// Add cursor-none to parent
+				parentElement.style.cursor = "none";
 
-        const handleMouseEnter = (e: MouseEvent) => {
-          x = e.clientX;
-          y = e.clientY;
-          isActive = true;
-        };
+				// Add event listeners to parent
+				const handleMouseMove = (e: MouseEvent) => {
+					// console.log("Mouse move event:", e);
+					// console.log("Mouse coordinates:", e.clientX, e.clientY);
+					console.log(x, y);
+					x.set(e.clientX);
+					y.set(e.clientY);
+					isActive = true;
+				};
 
-        const handleMouseLeave = () => {
-          isActive = false;
-        };
+				const handleMouseEnter = (e: MouseEvent) => {
+					x.set(e.clientX);
+					y.set(e.clientY);
 
-        parentElement.addEventListener("mousemove", handleMouseMove);
-        parentElement.addEventListener("mouseenter", handleMouseEnter);
-        parentElement.addEventListener("mouseleave", handleMouseLeave);
+					isActive = true;
+				};
 
-        return () => {
-          parentElement.style.cursor = "";
-          parentElement.removeEventListener("mousemove", handleMouseMove);
-          parentElement.removeEventListener("mouseenter", handleMouseEnter);
-          parentElement.removeEventListener("mouseleave", handleMouseLeave);
-        };
-      }
-    }
-  });
+				const handleMouseLeave = () => {
+					isActive = false;
+				};
+
+				parentElement.addEventListener("mousemove", handleMouseMove);
+				parentElement.addEventListener("mouseenter", handleMouseEnter);
+				parentElement.addEventListener("mouseleave", handleMouseLeave);
+
+				return () => {
+					parentElement.style.cursor = "";
+					parentElement.removeEventListener("mousemove", handleMouseMove);
+					parentElement.removeEventListener("mouseenter", handleMouseEnter);
+					parentElement.removeEventListener("mouseleave", handleMouseLeave);
+				};
+			}
+		}
+	});
 </script>
 
-<div bind:this={containerRef} />
+<div bind:this={containerRef}></div>
 <AnimatePresence>
-  {#if isActive}
-    <motion.div
-      class="pointer-events-none fixed z-50"
-      style={{
-        top: `${y}px`,
-        left: `${x}px`,
-        transform: "translate(-50%, -50%)",
-        ...style,
-      }}
-      initial={{
-        scale: 0,
-        opacity: 0,
-      }}
-      animate={{
-        scale: 1,
-        opacity: 1,
-      }}
-      exit={{
-        scale: 0,
-        opacity: 0,
-      }}
-      {...props}
-    >
-      {#if children}
-        {@render children()}
-      {:else}
-        <svg
-          stroke="currentColor"
-          fill="currentColor"
-          stroke-width="1"
-          viewBox="0 0 16 16"
-          height="24"
-          width="24"
-          xmlns="http://www.w3.org/2000/svg"
-          class={cn(
-            "rotate-[-70deg] stroke-white text-black",
-            className
-          )}
-        >
-          <path d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z" />
-        </svg>
-      {/if}
-    </motion.div>
-  {/if}
+	{#if isActive}
+		<motion.div
+			class="pointer-events-none fixed z-50 transform-[translate(-50%,-50%)]"
+			style={{
+				top: y,
+				left: x,
+			}}
+			initial={{
+				scale: 0,
+				opacity: 0,
+			}}
+			animate={{
+				scale: 1,
+				opacity: 1,
+			}}
+			exit={{
+				scale: 0,
+				opacity: 0,
+			}}
+		>
+			{#if children}
+				{@render children()}
+			{:else}
+				<svg
+					stroke="currentColor"
+					fill="currentColor"
+					stroke-width="1"
+					viewBox="0 0 16 16"
+					height="24"
+					width="24"
+					xmlns="http://www.w3.org/2000/svg"
+					class={cn("rotate-[-70deg] stroke-white text-black", className)}
+				>
+					<path
+						d="M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z"
+					/>
+				</svg>
+			{/if}
+		</motion.div>
+	{/if}
 </AnimatePresence>
-
