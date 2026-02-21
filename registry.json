@@ -1152,6 +1152,26 @@
 			],
 			"registryDependencies": [],
 			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "dither-shader",
+			"type": "registry:block",
+			"title": "Dither Shader",
+			"description": "A canvas-based component that applies dithering effects to images with customizable patterns and color modes.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/dither-shader/dither-shader.svelte",
+					"type": "registry:component",
+					"target": "magic/dither-shader/dither-shader.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/dither-shader/index.ts",
+					"type": "registry:file",
+					"target": "magic/dither-shader/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": []
 		}
 	]
 }

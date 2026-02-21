@@ -5,7 +5,7 @@
 	"type": "registry:block",
 	"description": "An interactive file tree component with expandable folders, selectable files, and smooth animations.",
 	"dependencies": [
-		"lucide-svelte",
+		"@lucide/svelte",
 		"motion-sv"
 	],
 	"files": [

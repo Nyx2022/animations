@@ -60,8 +60,10 @@
 	<!-- Props Section -->
 	{#if data.props && data.props.length > 0}
 		<H2 id="props">Props</H2>
-		{#each data.props as prop}
-			<APITable data={prop} />
-		{/each}
+		<div>
+			{#each data.props as prop}
+				<APITable data={prop} />
+			{/each}
+		</div>
 	{/if}
 </div>

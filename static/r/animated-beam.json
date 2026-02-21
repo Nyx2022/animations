@@ -14,7 +14,7 @@
 			"target": "magic/animated-beam/animated-beam.svelte"
 		},
 		{
-			"content": "export { default as AnimatedBeam } from \"./animated-beam.svelte\";\nexport type { AnimatedBeamProps, PathDimensions, GradientCoordinates } from \"./types\";\n",
+			"content": "export type { AnimatedBeamProps, PathDimensions, GradientCoordinates } from \"./types\";\nimport AnimatedBeam from \"./animated-beam.svelte\";\nexport { AnimatedBeam };\n",
 			"type": "registry:file",
 			"target": "magic/animated-beam/index.ts"
 		},

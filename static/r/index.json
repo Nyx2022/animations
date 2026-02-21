@@ -86,7 +86,7 @@
 		"type": "registry:block",
 		"description": "An interactive file tree component with expandable folders, selectable files, and smooth animations.",
 		"dependencies": [
-			"lucide-svelte",
+			"@lucide/svelte",
 			"motion-sv"
 		],
 		"registryDependencies": [],
@@ -231,7 +231,7 @@
 		"type": "registry:block",
 		"description": "A video dialog component with animated entrance effects, thumbnail support, and customizable animation styles.",
 		"dependencies": [
-			"lucide-svelte",
+			"@lucide/svelte",
 			"motion-sv"
 		],
 		"registryDependencies": [],
@@ -254,7 +254,7 @@
 		"type": "registry:block",
 		"description": "A button with an interactive hover effect featuring an expanding dot and sliding text animation with an arrow.",
 		"dependencies": [
-			"lucide-svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [],
 		"relativeUrl": "interactive-hover-button.json"
@@ -420,5 +420,25 @@
 		],
 		"registryDependencies": [],
 		"relativeUrl": "word-rotate.json"
+	},
+	{
+		"name": "bento-grid",
+		"title": "Bento Grid",
+		"type": "registry:block",
+		"description": "A flexible grid layout with interchangeable BentoCard items for showcasing content in a responsive masonry style.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bento-grid.json"
+	},
+	{
+		"name": "dither-shader",
+		"title": "Dither Shader",
+		"type": "registry:block",
+		"description": "A canvas-based component that applies dithering effects to images with customizable patterns and color modes.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "dither-shader.json"
 	}
 ]

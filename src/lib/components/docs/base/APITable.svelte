@@ -7,6 +7,7 @@
 	import Td from "../markdown/Td.svelte";
 	import InfoPopover from "./InfoPopover.svelte";
 	import { cn } from "$lib/utils";
+	import { H3 } from "../markdown";
 
 	type PropDef = {
 		name: string;
@@ -23,12 +24,8 @@
 	};
 
 	let {
-		headers = ["Name", "Type", "Default", "Description"],
-		keys = ["name", "type", "default", "description"],
 		data,
 	}: {
-		headers?: string[];
-		keys?: string[];
 		data: PropsTable | PropDef[];
 	} = $props();
 
@@ -36,10 +33,21 @@
 		return "props" in data;
 	};
 
-	const tableData = isPropsTable(data) ? data.props : data;
-	const tableHeaders = isPropsTable(data) ? ["Name", "Type", "Default", "Description"] : headers;
-	const tableKeys = isPropsTable(data) ? ["name", "type", "default", "description"] : keys;
+	let tableData = $derived(isPropsTable(data) ? data.props : data);
+	let tableHeaders = ["Name", "Type", "Default", "Description"];
+	let tableKeys = ["name", "type", "default", "description"];
 </script>
+
+{#if isPropsTable(data)}
+	<H3 id={data.name} class="mt-6 text-xl font-semibold">
+		{data.name}
+	</H3>
+	{#if data.desc}
+		<p class="text-muted-foreground">
+			{data.desc}
+		</p>
+	{/if}
+{/if}
 
 <Table>
 	<Thead>
@@ -57,7 +65,7 @@
 						<span class="inline-flex items-center">
 							<code
 								class={cn(
-									"border-border bg-card-muted text-foreground mono rounded-lg border px-1.5 py-0.5 font-normal shadow-sm"
+									"bg-muted/40 text-foreground  rounded-sm border px-1.5 py-0.5 font-normal"
 								)}
 							>
 								{key === "default" && row.required

@@ -85,7 +85,8 @@ export const data: ComponentDoc = {
 	seo,
 	props: [
 		{
-			name: "BentoGrid",
+			name: "Bento Grid",
+			desc: "Bento grid component",
 			props: [
 				{
 					name: "class",
@@ -101,7 +102,7 @@ export const data: ComponentDoc = {
 			],
 		},
 		{
-			name: "BentoCard",
+			name: "Bento Card",
 			props: [
 				{
 					name: "name",
