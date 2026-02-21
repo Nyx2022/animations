@@ -14,7 +14,7 @@ A meteor shower effect component that creates animated falling meteors with cust
 :::tab{label="npm"}
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/meteors.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/meteors.json
 ```
 
 :::
@@ -22,7 +22,7 @@ npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/meteors.json
 :::tab{label="pnpm"}
 
 ```bash
-pnpm dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/meteors.json
+pnpm dlx shadcn-svelte@latest add https://sv-animations.vercel.app/r/meteors.json
 ```
 
 :::
@@ -30,7 +30,7 @@ pnpm dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/meteors.
 :::tab{label="yarn"}
 
 ```bash
-yarn dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/meteors.json
+yarn dlx shadcn-svelte@latest add https://sv-animations.vercel.app/r/meteors.json
 ```
 
 :::
@@ -38,7 +38,7 @@ yarn dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/meteors.
 :::tab{label="bun"}
 
 ```bash
-bunx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/meteors.json
+bunx shadcn-svelte@latest add https://sv-animations.vercel.app/r/meteors.json
 ```
 
 :::

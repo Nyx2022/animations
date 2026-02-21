@@ -232,7 +232,7 @@
 				}
 			],
 			"registryDependencies": [],
-			"dependencies": ["lucide-svelte", "motion-sv"]
+			"dependencies": ["@lucide/svelte", "motion-sv"]
 		},
 		{
 			"name": "dot-pattern",
@@ -642,7 +642,7 @@
 				}
 			],
 			"registryDependencies": [],
-			"dependencies": ["lucide-svelte", "motion-sv"]
+			"dependencies": ["@lucide/svelte", "motion-sv"]
 		},
 		{
 			"name": "hyper-text",
@@ -682,7 +682,7 @@
 				}
 			],
 			"registryDependencies": [],
-			"dependencies": ["lucide-svelte"]
+			"dependencies": ["@lucide/svelte"]
 		},
 		{
 			"name": "light-rays",
@@ -1127,6 +1127,31 @@
 			],
 			"registryDependencies": [],
 			"dependencies": ["motion-sv"]
+		},
+		{
+			"name": "bento-grid",
+			"type": "registry:block",
+			"title": "Bento Grid",
+			"description": "A flexible grid layout with interchangeable BentoCard items for showcasing content in a responsive masonry style.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/bento-grid/bento-grid.svelte",
+					"type": "registry:component",
+					"target": "magic/bento-grid/bento-grid.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/bento-grid/bento-card.svelte",
+					"type": "registry:component",
+					"target": "magic/bento-grid/bento-card.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/bento-grid/index.ts",
+					"type": "registry:file",
+					"target": "magic/bento-grid/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["@lucide/svelte"]
 		}
 	]
 }

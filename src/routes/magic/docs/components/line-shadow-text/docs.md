@@ -11,7 +11,7 @@ A text component with an animated diagonal line shadow effect that moves across 
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/line-shadow-text.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/line-shadow-text.json
 ```
 
   </Tab>

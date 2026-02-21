@@ -11,7 +11,7 @@ A component that displays video content masked by text, creating a text-shaped v
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/video-text.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/video-text.json
 ```
 
   </Tab>

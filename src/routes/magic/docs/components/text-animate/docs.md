@@ -5,7 +5,7 @@ Animate text with various effects like blur, slide, scale, and fade with granula
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/text-animate.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/text-animate.json
 ```
 
 ## Usage

@@ -5,7 +5,7 @@ A component that displays user avatars in a stacked, overlapping circle layout. 
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/avatar-circles.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/avatar-circles.json
 ```
 
 ## Usage

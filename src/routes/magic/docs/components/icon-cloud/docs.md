@@ -5,7 +5,7 @@ A description for Icon Cloud component.
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/icon-cloud.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/icon-cloud.json
 ```
 
 ## Usage
@@ -22,8 +22,8 @@ npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/icon-cloud.js
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `class` | `string` | `""` | Additional CSS classes to apply |
+| Prop    | Type     | Default | Description                     |
+| ------- | -------- | ------- | ------------------------------- |
+| `class` | `string` | `""`    | Additional CSS classes to apply |
 
 ## Examples

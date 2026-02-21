@@ -5,7 +5,7 @@ A light glare effect which pans across text making it appear as if it is shimmer
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/animated-shiny-text.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/animated-shiny-text.json
 ```
 
 ## Usage

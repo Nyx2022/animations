@@ -13,7 +13,7 @@ An animated background border effect that creates a radiant shine animation arou
 :::tab{label="npm"}
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/shine-border.json
 ```
 
 :::
@@ -21,7 +21,7 @@ npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.
 :::tab{label="pnpm"}
 
 ```bash
-pnpm dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.json
+pnpm dlx shadcn-svelte@latest add https://sv-animations.vercel.app/r/shine-border.json
 ```
 
 :::
@@ -29,7 +29,7 @@ pnpm dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-bo
 :::tab{label="yarn"}
 
 ```bash
-yarn dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.json
+yarn dlx shadcn-svelte@latest add https://sv-animations.vercel.app/r/shine-border.json
 ```
 
 :::
@@ -37,7 +37,7 @@ yarn dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-bo
 :::tab{label="bun"}
 
 ```bash
-bunx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shine-border.json
+bunx shadcn-svelte@latest add https://sv-animations.vercel.app/r/shine-border.json
 ```
 
 :::

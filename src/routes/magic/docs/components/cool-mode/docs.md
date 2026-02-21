@@ -14,7 +14,7 @@ Add a fun particle effect that follows mouse interactions, with support for emoj
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/cool-mode.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/cool-mode.json
 ```
 
 ## Usage

@@ -22,18 +22,18 @@ export const meta: ComponentMeta = {
 	badge: "new",
 };
 
-const examples: Example[] = [
-	{
-		name: "Bento Grid Example",
-		preview: BentoGridExample,
-		code: {
-			filename: "bento-grid-example.svelte",
-			filecode: BentoGridExampleRaw,
-			lang: "svelte",
-			highlight: [2],
-		},
-	},
-];
+// const examples: Example[] = [
+// 	{
+// 		name: "Bento Grid Example",
+// 		preview: BentoGridExample,
+// 		code: {
+// 			filename: "bento-grid-example.svelte",
+// 			filecode: BentoGridExampleRaw,
+// 			lang: "svelte",
+// 			highlight: [2],
+// 		},
+// 	},
+// ];
 
 const seo: SEO = {
 	title: "Bento Grid",
@@ -62,7 +62,14 @@ let installBlock: InstallComponentDocs = {
 			lang: "typescript",
 		},
 	],
-	folderStructure: ``,
+	folderStructure: `src/
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── bento-grid/
+                ├── bento-grid.svelte
+				├── bento-card.svelte
+                └── index.ts`,
 };
 
 export const data: ComponentDoc = {
@@ -75,18 +82,68 @@ export const data: ComponentDoc = {
 		hideLines: true,
 		highlight: [2],
 	},
-	examples,
 	seo,
 	props: [
 		{
 			name: "BentoGrid",
-			desc: "A component for Bento Grid.",
 			props: [
 				{
 					name: "class",
 					type: "string",
 					default: '""',
 					description: "Additional CSS classes to apply",
+				},
+				{
+					name: "children",
+					type: "Snippet",
+					description: "The content to be displayed inside the grid",
+				},
+			],
+		},
+		{
+			name: "BentoCard",
+			props: [
+				{
+					name: "name",
+					type: "string",
+					description: "The name of the card, displayed as the title",
+				},
+				{
+					name: "class",
+					type: "string",
+					default: '""',
+					description: "Additional CSS classes to apply",
+				},
+				{
+					name: "background",
+					type: "Snippet",
+					description: "The background of the card, can be a color or an image",
+				},
+				{
+					name: "Icon",
+					type: "Component<any>",
+					description:
+						"The icon to be displayed on the card, passed as a Svelte component",
+				},
+				{
+					name: "iconClass",
+					type: "string",
+					default: '""',
+				},
+				{
+					name: "description",
+					type: "string",
+					description: "A brief description of the card's content",
+				},
+				{
+					name: "href",
+					type: "string",
+					description: "The URL to navigate to when the card is clicked",
+				},
+				{
+					name: "cta",
+					type: "string",
+					description: "The call-to-action text displayed on the card",
 				},
 			],
 		},

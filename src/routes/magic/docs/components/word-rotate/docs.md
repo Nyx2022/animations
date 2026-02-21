@@ -11,7 +11,7 @@ A component that cycles through an array of words with smooth fade and slide ani
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/word-rotate.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/word-rotate.json
 ```
 
   </Tab>

@@ -11,7 +11,7 @@ An animated number counter component with spring physics that smoothly animates 
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/number-ticker.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/number-ticker.json
 ```
 
   </Tab>

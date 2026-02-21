@@ -11,7 +11,7 @@ An SVG-based grid pattern background component with support for highlighted squa
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/grid-pattern.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/grid-pattern.json
 ```
 
   </Tab>

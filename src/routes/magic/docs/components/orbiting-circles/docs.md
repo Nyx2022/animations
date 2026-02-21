@@ -5,7 +5,7 @@ A description for Orbiting Circles component.
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/orbiting-circles.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/orbiting-circles.json
 ```
 
 ## Usage
@@ -22,8 +22,8 @@ npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/orbiting-circ
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `class` | `string` | `""` | Additional CSS classes to apply |
+| Prop    | Type     | Default | Description                     |
+| ------- | -------- | ------- | ------------------------------- |
+| `class` | `string` | `""`    | Additional CSS classes to apply |
 
 ## Examples

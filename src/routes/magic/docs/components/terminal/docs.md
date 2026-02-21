@@ -11,7 +11,7 @@ A terminal-like UI component with typing animations, sequence control, and inter
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/terminal.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/terminal.json
 ```
 
   </Tab>

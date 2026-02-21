@@ -5,7 +5,7 @@ A description for Retro Grid component.
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/retro-grid.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/retro-grid.json
 ```
 
 ## Usage
@@ -22,8 +22,8 @@ npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/retro-grid.js
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `class` | `string` | `""` | Additional CSS classes to apply |
+| Prop    | Type     | Default | Description                     |
+| ------- | -------- | ------- | ------------------------------- |
+| `class` | `string` | `""`    | Additional CSS classes to apply |
 
 ## Examples

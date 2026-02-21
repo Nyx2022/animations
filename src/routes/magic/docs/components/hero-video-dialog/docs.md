@@ -11,7 +11,7 @@ A video dialog component with animated entrance effects, thumbnail support, and 
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/hero-video-dialog.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/hero-video-dialog.json
 ```
 
   </Tab>

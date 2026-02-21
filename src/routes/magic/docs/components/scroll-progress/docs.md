@@ -11,7 +11,7 @@ A fixed progress bar component that indicates page scroll progress with a gradie
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/scroll-progress.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/scroll-progress.json
 ```
 
   </Tab>

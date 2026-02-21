@@ -5,7 +5,7 @@ A description for Dither Shader component.
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/dither-shader.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/dither-shader.json
 ```
 
 ## Usage
@@ -22,8 +22,8 @@ npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/dither-shader
 
 ## Props
 
-| Prop | Type | Default | Description |
-|------|------|---------|-------------|
-| `class` | `string` | `""` | Additional CSS classes to apply |
+| Prop    | Type     | Default | Description                     |
+| ------- | -------- | ------- | ------------------------------- |
+| `class` | `string` | `""`    | Additional CSS classes to apply |
 
 ## Examples

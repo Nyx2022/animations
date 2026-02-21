@@ -11,7 +11,7 @@ A card component with animated neon gradient borders and customizable colors, bo
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/neon-gradient-card.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/neon-gradient-card.json
 ```
 
   </Tab>

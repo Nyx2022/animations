@@ -15,7 +15,7 @@ An interactive file tree component with expandable folders, selectable files, an
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/file-tree.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/file-tree.json
 ```
 
 ## Usage

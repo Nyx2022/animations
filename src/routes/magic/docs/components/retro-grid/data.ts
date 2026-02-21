@@ -9,37 +9,37 @@ import PreviewCode from "./examples/preview.svelte?raw";
 
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
-  id: "retro-grid",
-  title: "Retro Grid",
-  description: "A description for Retro Grid component.",
-  category: "animation",
-  badge: "new",
+	id: "retro-grid",
+	title: "Retro Grid",
+	description: "A description for Retro Grid component.",
+	category: "animation",
+	badge: "new",
 };
 
-const examples: Example[] = [
-];
+const examples: Example[] = [];
 
 const seo: SEO = {
-  title: "Retro Grid",
-  description: "Learn how to create Retro Grid effects in Svelte using the Svelte 5 Animations library.",
-  keywords: ["Svelte", "Retro Grid", "Svelte 5 Animations", "Animation", "Web Design"],
+	title: "Retro Grid",
+	description:
+		"Learn how to create Retro Grid effects in Svelte using the Svelte 5 Animations library.",
+	keywords: ["Svelte", "Retro Grid", "Svelte 5 Animations", "Animation", "Web Design"],
 };
 
-let installBlock : InstallComponentDocs={
-  installCode:[
-    {
-      filename: "retro-grid.svelte",
-      filecode: RetroGridRaw,
-      lang: "svelte",
-      isExpand: true,
-    },
-    {
-      filename: "index.ts",
-      filecode: IndexTs,
-      lang: "typescript",
-    }
-  ],
-  folderStructure: `src/
+let installBlock: InstallComponentDocs = {
+	installCode: [
+		{
+			filename: "retro-grid.svelte",
+			filecode: RetroGridRaw,
+			lang: "svelte",
+			isExpand: true,
+		},
+		{
+			filename: "index.ts",
+			filecode: IndexTs,
+			lang: "typescript",
+		},
+	],
+	folderStructure: `src/
 â””â”€â”€ lib/
     â””â”€â”€ components/
         â””â”€â”€ magic-ui/
@@ -49,25 +49,30 @@ let installBlock : InstallComponentDocs={
 };
 
 export const data: ComponentDoc = {
-  ...meta,
-  preview: Preview,
-  previewCode: {
-    filename: "retro-grid.svelte",
-    filecode: PreviewCode,
-    lang: "svelte",
-    hideLines: true,
-    highlight: [2],
-  },
-  examples,
-  seo,
-  props: [
-    {
-      name: "RetroGrid",
-      desc: "A component for Retro Grid.",
-      props: [
-        { name: "class", type: "string", default: '""', description: "Additional CSS classes to apply" },
-      ],
-    },
-  ],
-  installBlock,
+	...meta,
+	preview: Preview,
+	previewCode: {
+		filename: "retro-grid.svelte",
+		filecode: PreviewCode,
+		lang: "svelte",
+		hideLines: true,
+		highlight: [2],
+	},
+	examples,
+	seo,
+	props: [
+		{
+			name: "RetroGrid",
+			desc: "A component for Retro Grid.",
+			props: [
+				{
+					name: "class",
+					type: "string",
+					default: '""',
+					description: "Additional CSS classes to apply",
+				},
+			],
+		},
+	],
+	installBlock,
 };

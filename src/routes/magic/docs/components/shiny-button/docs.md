@@ -11,7 +11,7 @@ A button component with a shiny gradient mask effect that animates across the te
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shiny-button.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/shiny-button.json
 ```
 
   </Tab>

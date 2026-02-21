@@ -7,19 +7,19 @@ An infinite scrolling component that can be used to display text, images, or vid
 ::: code-group
 
 ```bash [npm]
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/marquee.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/marquee.json
 ```
 
 ```bash [pnpm]
-pnpm dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/marquee.json
+pnpm dlx shadcn-svelte@latest add https://sv-animations.vercel.app/r/marquee.json
 ```
 
 ```bash [bun]
-bunx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/marquee.json
+bunx shadcn-svelte@latest add https://sv-animations.vercel.app/r/marquee.json
 ```
 
 ```bash [yarn]
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/marquee.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/marquee.json
 ```
 
 :::

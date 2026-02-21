@@ -9,37 +9,37 @@ import PreviewCode from "./examples/preview.svelte?raw";
 
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
-  id: "confetti",
-  title: "Confetti",
-  description: "A description for Confetti component.",
-  category: "animation",
-  badge: "new",
+	id: "confetti",
+	title: "Confetti",
+	description: "A description for Confetti component.",
+	category: "animation",
+	badge: "new",
 };
 
-const examples: Example[] = [
-];
+const examples: Example[] = [];
 
 const seo: SEO = {
-  title: "Confetti",
-  description: "Learn how to create Confetti effects in Svelte using the Svelte 5 Animations library.",
-  keywords: ["Svelte", "Confetti", "Svelte 5 Animations", "Animation", "Web Design"],
+	title: "Confetti",
+	description:
+		"Learn how to create Confetti effects in Svelte using the Svelte 5 Animations library.",
+	keywords: ["Svelte", "Confetti", "Svelte 5 Animations", "Animation", "Web Design"],
 };
 
-let installBlock : InstallComponentDocs={
-  installCode:[
-    {
-      filename: "confetti.svelte",
-      filecode: ConfettiRaw,
-      lang: "svelte",
-      isExpand: true,
-    },
-    {
-      filename: "index.ts",
-      filecode: IndexTs,
-      lang: "typescript",
-    }
-  ],
-  folderStructure: `src/
+let installBlock: InstallComponentDocs = {
+	installCode: [
+		{
+			filename: "confetti.svelte",
+			filecode: ConfettiRaw,
+			lang: "svelte",
+			isExpand: true,
+		},
+		{
+			filename: "index.ts",
+			filecode: IndexTs,
+			lang: "typescript",
+		},
+	],
+	folderStructure: `src/
 â””â”€â”€ lib/
     â””â”€â”€ components/
         â””â”€â”€ magic-ui/
@@ -49,25 +49,30 @@ let installBlock : InstallComponentDocs={
 };
 
 export const data: ComponentDoc = {
-  ...meta,
-  preview: Preview,
-  previewCode: {
-    filename: "confetti.svelte",
-    filecode: PreviewCode,
-    lang: "svelte",
-    hideLines: true,
-    highlight: [2],
-  },
-  examples,
-  seo,
-  props: [
-    {
-      name: "Confetti",
-      desc: "A component for Confetti.",
-      props: [
-        { name: "class", type: "string", default: '""', description: "Additional CSS classes to apply" },
-      ],
-    },
-  ],
-  installBlock,
+	...meta,
+	preview: Preview,
+	previewCode: {
+		filename: "confetti.svelte",
+		filecode: PreviewCode,
+		lang: "svelte",
+		hideLines: true,
+		highlight: [2],
+	},
+	examples,
+	seo,
+	props: [
+		{
+			name: "Confetti",
+			desc: "A component for Confetti.",
+			props: [
+				{
+					name: "class",
+					type: "string",
+					default: '""',
+					description: "Additional CSS classes to apply",
+				},
+			],
+		},
+	],
+	installBlock,
 };

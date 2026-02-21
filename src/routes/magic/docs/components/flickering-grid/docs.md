@@ -11,7 +11,7 @@ An animated flickering grid pattern component that creates a dynamic canvas-base
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/flickering-grid.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/flickering-grid.json
 ```
 
   </Tab>

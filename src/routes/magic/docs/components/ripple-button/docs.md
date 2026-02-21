@@ -11,7 +11,7 @@ A button component with a ripple effect that appears on click, expanding from th
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/ripple-button.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/ripple-button.json
 ```
 
   </Tab>

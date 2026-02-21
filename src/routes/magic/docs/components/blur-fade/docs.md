@@ -5,7 +5,7 @@ A component that animates content with blur and fade effects, supporting directi
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/blur-fade.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/blur-fade.json
 ```
 
 ## Usage

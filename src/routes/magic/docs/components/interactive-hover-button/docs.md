@@ -11,7 +11,7 @@ A button with an interactive hover effect featuring an expanding dot and sliding
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/interactive-hover-button.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/interactive-hover-button.json
 ```
 
   </Tab>

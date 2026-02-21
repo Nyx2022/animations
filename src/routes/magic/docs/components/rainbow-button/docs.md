@@ -11,7 +11,7 @@ A button component with animated rainbow gradient borders and background that cy
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/rainbow-button.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/rainbow-button.json
 ```
 
   </Tab>

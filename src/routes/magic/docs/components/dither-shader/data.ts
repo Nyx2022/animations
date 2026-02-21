@@ -15,7 +15,8 @@ import PreviewCode from "./examples/preview.svelte?raw";
 export const meta: ComponentMeta = {
 	id: "dither-shader",
 	title: "Dither Shader",
-	description: "A description for Dither Shader component.",
+	description:
+		"A real-time ordered dithering effect for images, perfect for pixel art and retro aesthetics.",
 	category: "animation",
 	badge: "new",
 };
@@ -66,12 +67,12 @@ let installBlock: InstallComponentDocs = {
 		},
 	],
 	folderStructure: `src/
-  lib/
-    components/
-      magic-ui/
-        dither-shader/
-          dither-shader.svelte
-          index.ts`,
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── dither-shader/
+                ├── dither-shader.svelte
+                └── index.ts`,
 };
 
 export const data: ComponentDoc = {
@@ -92,10 +93,108 @@ export const data: ComponentDoc = {
 			desc: "A component for Dither Shader.",
 			props: [
 				{
+					name: "src",
+					type: "string",
+					default: "",
+					description: "Source image URL (required).",
+				},
+				{
+					name: "gridSize",
+					type: "number",
+					default: "4",
+					description: "Size of the dithering grid cells.",
+				},
+				{
+					name: "ditherMode",
+					type: '"bayer" | "halftone" | "noise" | "crosshatch"',
+					default: '"bayer"',
+					description: "Type of dithering pattern to use.",
+				},
+				{
+					name: "colorMode",
+					type: '"original" | "grayscale" | "duotone" | "custom"',
+					default: '"original"',
+					description: "Color processing mode for the output.",
+				},
+				{
+					name: "invert",
+					type: "boolean",
+					default: "false",
+					description: "Invert the dithered output colors.",
+				},
+				{
+					name: "pixelRatio",
+					type: "number",
+					default: "1",
+					description:
+						"Pixelation multiplier (1 = no pixelation, higher = more pixelated).",
+				},
+				{
+					name: "primaryColor",
+					type: "string",
+					default: '"#000000"',
+					description: "Primary color for duotone mode.",
+				},
+				{
+					name: "secondaryColor",
+					type: "string",
+					default: '"#ffffff"',
+					description: "Secondary color for duotone mode.",
+				},
+				{
+					name: "customPalette",
+					type: "string[]",
+					default: '["#000000", "#ffffff"]',
+					description: "Custom color palette array for custom mode.",
+				},
+				{
+					name: "brightness",
+					type: "number",
+					default: "0",
+					description: "Brightness adjustment (-1 to 1).",
+				},
+				{
+					name: "contrast",
+					type: "number",
+					default: "1",
+					description: "Contrast adjustment (0 to 2, 1 = normal).",
+				},
+				{
+					name: "backgroundColor",
+					type: "string",
+					default: '"transparent"',
+					description: "Background color behind the dithered image.",
+				},
+				{
+					name: "objectFit",
+					type: '"cover" | "contain" | "fill" | "none"',
+					default: '"cover"',
+					description: "Object fit behavior for the source image.",
+				},
+				{
+					name: "threshold",
+					type: "number",
+					default: "0.5",
+					description: "Threshold bias for dithering (0 to 1).",
+				},
+				{
+					name: "animated",
+					type: "boolean",
+					default: "false",
+					description: "Enable animation effect.",
+				},
+				{
+					name: "animationSpeed",
+					type: "number",
+					default: "0.02",
+					description: "Animation speed (lower = slower).",
+				},
+				{
 					name: "class",
 					type: "string",
 					default: '""',
-					description: "Additional CSS classes to apply",
+					description:
+						"Additional CSS classes for the container (use this to set size via Tailwind).",
 				},
 			],
 		},

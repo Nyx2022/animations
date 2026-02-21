@@ -8,7 +8,7 @@ A customizable typing animation component that creates typewriter effects with s
 <Tab value="CLI">
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/typing-animation.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/typing-animation.json
 ```
 
 </Tab>
