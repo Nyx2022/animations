@@ -482,5 +482,51 @@
 		],
 		"registryDependencies": [],
 		"relativeUrl": "magic-card.json"
+	},
+	{
+		"name": "orbiting-circles",
+		"title": "Orbiting Circles",
+		"type": "registry:block",
+		"description": "A component that displays icons or elements orbiting in a circular path with customizable radius, duration, and direction.",
+		"registryDependencies": [],
+		"relativeUrl": "orbiting-circles.json"
+	},
+	{
+		"name": "progressive-blur",
+		"title": "Progressive Blur",
+		"type": "registry:block",
+		"description": "A component that creates a progressive blur effect at the top, bottom, or both edges of a container with customizable blur levels and positioning.",
+		"registryDependencies": [],
+		"relativeUrl": "progressive-blur.json"
+	},
+	{
+		"name": "retro-grid",
+		"title": "Retro Grid",
+		"type": "registry:block",
+		"description": "An animated retro-style grid background component with customizable angle, cell size, opacity, and colors.",
+		"registryDependencies": [],
+		"relativeUrl": "retro-grid.json"
+	},
+	{
+		"name": "smooth-cursor",
+		"title": "Smooth Cursor",
+		"type": "registry:block",
+		"description": "A smooth animated cursor component with spring physics that follows mouse movement with rotation and scale effects.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "smooth-cursor.json"
+	},
+	{
+		"name": "stagger-text",
+		"title": "Stagger Text",
+		"type": "registry:block",
+		"description": "An interactive text component where characters animate vertically on hover with a staggered delay effect.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "stagger-text.json"
 	}
 ]

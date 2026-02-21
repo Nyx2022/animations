@@ -1,0 +1,34 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "retro-grid",
+	"title": "Retro Grid",
+	"type": "registry:block",
+	"description": "An animated retro-style grid background component with customizable angle, cell size, opacity, and colors.",
+	"css": {
+		"@keyframes grid": {
+			"0%": {
+				"transform": "translateY(-50%)"
+			},
+			"100%": {
+				"transform": "translateY(0)"
+			}
+		}
+	},
+	"cssVars": {
+		"theme": {
+			"animate-grid": "grid 15s linear infinite"
+		}
+	},
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { cn } from \"$UTILS$\";\n\timport type { HTMLAttributes } from \"svelte/elements\";\n\n\tinterface RetroGridProps extends HTMLAttributes<HTMLDivElement> {\n\t\tclass?: string;\n\t\tangle?: number;\n\t\tcellSize?: number;\n\t\topacity?: number;\n\t\tlightLineColor?: string;\n\t\tdarkLineColor?: string;\n\t}\n\n\tlet {\n\t\tclass: className,\n\t\tangle = 65,\n\t\tcellSize = 60,\n\t\topacity = 0.5,\n\t\tlightLineColor = \"gray\",\n\t\tdarkLineColor = \"gray\",\n\t\t...props\n\t}: RetroGridProps = $props();\n\n\tconst gridStyles = $derived({\n\t\t\"--grid-angle\": `${angle}deg`,\n\t\t\"--cell-size\": `${cellSize}px`,\n\t\t\"--opacity\": opacity,\n\t\t\"--light-line\": lightLineColor,\n\t\t\"--dark-line\": darkLineColor,\n\t} as any);\n</script>\n\n<div\n\tclass={cn(\n\t\t\"pointer-events-none absolute size-full overflow-hidden perspective-[200px]\",\n\t\t`opacity-(--opacity)`,\n\t\tclassName\n\t)}\n\tstyle={gridStyles}\n\t{...props}\n>\n\t<div class=\"absolute inset-0 transform-[rotateX(var(--grid-angle))]\">\n\t\t<div\n\t\t\tclass=\"animate-grid inset-[0%_0px] ml-[-200%] h-[300vh] w-[600vw] origin-[100%_0_0] bg-[linear-gradient(to_right,var(--light-line)_1px,transparent_0),linear-gradient(to_bottom,var(--light-line)_1px,transparent_0)] bg-size-[var(--cell-size)_var(--cell-size)] bg-repeat dark:bg-[linear-gradient(to_right,var(--dark-line)_1px,transparent_0),linear-gradient(to_bottom,var(--dark-line)_1px,transparent_0)]\"\n\t\t></div>\n\t</div>\n\n\t<div\n\t\tclass=\"absolute inset-0 bg-linear-to-t from-white to-transparent to-90% dark:from-black\"\n\t></div>\n</div>\n",
+			"type": "registry:component",
+			"target": "magic/retro-grid/retro-grid.svelte"
+		},
+		{
+			"content": "export { default as RetroGrid } from \"./retro-grid.svelte\";\n",
+			"type": "registry:file",
+			"target": "magic/retro-grid/index.ts"
+		}
+	]
+}

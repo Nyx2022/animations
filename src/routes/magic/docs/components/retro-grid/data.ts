@@ -39,13 +39,30 @@ let installBlock: InstallComponentDocs = {
 			lang: "typescript",
 		},
 	],
+	tailwind: {
+		filename: "src/routes/layout.css",
+		lang: "css",
+		highlight: [2, [4, 14]],
+		filecode: `@theme inline {
+  --animate-grid: grid 15s linear infinite;
+
+  @keyframes grid {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}`,
+	},
 	folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ retro-grid/
-                â”œâ”€â”€ retro-grid.svelte
-                â””â”€â”€ index.ts`,
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── retro-grid/
+                ├── retro-grid.svelte
+                └── index.ts`,
 };
 
 export const data: ComponentDoc = {
@@ -70,6 +87,36 @@ export const data: ComponentDoc = {
 					type: "string",
 					default: '""',
 					description: "Additional CSS classes to apply",
+				},
+				{
+					name: "angle",
+					type: "number",
+					default: "65",
+					description: "Rotation angle of the grid in degrees",
+				},
+				{
+					name: "cellSize",
+					type: "number",
+					default: "60",
+					description: "Size of each grid cell in pixels",
+				},
+				{
+					name: "opacity",
+					type: "number",
+					default: "0.5",
+					description: "Opacity of the grid lines (0 to 1)",
+				},
+				{
+					name: "lightLineColor",
+					type: "string",
+					default: '"gray"',
+					description: "Color of the light grid lines",
+				},
+				{
+					name: "darkLineColor",
+					type: "string",
+					default: '"gray"',
+					description: "Color of the dark grid lines",
 				},
 			],
 		},

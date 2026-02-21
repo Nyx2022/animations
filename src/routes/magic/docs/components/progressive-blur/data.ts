@@ -11,7 +11,8 @@ import PreviewCode from "./examples/preview.svelte?raw";
 export const meta: ComponentMeta = {
 	id: "progressive-blur",
 	title: "Progressive Blur",
-	description: "A description for Progressive Blur component.",
+	description:
+		"A component that creates a progressive blur effect at the top, bottom, or both edges of a container with customizable blur levels and positioning.",
 	category: "animation",
 	badge: "new",
 };
@@ -21,8 +22,15 @@ const examples: Example[] = [];
 const seo: SEO = {
 	title: "Progressive Blur",
 	description:
-		"Learn how to create Progressive Blur effects in Svelte using the Svelte 5 Animations library.",
-	keywords: ["Svelte", "Progressive Blur", "Svelte 5 Animations", "Animation", "Web Design"],
+		"A component that creates a progressive blur effect at the top, bottom, or both edges of a container with customizable blur levels and positioning in Svelte 5.",
+	keywords: [
+		"Svelte",
+		"Progressive Blur",
+		"Svelte 5 Animations",
+		"Blur Effect",
+		"Backdrop Filter",
+		"Web Design",
+	],
 };
 
 let installBlock: InstallComponentDocs = {
@@ -40,12 +48,12 @@ let installBlock: InstallComponentDocs = {
 		},
 	],
 	folderStructure: `src/
-â””â”€â”€ lib/
-    â””â”€â”€ components/
-        â””â”€â”€ magic-ui/
-            â””â”€â”€ progressive-blur/
-                â”œâ”€â”€ progressive-blur.svelte
-                â””â”€â”€ index.ts`,
+└── lib/
+    └── components/
+        └── magic-ui/
+            └── progressive-blur/
+                ├── progressive-blur.svelte
+                └── index.ts`,
 };
 
 export const data: ComponentDoc = {
@@ -63,13 +71,31 @@ export const data: ComponentDoc = {
 	props: [
 		{
 			name: "ProgressiveBlur",
-			desc: "A component for Progressive Blur.",
+			desc: "A component that creates a progressive blur effect with customizable positioning and blur levels.",
 			props: [
 				{
 					name: "class",
 					type: "string",
 					default: '""',
 					description: "Additional CSS classes to apply",
+				},
+				{
+					name: "height",
+					type: "string",
+					default: '"30%"',
+					description: "Height of the blur area",
+				},
+				{
+					name: "position",
+					type: '"top" | "bottom" | "both"',
+					default: '"bottom"',
+					description: "Position of the blur effect",
+				},
+				{
+					name: "blurLevels",
+					type: "number[]",
+					default: "[0.5, 1, 2, 4, 8, 16, 32, 64]",
+					description: "Array of blur levels in pixels for progressive blur layers",
 				},
 			],
 		},
