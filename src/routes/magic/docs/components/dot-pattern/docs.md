@@ -14,7 +14,7 @@ A customizable dot pattern background component with optional glow animations an
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/dot-pattern.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/dot-pattern.json
 ```
 
 ## Usage

@@ -5,7 +5,7 @@ An animated gradient background which transitions between colors for text.
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/animated-gradient-text.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/animated-gradient-text.json
 ```
 
 ## Usage

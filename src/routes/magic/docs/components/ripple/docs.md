@@ -11,7 +11,7 @@ A component that creates expanding ripple circles with customizable size, opacit
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/ripple.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/ripple.json
 ```
 
   </Tab>

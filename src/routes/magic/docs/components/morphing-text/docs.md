@@ -11,7 +11,7 @@ A text component that smoothly morphs between multiple text strings with a blur 
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/morphing-text.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/morphing-text.json
 ```
 
   </Tab>

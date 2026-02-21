@@ -1,25 +1,17 @@
 $components = @(
-    @{ name = "flickering-grid"; examples = 0 },
-    @{ name = "grid-pattern"; examples = 0 },
-    @{ name = "hero-video-dialog"; examples = 0 },
-    @{ name = "hyper-text"; examples = 0 },
-    @{ name = "interactive-hover-button"; examples = 0 },
-    @{ name = "light-rays"; examples = 0 },
-    @{ name = "line-shadow-text"; examples = 0 },
-    @{ name = "morphing-text"; examples = 0 },
-    @{ name = "neon-gradient-card"; examples = 0 },
-    @{ name = "number-ticker"; examples = 0 },
-    @{ name = "pulsating-button"; examples = 0 },
-    @{ name = "rainbow-button"; examples = 0 },
-    @{ name = "ripple"; examples = 0 },
-    @{ name = "ripple-button"; examples = 0 },
-    @{ name = "scroll-progress"; examples = 0 },
-    @{ name = "shimmer-button"; examples = 0 },
-    @{ name = "shiny-button"; examples = 0 },
-    @{ name = "terminal"; examples = 0 },
-    @{ name = "video-text"; examples = 0 },
-    @{ name = "warp-background"; examples = 0 },
-    @{ name = "word-rotate"; examples = 0 }
+    @{ name = "dock"; examples = 0 },
+    @{ name = "icon-cloud"; examples = 0 },
+    @{ name = "lens"; examples = 0 },
+    @{ name = "orbiting-circles"; examples = 0 },
+    @{ name = "pointer"; examples = 0 },
+    @{ name = "progressive-blur"; examples = 0 },
+    @{ name = "retro-grid"; examples = 0 },
+    @{ name = "bento-grid"; examples = 0 },
+    @{ name = "confetti"; examples = 0 },
+    @{ name = "dither-shader"; examples = 0 },
+    @{ name = "magic-card"; examples = 0 },
+    @{ name = "smooth-cursor"; examples = 0 },
+    @{ name = "stagger-text"; examples = 0 }
 )
 
 Write-Host "========================================" -ForegroundColor Cyan
@@ -42,5 +34,5 @@ Write-Host "Summary:" -ForegroundColor Cyan
 Write-Host "Total components created: $($components.Count)" -ForegroundColor White
 Write-Host "`nComponents:" -ForegroundColor Cyan
 foreach ($component in $components) {
-    Write-Host "  ✓ $($component.name) (with $($component.examples) examples)" -ForegroundColor Green
+    Write-Host ("  - {0} (with {1} examples)" -f $component.name, $component.examples) -ForegroundColor Green
 }

@@ -11,7 +11,7 @@ A button component with a pulsating ring effect that expands and fades around th
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/pulsating-button.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/pulsating-button.json
 ```
 
   </Tab>

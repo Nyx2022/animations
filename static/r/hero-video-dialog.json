@@ -5,7 +5,7 @@
 	"type": "registry:block",
 	"description": "A video dialog component with animated entrance effects, thumbnail support, and customizable animation styles.",
 	"dependencies": [
-		"lucide-svelte",
+		"@lucide/svelte",
 		"motion-sv"
 	],
 	"files": [

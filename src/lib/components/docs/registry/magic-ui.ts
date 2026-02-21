@@ -64,6 +64,13 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "A component to display overlapping avatar circles, commonly used for showing multiple users.",
 	},
 	{
+		id: "bento-grid",
+		name: "Bento Grid",
+		href: "/magic/docs/components/bento-grid",
+		badge: "New",
+		desc: "Bento grid is a layout used to showcase the features of a product in a simple and elegant way.",
+	},
+	{
 		id: "blur-fade",
 		name: "Blur Fade",
 		href: "/magic/docs/components/blur-fade",
@@ -75,11 +82,32 @@ export const magicUIComponents: MagicComponent[] = [
 		href: "/magic/docs/components/border-beam",
 		desc: "An animated beam of light which travels along the border of its container.",
 	},
+	// {
+	// 	id: "confetti",
+	// 	name: "Confetti",
+	// 	href: "/magic/docs/components/confetti",
+	// 	badge: "Beta",
+	// 	desc: "",
+	// },
 	{
 		id: "cool-mode",
 		name: "Cool Mode",
 		href: "/magic/docs/components/cool-mode",
 		desc: "Add a fun particle effect that follows mouse interactions, with support for emojis, images, and custom shapes.",
+	},
+	{
+		id: "dither-shader",
+		name: "Dither Shader",
+		href: "/magic/docs/components/dither-shader",
+		badge: "New",
+		desc: "A real-time ordered dithering effect for images, perfect for pixel art and retro aesthetics.",
+	},
+	{
+		id: "dock",
+		name: "Dock",
+		href: "/magic/docs/components/dock",
+		badge: "New",
+		desc: "An implementation of the MacOS dock using Svelte + tailwindcss + Motion SV",
 	},
 	{
 		id: "dot-pattern",
@@ -126,10 +154,24 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "A text animation that scrambles letters before revealing the final text.",
 	},
 	{
+		id: "icon-cloud",
+		name: "Icon Cloud",
+		href: "/magic/docs/components/icon-cloud",
+		badge: "New",
+		desc: "An interactive 3D tag cloud component",
+	},
+	{
 		id: "interactive-hover-button",
 		name: "Interactive Hover Button",
 		href: "/magic/docs/components/interactive-hover-button",
 		desc: "A visually engaging button component that responds to hover with dynamic transitions",
+	},
+	{
+		id: "lens",
+		name: "Lens",
+		href: "/magic/docs/components/lens",
+		badge: "New",
+		desc: "A interactive component that enables zooming into images, videos and other elements.",
 	},
 	{
 		id: "light-rays",
@@ -144,6 +186,13 @@ export const magicUIComponents: MagicComponent[] = [
 		href: "/magic/docs/components/line-shadow-text",
 		badge: "New",
 		desc: "A text component with a moving line shadow.",
+	},
+	{
+		id: "magic-card",
+		name: "Magic Card",
+		href: "/magic/docs/components/magic-card",
+		badge: "New",
+		desc: "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
 	},
 	{
 		id: "marquee",
@@ -179,11 +228,32 @@ export const magicUIComponents: MagicComponent[] = [
 		desc: "Animate numbers to count up or down to a target number",
 	},
 	{
+		id: "orbiting-circles",
+		name: "Orbiting Circles",
+		href: "/magic/docs/components/orbiting-circles",
+		badge: "New",
+		desc: "A collection of circles which move in orbit along a circular path",
+	},
+	{
 		id: "pixel-image",
 		name: "Pixel Image",
 		href: "/magic/docs/components/pixel-image",
 		badge: "New",
 		desc: "A component that displays your image with a pixelated effect, enhancing the visual appeal of any image in your website.",
+	},
+	{
+		id: "pointer",
+		name: "Pointer",
+		href: "/magic/docs/components/pointer",
+		badge: "New",
+		desc: "A component that displays a pointer when hovering over an element",
+	},
+	{
+		id: "progressive-blur",
+		name: "Progressive Blur",
+		href: "/magic/docs/components/progressive-blur",
+		badge: "New",
+		desc: "Add a progressive blur effect to scrollable content",
 	},
 	{
 		id: "pulsating-button",
@@ -196,6 +266,13 @@ export const magicUIComponents: MagicComponent[] = [
 		name: "Rainbow Button",
 		href: "/magic/docs/components/rainbow-button",
 		desc: "An animated button with a rainbow effect.",
+	},
+	{
+		id: "retro-grid",
+		name: "Retro Grid",
+		href: "/magic/docs/components/retro-grid",
+		badge: "New",
+		desc: "An animated scrolling retro grid effect",
 	},
 	{
 		id: "ripple",
@@ -233,6 +310,20 @@ export const magicUIComponents: MagicComponent[] = [
 	// 	name: "Shiny Button",
 	// 	href: "/magic/docs/components/shiny-button",
 	// 	badge: "Beta",
+	// 	desc: "A shiny button component with dynamic styles in the dark mode or light mode.",
+	// },
+	{
+		id: "smooth-cursor",
+		name: "Smooth Cursor",
+		href: "/magic/docs/components/smooth-cursor",
+		badge: "New",
+		desc: "A customizable, physics-based smooth cursor animation component for React applications.",
+	},
+	// {
+	// 	id: "stagger-text",
+	// 	name: "Stagger Text",
+	// 	href: "/magic/docs/components/stagger-text",
+	// 	badge: "New",
 	// 	desc: "",
 	// },
 	{

@@ -5,7 +5,7 @@ A component for creating animated border beam effects around elements with custo
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/border-beam.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/border-beam.json
 ```
 
 ## Usage

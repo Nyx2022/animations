@@ -86,7 +86,7 @@
 		"type": "registry:block",
 		"description": "An interactive file tree component with expandable folders, selectable files, and smooth animations.",
 		"dependencies": [
-			"lucide-svelte",
+			"@lucide/svelte",
 			"motion-sv"
 		],
 		"registryDependencies": [],
@@ -231,7 +231,7 @@
 		"type": "registry:block",
 		"description": "A video dialog component with animated entrance effects, thumbnail support, and customizable animation styles.",
 		"dependencies": [
-			"lucide-svelte",
+			"@lucide/svelte",
 			"motion-sv"
 		],
 		"registryDependencies": [],
@@ -249,12 +249,21 @@
 		"relativeUrl": "hyper-text.json"
 	},
 	{
+		"name": "icon-cloud",
+		"title": "Icon Cloud",
+		"type": "registry:block",
+		"description": "An interactive 3D tag cloud component that displays icons or images in a sphere formation with smooth rotation and drag interactions.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "icon-cloud.json"
+	},
+	{
 		"name": "interactive-hover-button",
 		"title": "Interactive Hover Button",
 		"type": "registry:block",
 		"description": "A button with an interactive hover effect featuring an expanding dot and sliding text animation with an arrow.",
 		"dependencies": [
-			"lucide-svelte"
+			"@lucide/svelte"
 		],
 		"registryDependencies": [],
 		"relativeUrl": "interactive-hover-button.json"
@@ -420,5 +429,104 @@
 		],
 		"registryDependencies": [],
 		"relativeUrl": "word-rotate.json"
+	},
+	{
+		"name": "bento-grid",
+		"title": "Bento Grid",
+		"type": "registry:block",
+		"description": "A flexible grid layout with interchangeable BentoCard items for showcasing content in a responsive masonry style.",
+		"dependencies": [
+			"@lucide/svelte"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bento-grid.json"
+	},
+	{
+		"name": "dither-shader",
+		"title": "Dither Shader",
+		"type": "registry:block",
+		"description": "A canvas-based component that applies dithering effects to images with customizable patterns and color modes.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "dither-shader.json"
+	},
+	{
+		"name": "dock",
+		"title": "Dock",
+		"type": "registry:block",
+		"description": "A macOS-style dock component with smooth magnification animation on hover, inspired by the macOS dock.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dock.json"
+	},
+	{
+		"name": "lens",
+		"title": "Lens",
+		"type": "registry:block",
+		"description": "An interactive component that enables zooming into images, videos and other elements.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "lens.json"
+	},
+	{
+		"name": "magic-card",
+		"title": "Magic Card",
+		"type": "registry:block",
+		"description": "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "magic-card.json"
+	},
+	{
+		"name": "orbiting-circles",
+		"title": "Orbiting Circles",
+		"type": "registry:block",
+		"description": "A component that displays icons or elements orbiting in a circular path with customizable radius, duration, and direction.",
+		"registryDependencies": [],
+		"relativeUrl": "orbiting-circles.json"
+	},
+	{
+		"name": "progressive-blur",
+		"title": "Progressive Blur",
+		"type": "registry:block",
+		"description": "A component that creates a progressive blur effect at the top, bottom, or both edges of a container with customizable blur levels and positioning.",
+		"registryDependencies": [],
+		"relativeUrl": "progressive-blur.json"
+	},
+	{
+		"name": "retro-grid",
+		"title": "Retro Grid",
+		"type": "registry:block",
+		"description": "An animated retro-style grid background component with customizable angle, cell size, opacity, and colors.",
+		"registryDependencies": [],
+		"relativeUrl": "retro-grid.json"
+	},
+	{
+		"name": "smooth-cursor",
+		"title": "Smooth Cursor",
+		"type": "registry:block",
+		"description": "A smooth animated cursor component with spring physics that follows mouse movement with rotation and scale effects.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "smooth-cursor.json"
+	},
+	{
+		"name": "stagger-text",
+		"title": "Stagger Text",
+		"type": "registry:block",
+		"description": "An interactive text component where characters animate vertically on hover with a staggered delay effect.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "stagger-text.json"
 	}
 ]

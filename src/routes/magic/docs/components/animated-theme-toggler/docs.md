@@ -5,7 +5,7 @@ A smooth animated theme toggler that uses the View Transition API to create a ci
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/animated-theme-toggler.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/animated-theme-toggler.json
 ```
 
 ## Usage

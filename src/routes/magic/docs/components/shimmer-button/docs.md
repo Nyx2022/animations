@@ -11,7 +11,7 @@ A button component with an animated shimmer effect that slides across the button
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/shimmer-button.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/shimmer-button.json
 ```
 
   </Tab>

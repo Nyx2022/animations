@@ -14,23 +14,23 @@ A stunning image reveal animation component that splits an image into a grid of 
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/pixel-image.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/pixel-image.json
 ```
 
 ```bash
-pnpm dlx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/pixel-image.json
+pnpm dlx shadcn-svelte@latest add https://sv-animations.vercel.app/r/pixel-image.json
 ```
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/pixel-image.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/pixel-image.json
 ```
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/pixel-image.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/pixel-image.json
 ```
 
 ```bash
-bunx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/pixel-image.json
+bunx shadcn-svelte@latest add https://sv-animations.vercel.app/r/pixel-image.json
 ```
 
 ## Usage

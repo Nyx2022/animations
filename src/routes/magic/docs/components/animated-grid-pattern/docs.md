@@ -5,7 +5,7 @@ An animated grid pattern component that creates a dynamic background with moving
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/animated-grid-pattern.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/animated-grid-pattern.json
 ```
 
 ## Usage

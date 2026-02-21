@@ -11,7 +11,9 @@
 	const { children, class: className = "", ...restProps }: ComponentProps = $props();
 </script>
 
-<div class="border-border bg-card relative my-6 w-full overflow-x-auto rounded-xl border shadow-sm">
+<div
+	class="border-border bg-card relative mt-2 mb-6 w-full overflow-x-auto rounded-xl border shadow-sm"
+>
 	<table {...restProps} class={cn("w-full text-base [&_code]:text-sm", className)}>
 		{@render children?.()}
 	</table>

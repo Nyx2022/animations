@@ -11,7 +11,7 @@ A component that creates animated light rays with customizable count, color, blu
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/light-rays.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/light-rays.json
 ```
 
   </Tab>

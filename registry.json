@@ -232,7 +232,7 @@
 				}
 			],
 			"registryDependencies": [],
-			"dependencies": ["lucide-svelte", "motion-sv"]
+			"dependencies": ["@lucide/svelte", "motion-sv"]
 		},
 		{
 			"name": "dot-pattern",
@@ -642,7 +642,7 @@
 				}
 			],
 			"registryDependencies": [],
-			"dependencies": ["lucide-svelte", "motion-sv"]
+			"dependencies": ["@lucide/svelte", "motion-sv"]
 		},
 		{
 			"name": "hyper-text",
@@ -665,6 +665,26 @@
 			"dependencies": ["motion-sv"]
 		},
 		{
+			"name": "icon-cloud",
+			"type": "registry:block",
+			"title": "Icon Cloud",
+			"description": "An interactive 3D tag cloud component that displays icons or images in a sphere formation with smooth rotation and drag interactions.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/icon-cloud/icon-cloud.svelte",
+					"type": "registry:component",
+					"target": "magic/icon-cloud/icon-cloud.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/icon-cloud/index.ts",
+					"type": "registry:file",
+					"target": "magic/icon-cloud/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": []
+		},
+		{
 			"name": "interactive-hover-button",
 			"type": "registry:block",
 			"title": "Interactive Hover Button",
@@ -682,7 +702,7 @@
 				}
 			],
 			"registryDependencies": [],
-			"dependencies": ["lucide-svelte"]
+			"dependencies": ["@lucide/svelte"]
 		},
 		{
 			"name": "light-rays",
@@ -1123,6 +1143,243 @@
 					"path": "./src/lib/components/magic-ui/word-rotate/index.ts",
 					"type": "registry:file",
 					"target": "magic/word-rotate/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["motion-sv"]
+		},
+		{
+			"name": "bento-grid",
+			"type": "registry:block",
+			"title": "Bento Grid",
+			"description": "A flexible grid layout with interchangeable BentoCard items for showcasing content in a responsive masonry style.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/bento-grid/bento-grid.svelte",
+					"type": "registry:component",
+					"target": "magic/bento-grid/bento-grid.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/bento-grid/bento-card.svelte",
+					"type": "registry:component",
+					"target": "magic/bento-grid/bento-card.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/bento-grid/index.ts",
+					"type": "registry:file",
+					"target": "magic/bento-grid/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["@lucide/svelte"]
+		},
+		{
+			"name": "dither-shader",
+			"type": "registry:block",
+			"title": "Dither Shader",
+			"description": "A canvas-based component that applies dithering effects to images with customizable patterns and color modes.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/dither-shader/dither-shader.svelte",
+					"type": "registry:component",
+					"target": "magic/dither-shader/dither-shader.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/dither-shader/index.ts",
+					"type": "registry:file",
+					"target": "magic/dither-shader/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": []
+		},
+		{
+			"name": "dock",
+			"type": "registry:block",
+			"title": "Dock",
+			"description": "A macOS-style dock component with smooth magnification animation on hover, inspired by the macOS dock.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/dock/dock.svelte",
+					"type": "registry:component",
+					"target": "magic/dock/dock.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/dock/dock-icon.svelte",
+					"type": "registry:component",
+					"target": "magic/dock/dock-icon.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/dock/index.ts",
+					"type": "registry:file",
+					"target": "magic/dock/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["motion-sv"]
+		},
+		{
+			"name": "lens",
+			"type": "registry:block",
+			"title": "Lens",
+			"description": "An interactive component that enables zooming into images, videos and other elements.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/lens/lens.svelte",
+					"type": "registry:component",
+					"target": "magic/lens/lens.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/lens/index.ts",
+					"type": "registry:file",
+					"target": "magic/lens/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["motion-sv"]
+		},
+		{
+			"name": "magic-card",
+			"type": "registry:block",
+			"title": "Magic Card",
+			"description": "A spotlight effect that follows your mouse cursor and highlights borders on hover.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/magic-card/magic-card.svelte",
+					"type": "registry:component",
+					"target": "magic/magic-card/magic-card.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/magic-card/index.ts",
+					"type": "registry:file",
+					"target": "magic/magic-card/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["motion-sv"]
+		},
+		{
+			"name": "orbiting-circles",
+			"type": "registry:block",
+			"title": "Orbiting Circles",
+			"description": "A component that displays icons or elements orbiting in a circular path with customizable radius, duration, and direction.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/orbiting-circles/orbiting-circles.svelte",
+					"type": "registry:component",
+					"target": "magic/orbiting-circles/orbiting-circles.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/orbiting-circles/index.ts",
+					"type": "registry:file",
+					"target": "magic/orbiting-circles/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"cssVars": {
+				"theme": {
+					"animate-orbit": "orbit calc(var(--duration) * 1s) linear infinite"
+				}
+			},
+			"css": {
+				"@keyframes orbit": {
+					"0%": {
+						"transform": "rotate(calc(var(--angle) * 1deg)) translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))"
+					},
+					"100%": {
+						"transform": "rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg))"
+					}
+				}
+			}
+		},
+		{
+			"name": "progressive-blur",
+			"type": "registry:block",
+			"title": "Progressive Blur",
+			"description": "A component that creates a progressive blur effect at the top, bottom, or both edges of a container with customizable blur levels and positioning.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/progressive-blur/progressive-blur.svelte",
+					"type": "registry:component",
+					"target": "magic/progressive-blur/progressive-blur.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/progressive-blur/index.ts",
+					"type": "registry:file",
+					"target": "magic/progressive-blur/index.ts"
+				}
+			],
+			"registryDependencies": []
+		},
+		{
+			"name": "retro-grid",
+			"type": "registry:block",
+			"title": "Retro Grid",
+			"description": "An animated retro-style grid background component with customizable angle, cell size, opacity, and colors.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/retro-grid/retro-grid.svelte",
+					"type": "registry:component",
+					"target": "magic/retro-grid/retro-grid.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/retro-grid/index.ts",
+					"type": "registry:file",
+					"target": "magic/retro-grid/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"cssVars": {
+				"theme": {
+					"animate-grid": "grid 15s linear infinite"
+				}
+			},
+			"css": {
+				"@keyframes grid": {
+					"0%": {
+						"transform": "translateY(-50%)"
+					},
+					"100%": {
+						"transform": "translateY(0)"
+					}
+				}
+			}
+		},
+		{
+			"name": "smooth-cursor",
+			"type": "registry:block",
+			"title": "Smooth Cursor",
+			"description": "A smooth animated cursor component with spring physics that follows mouse movement with rotation and scale effects.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/smooth-cursor/smooth-cursor.svelte",
+					"type": "registry:component",
+					"target": "magic/smooth-cursor/smooth-cursor.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/smooth-cursor/index.ts",
+					"type": "registry:file",
+					"target": "magic/smooth-cursor/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["motion-sv"]
+		},
+		{
+			"name": "stagger-text",
+			"type": "registry:block",
+			"title": "Stagger Text",
+			"description": "An interactive text component where characters animate vertically on hover with a staggered delay effect.",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/stagger-text/stagger-text.svelte",
+					"type": "registry:component",
+					"target": "magic/stagger-text/stagger-text.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/stagger-text/index.ts",
+					"type": "registry:file",
+					"target": "magic/stagger-text/index.ts"
 				}
 			],
 			"registryDependencies": [],

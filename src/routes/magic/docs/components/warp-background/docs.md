@@ -11,7 +11,7 @@ A 3D perspective grid background with animated light beams that create a warping
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/warp-background.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/warp-background.json
 ```
 
   </Tab>

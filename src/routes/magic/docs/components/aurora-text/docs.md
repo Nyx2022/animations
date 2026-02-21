@@ -7,7 +7,7 @@ An animated gradient text component with aurora-like flowing colors that smoothl
 ### Install via CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/aurora-text.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/aurora-text.json
 ```
 
 ### Manual Installation

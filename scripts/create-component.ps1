@@ -210,7 +210,7 @@ A description for $titleCase component.
 ## Installation
 
 ``````bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/$kebabCase.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/$kebabCase.json
 ``````
 
 ## Usage

@@ -6,6 +6,7 @@
 	import MultipleCode from "$lib/components/ui/code/multiple-code.svelte";
 	import SingleCodeFilename from "../code/single-code-filename.svelte";
 	import { Button } from "$lib/components/ui/button";
+	import { cn } from "$lib/utils";
 
 	interface PreviewComponentProps {
 		children: Snippet;
@@ -13,6 +14,7 @@
 		lang?: SupportedLanguage;
 		showRetry?: boolean;
 		isCentered?: boolean;
+		class?: string;
 	}
 
 	let {
@@ -21,6 +23,7 @@
 		lang = "svelte",
 		showRetry = true,
 		isCentered = true,
+		class: className = "",
 	}: PreviewComponentProps = $props();
 
 	type TabValue = "preview" | "code";
@@ -53,10 +56,11 @@
 		{#if value === "preview"}
 			<!-- <ComponentView> -->
 			<div
-				class={[
+				class={cn(
 					"border-border relative flex min-h-64 w-full overflow-hidden rounded-lg border p-6",
 					isCentered ? "items-center justify-center" : "",
-				]}
+					className
+				)}
 			>
 				{#if showRetry && value === "preview"}
 					<Button

@@ -11,7 +11,7 @@ An animated text component that creates a glitch effect by cycling through rando
 ### Using CLI
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/hyper-text.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/hyper-text.json
 ```
 
   </Tab>

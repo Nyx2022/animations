@@ -1,14 +1,14 @@
 ﻿$components = @(
-    @{ name = "animated-beam"; examples = 3 },
-    @{ name = "animated-circular-progress-bar"; examples = 3 },
-    @{ name = "animated-grid-pattern"; examples = 3 },
-    @{ name = "animated-list"; examples = 3 },
+    @{ name = "animated-beam"; examples = 0 },
+    @{ name = "animated-circular-progress-bar"; examples = 0 },
+    @{ name = "animated-grid-pattern"; examples = 0 },
+    @{ name = "animated-list"; examples = 0 },
     @{ name = "animated-theme-toggler"; examples = 2 },
-    @{ name = "blur-fade"; examples = 3 },
-    @{ name = "border-beam"; examples = 3 },
+    @{ name = "blur-fade"; examples = 0 },
+    @{ name = "border-beam"; examples = 0 },
     @{ name = "cool-mode"; examples = 2 },
-    @{ name = "dot-pattern"; examples = 3 },
-    @{ name = "file-tree"; examples = 3 }
+    @{ name = "dot-pattern"; examples = 0 },
+    @{ name = "file-tree"; examples = 0 }
 )
 
 Write-Host "========================================" -ForegroundColor Cyan

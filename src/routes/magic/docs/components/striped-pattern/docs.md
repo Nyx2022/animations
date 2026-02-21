@@ -5,7 +5,7 @@ A background striped pattern made with SVGs, fully customizable using Tailwind C
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/striped-pattern.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/striped-pattern.json
 ```
 
 ## Usage

@@ -5,7 +5,7 @@ A description for component.
 ## Installation
 
 ```bash
-npx shadcn-svelte@latest add https://animations.sikandarjodd.dev/r/animated-list.json
+npx shadcn-svelte@latest add https://sv-animations.vercel.app/r/animated-list.json
 ```
 
 ## Usage
