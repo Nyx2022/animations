@@ -20,14 +20,6 @@
 		darkLineColor = "gray",
 		...props
 	}: RetroGridProps = $props();
-
-	const gridStyles = $derived({
-		"--grid-angle": `${angle}deg`,
-		"--cell-size": `${cellSize}px`,
-		"--opacity": opacity,
-		"--light-line": lightLineColor,
-		"--dark-line": darkLineColor,
-	} as any);
 </script>
 
 <div
@@ -36,7 +28,12 @@
 		`opacity-(--opacity)`,
 		className
 	)}
-	style={gridStyles}
+	style="
+		--grid-angle: {angle}deg;
+		--cell-size: {cellSize}px;
+		--opacity: {opacity};
+		--light-line: {lightLineColor};
+		--dark-line: {darkLineColor};"
 	{...props}
 >
 	<div class="absolute inset-0 transform-[rotateX(var(--grid-angle))]">

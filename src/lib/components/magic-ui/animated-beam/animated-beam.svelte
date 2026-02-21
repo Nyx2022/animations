@@ -27,7 +27,8 @@
 	}: AnimatedBeamProps = $props();
 
 	// Generate unique ID for gradient
-	let id = $state(`gradient-${Math.random().toString(36).substring(2, 11)}`);
+	// let id = $state(`gradient-${Math.random().toString(36).substring(2, 11)}`);
+	let id = $props.id();
 
 	// Use path calculator
 	const pathCalculator = usePathCalculator();

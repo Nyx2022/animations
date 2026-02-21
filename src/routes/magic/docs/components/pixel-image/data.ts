@@ -7,6 +7,15 @@ import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/typ
 import Preview from "./examples/preview.svelte";
 import PreviewCode from "./examples/preview.svelte?raw";
 
+import ColorOnly from "./examples/color-only.svelte";
+import ColorOnlyCode from "./examples/color-only.svelte?raw";
+
+import FastReveal from "./examples/fast-reveal.svelte";
+import FastRevealCode from "./examples/fast-reveal.svelte?raw";
+
+import GridVariations from "./examples/grid-variations.svelte";
+import GridVariationsCode from "./examples/grid-variations.svelte?raw";
+
 /** Component metadata for navigation */
 export const meta: ComponentMeta = {
 	id: "pixel-image",
@@ -17,7 +26,40 @@ export const meta: ComponentMeta = {
 	badge: "new",
 };
 
-const examples: Example[] = [];
+const examples: Example[] = [
+	{
+		name: "Color Only (Once)",
+		description: "Pixel image with once={true} - animation plays only once and stays visible.",
+		preview: ColorOnly,
+		code: {
+			filename: "color-only.svelte",
+			filecode: ColorOnlyCode,
+			lang: "svelte",
+		},
+	},
+	{
+		name: "Fast Reveal (Replay)",
+		description:
+			"Quick animation that replays each time you scroll into view (default once={false}).",
+		preview: FastReveal,
+		code: {
+			filename: "fast-reveal.svelte",
+			filecode: FastRevealCode,
+			lang: "svelte",
+		},
+	},
+	{
+		name: "Grid Variations",
+		description:
+			"Compare different grid sizes - see how 8x8 vs 8x3 grids affect the animation.",
+		preview: GridVariations,
+		code: {
+			filename: "grid-variations.svelte",
+			filecode: GridVariationsCode,
+			lang: "svelte",
+		},
+	},
+];
 
 const seo: SEO = {
 	title: "Pixel Image",
@@ -109,6 +151,13 @@ export const data: ComponentDoc = {
 					type: "number",
 					default: "1300",
 					description: "Delay before color reveal begins (ms)",
+				},
+				{
+					name: "once",
+					type: "boolean",
+					default: "false",
+					description:
+						"If true, animation plays only once. If false, replays each time element enters view",
 				},
 			],
 		},

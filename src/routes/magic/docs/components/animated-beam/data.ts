@@ -1,10 +1,6 @@
 ﻿import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
 import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
-import AnimatedBeamWithCurvature from "./examples/animated-beam-with-curvature.svelte";
-import AnimatedBeamWithCurvatureRaw from "./examples/animated-beam-with-curvature.svelte?raw";
-import AnimatedBeamReverseDirection from "./examples/animated-beam-reverse-direction.svelte";
-import AnimatedBeamReverseDirectionRaw from "./examples/animated-beam-reverse-direction.svelte?raw";
 
 // Preview
 import Preview from "./examples/preview.svelte";
@@ -20,6 +16,14 @@ import Types from "$lib/components/magic-ui/animated-beam/types.ts?raw";
 import UseGradientCoordinates from "$lib/components/magic-ui/animated-beam/use-gradient-coordinates.svelte.ts?raw";
 import UsePathCalculator from "$lib/components/magic-ui/animated-beam/use-path-calculator.svelte.ts?raw";
 import UseResizeObserver from "$lib/components/magic-ui/animated-beam/use-resize-observer.svelte.ts?raw";
+
+// Examples
+import AnimatedBeamWithCurvature from "./examples/animated-beam-with-curvature.svelte";
+import AnimatedBeamWithCurvatureRaw from "./examples/animated-beam-with-curvature.svelte?raw";
+import AnimatedBeamReverseDirection from "./examples/animated-beam-reverse-direction.svelte";
+import AnimatedBeamReverseDirectionRaw from "./examples/animated-beam-reverse-direction.svelte?raw";
+import AnimatedBeamBiDirectional from "./examples/animated-beam-bi-directional.svelte";
+import AnimatedBeamBiDirectionalRaw from "./examples/animated-beam-bi-directional.svelte?raw";
 
 let installBlock: InstallComponentDocs = {
 	installCode: [
@@ -90,6 +94,7 @@ const examples: Example[] = [
 			filename: "animated-beam-with-curvature.svelte",
 			filecode: AnimatedBeamWithCurvatureRaw,
 			lang: "svelte",
+			isExpand: true,
 		},
 	},
 	{
@@ -99,6 +104,17 @@ const examples: Example[] = [
 			filename: "animated-beam-reverse-direction.svelte",
 			filecode: AnimatedBeamReverseDirectionRaw,
 			lang: "svelte",
+			isExpand: true,
+		},
+	},
+	{
+		name: "Bi Directional Beams",
+		preview: AnimatedBeamBiDirectional,
+		code: {
+			filename: "animated-beam-bi-directional.svelte",
+			filecode: AnimatedBeamBiDirectionalRaw,
+			lang: "svelte",
+			isExpand: true,
 		},
 	},
 ];

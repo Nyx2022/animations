@@ -1,4 +1,4 @@
-﻿<script lang="ts">
+<script lang="ts">
 	import { AnimatedBeam } from "$lib/components/magic-ui/animated-beam";
 	import Circle from "./circle.svelte";
 	import OpenaiIcon from "./openai-icon.svelte";
@@ -24,5 +24,21 @@
 		</div>
 	</div>
 
-	<AnimatedBeam duration={3} {containerRef} fromRef={div1Ref} toRef={div2Ref} reverse={true} />
+	<AnimatedBeam
+		{containerRef}
+		fromRef={div1Ref}
+		toRef={div2Ref}
+		startYOffset={10}
+		endYOffset={10}
+		curvature={-20}
+	/>
+	<AnimatedBeam
+		{containerRef}
+		fromRef={div2Ref}
+		toRef={div1Ref}
+		startYOffset={-10}
+		endYOffset={-10}
+		curvature={20}
+		reverse
+	/>
 </div>

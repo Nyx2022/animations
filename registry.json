@@ -545,7 +545,8 @@
 					"target": "magic/pixel-image/index.ts"
 				}
 			],
-			"registryDependencies": []
+			"registryDependencies": [],
+			"dependencies": ["motion-sv", "runed"]
 		},
 		{
 			"name": "striped-pattern",
