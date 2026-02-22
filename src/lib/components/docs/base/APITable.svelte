@@ -39,14 +39,16 @@
 </script>
 
 {#if isPropsTable(data)}
-	<H3 id={data.name} class="mt-6 text-xl font-semibold">
-		{data.name}
-	</H3>
-	{#if data.desc}
-		<p class="text-muted-foreground">
-			{data.desc}
-		</p>
-	{/if}
+	<div class="space-y-2">
+		<H3 id={data.name} class="mt-0 text-xl font-semibold">
+			{data.name}
+		</H3>
+		{#if data.desc}
+			<p class="text-muted-foreground m-0 leading-relaxed">
+				{data.desc}
+			</p>
+		{/if}
+	</div>
 {/if}
 
 <Table>

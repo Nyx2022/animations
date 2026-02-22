@@ -20,7 +20,13 @@
 
 	const PreviewComp = $derived(data.preview);
 	const installUrl = $derived(`${page.url.origin}/r/${data.id}.json`);
-	const llmsTxtUrl = $derived(`${page.url}/llms.txt`);
+
+	let getURLPath = (url: string) => {
+		// clean url by removing query params and hash
+		let cleanUrl = url.split("?")[0].split("#")[0];
+		return cleanUrl;
+	};
+	const llmsTxtUrl = $derived(`${getURLPath(page.url.pathname)}/llms.txt`);
 </script>
 
 <SEO title={data.seo.title} description={data.seo.description} keywords={data.seo.keywords} />

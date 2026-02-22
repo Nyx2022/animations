@@ -8,7 +8,6 @@
 	import InstallComponent from "$lib/components/docs/base/InstallComponent.svelte";
 	import APITable from "$lib/components/docs/base/APITable.svelte";
 	import { CopyPageDropdown } from "$lib/components/docs/copy-page-dropdown";
-	import SingleCodeFilename from "$lib/components/ui/code/single-code-filename.svelte";
 	import { data } from "./data";
 	import SEO from "$lib/seo/SEO.svelte";
 
@@ -21,7 +20,13 @@
 
 	const PreviewComp = $derived(data.preview);
 	const installUrl = $derived(`${page.url.origin}/r/${data.id}.json`);
-	const llmsTxtUrl = $derived(`${page.url}/llms.txt`);
+
+	let getURLPath = (url: string) => {
+		// clean url by removing query params and hash
+		let cleanUrl = url.split("?")[0].split("#")[0];
+		return cleanUrl;
+	};
+	const llmsTxtUrl = $derived(`${getURLPath(page.url.pathname)}/llms.txt`);
 </script>
 
 <SEO title={data.seo.title} description={data.seo.description} keywords={data.seo.keywords} />

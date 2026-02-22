@@ -50,54 +50,80 @@
 
 	let PreviewComp = $derived(preview);
 	let installUrl = $derived(`${page.url.origin}/r/${id}.json`);
-	let llmsTxtUrl = $derived(`${page.url}/llms.txt`);
+
+	let getURLPath = (url: string) => {
+		// clean url by removing query params and hash
+		let cleanUrl = url.split("?")[0].split("#")[0];
+		return cleanUrl;
+	};
+
+	let llmsTxtUrl = $derived(`${getURLPath(page.url.pathname)}/llms.txt`);
 </script>
 
 <SEOComponent title={seo.title} description={seo.description} keywords={seo.keywords} />
-<div>
-	<div class="flex flex-col justify-between gap-4 md:flex-row md:items-center">
-		<H1 id="introduction">{title}</H1>
-		<CopyPageDropdown componentName={title} {llmsTxtUrl} />
-	</div>
-	<Paragraph class={descriptionClass}>
-		{description}
-	</Paragraph>
-	<PackageBadges packages={installPackages} />
+<div class="space-y-8 md:space-y-10">
+	<section>
+		<div class="flex flex-col justify-between gap-3 md:flex-row md:items-center md:gap-4">
+			<H1 id="introduction">{title}</H1>
+			<CopyPageDropdown componentName={title} {llmsTxtUrl} />
+		</div>
 
-	<div class="my-6">
+		<div class="mt-4 space-y-3">
+			<Paragraph class={descriptionClass}>
+				{description}
+			</Paragraph>
+			<PackageBadges packages={installPackages} />
+		</div>
+	</section>
+
+	<section>
 		<PreviewComponent code={previewCode}>
 			{#if PreviewComp}
 				<PreviewComp />
 			{/if}
 		</PreviewComponent>
-	</div>
+	</section>
 
-	<H2 id="installation">Installation</H2>
-	<InstallComponent
-		{installUrl}
-		tailwindConfig={installTailwindCode ? { code: installTailwindCode } : undefined}
-		codeBlocks={installCodeBlocks}
-		packages={installPackages}
-		folderStructure={installFolderStructure}
-		class="my-4"
-	/>
+	<section>
+		<H2 id="installation">Installation</H2>
+		<InstallComponent
+			{installUrl}
+			tailwindConfig={installTailwindCode ? { code: installTailwindCode } : undefined}
+			codeBlocks={installCodeBlocks}
+			packages={installPackages}
+			folderStructure={installFolderStructure}
+			class="mt-4"
+		/>
+	</section>
 
 	{#if examples.length > 0}
-		<H2 id="examples">Examples</H2>
-		{#each examples as example}
-			<div class="my-6">
-				<H3 id={example.name.toLowerCase().replace(/\s+/g, "-")}>{example.name}</H3>
-				<PreviewComponent code={example.code}>
-					<example.preview />
-				</PreviewComponent>
+		<section>
+			<H2 id="examples">Examples</H2>
+			<div class="mt-4 space-y-8">
+				{#each examples as example}
+					<div class="space-y-3">
+						<H3 id={example.name.toLowerCase().replace(/\s+/g, "-")} class="mt-0">
+							{example.name}
+						</H3>
+						<PreviewComponent code={example.code}>
+							<example.preview />
+						</PreviewComponent>
+					</div>
+				{/each}
 			</div>
-		{/each}
+		</section>
 	{/if}
 
 	{#if propsTables.length > 0}
-		<H2 id="props">Props</H2>
-		{#each propsTables as prop}
-			<APITable data={prop} />
-		{/each}
+		<section>
+			<H2 id="props">Props</H2>
+			<div class="mt-3 space-y-6">
+				<div>
+					{#each propsTables as prop}
+						<APITable data={prop} />
+					{/each}
+				</div>
+			</div>
+		</section>
 	{/if}
 </div>
