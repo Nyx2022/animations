@@ -40,7 +40,13 @@
 	});
 </script>
 
+<!-- for some reason overflow hidden is not working - still in beta phase -->
+<!-- Original React implementation use mode="wait" but the animation doesn't work properly in svelte  -->
+<!-- React Implmentaion : https://magicui.design/docs/components/word-rotate -->
+
 <div class="overflow-hidden py-2">
+	<!-- mode="popLayout" initial={false} -->
+
 	<AnimatePresence mode="wait">
 		{#key words[index]}
 			<MotionComponent

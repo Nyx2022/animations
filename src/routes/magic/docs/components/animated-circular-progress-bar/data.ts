@@ -31,6 +31,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: [],
 	folderStructure: `src/
 └── lib/
     └── components/

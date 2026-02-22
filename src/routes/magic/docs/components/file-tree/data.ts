@@ -37,6 +37,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["motion-sv"],
 	installCode: [
 		{
 			filename: "file-tree.svelte",

@@ -11,7 +11,13 @@
 
 	let PreviewComp = $derived(data.preview);
 	let installUrl = $derived(`${page.url.origin}/r/${data.id}.json`);
-	let llmsTxtUrl = $derived(`${page.url}/llms.txt`);
+
+	let getURLPath = (url: string) => {
+		// clean url by removing query params and hash
+		let cleanUrl = url.split("?")[0].split("#")[0];
+		return cleanUrl;
+	};
+	let llmsTxtUrl = $derived(`${getURLPath(page.url.pathname)}/llms.txt`);
 </script>
 
 <SEO title={data.seo.title} description={data.seo.description} keywords={data.seo.keywords} />
@@ -87,7 +93,7 @@
 		</li>
 	</ul>
 
-	<H2>Note</H2>
+	<H2 id="note">Note</H2>
 	<Paragraph
 		>If using a YouTube video, make sure to use the embed version of the video URL.</Paragraph
 	>

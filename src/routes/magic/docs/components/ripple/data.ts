@@ -24,6 +24,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: [],
 	installCode: [
 		{
 			filename: "ripple.svelte",

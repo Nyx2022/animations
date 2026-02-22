@@ -23,6 +23,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: [],
 	installCode: [
 		{
 			filename: "shimmer-button.svelte",

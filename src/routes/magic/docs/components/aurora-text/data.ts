@@ -31,6 +31,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: [],
 	installCode: [
 		{
 			filename: "aurora-text.svelte",

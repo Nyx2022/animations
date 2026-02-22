@@ -10,7 +10,7 @@
 </script>
 
 <div
-	class="relative flex w-full min-w-70 items-center justify-center overflow-hidden p-10 md:min-w-125"
+	class="relative flex min-w-70 items-center justify-center overflow-hidden p-10 md:min-w-125"
 	bind:this={containerRef}
 >
 	<div class="flex size-full flex-col items-stretch justify-between gap-10">

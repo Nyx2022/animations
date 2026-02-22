@@ -17,7 +17,7 @@
 		<p class="text-slate-600 dark:text-slate-300">Beam with custom gradient colors</p>
 		<div class="flex items-center justify-center rounded-lg border p-8">
 			<div
-				class="relative flex w-full max-w-[500px] items-center justify-center overflow-hidden p-10"
+				class="relative flex max-w-[500px] items-center justify-center overflow-hidden p-10"
 			>
 				<div class="flex size-full flex-col items-stretch justify-between gap-10">
 					<div class="flex flex-row justify-between">

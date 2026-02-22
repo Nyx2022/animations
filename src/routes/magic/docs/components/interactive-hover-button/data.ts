@@ -30,6 +30,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["@lucide/svelte"],
 	installCode: [
 		{
 			filename: "interactive-hover-button.svelte",

@@ -26,6 +26,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["@neoconfetti/svelte"],
 	installCode: [
 		{
 			filename: "confetti.svelte",

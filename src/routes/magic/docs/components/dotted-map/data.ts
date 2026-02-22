@@ -39,6 +39,7 @@ const examples: Example[] = [
 ];
 
 let installBlock: InstallComponentDocs = {
+	packages: ["svg-dotted-map"],
 	installCode: [
 		{
 			filename: "dotted-map.svelte",
@@ -52,7 +53,6 @@ let installBlock: InstallComponentDocs = {
 			lang: "typescript",
 		},
 	],
-	packages: ["svg-dotted-map"],
 	folderStructure: `src/
 └── lib/
     └── components/

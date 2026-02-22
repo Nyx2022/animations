@@ -26,6 +26,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["motion-sv"],
 	installCode: [
 		{
 			filename: "smooth-cursor.svelte",

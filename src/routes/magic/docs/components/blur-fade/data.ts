@@ -61,6 +61,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["motion-sv"],
 	installCode: [
 		{
 			filename: "blur-fade.svelte",
@@ -74,7 +75,6 @@ let installBlock: InstallComponentDocs = {
 			lang: "typescript",
 		},
 	],
-	packages: ["@lucide/svelte", "motion-sv"],
 	folderStructure: `src/
 └── lib/
     └── components/

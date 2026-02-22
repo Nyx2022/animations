@@ -68,6 +68,9 @@ export const data: ComponentDoc = {
 	},
 	examples,
 	seo,
+	installBlock: {
+		packages: [],
+	},
 	tailwind,
 	props: [
 		{

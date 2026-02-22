@@ -36,6 +36,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: [],
 	installCode: [
 		{
 			filename: "icon-cloud.svelte",

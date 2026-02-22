@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { cn } from "$lib/utils.js";
+	import { useInView } from "motion-sv";
+	import { watch } from "runed";
 
 	type Grid = {
 		rows: number;
@@ -24,6 +26,7 @@
 		pixelFadeInDuration?: number;
 		maxAnimationDelay?: number;
 		colorRevealDelay?: number;
+		once?: boolean;
 	}
 
 	let {
@@ -34,9 +37,9 @@
 		maxAnimationDelay = 1200,
 		colorRevealDelay = 1300,
 		customGrid,
+		once = false,
 	}: Props = $props();
 
-	let isVisible = $state(false);
 	let showColor = $state(false);
 
 	const MIN_GRID = 1;
@@ -80,21 +83,37 @@
 		});
 	});
 
-	$effect(() => {
-		isVisible = true;
-		const colorTimeout = setTimeout(() => {
-			showColor = true;
-		}, colorRevealDelay);
-		return () => clearTimeout(colorTimeout);
-	});
+	let element: HTMLDivElement | null = $state(null);
+	let view = useInView(
+		() => element!,
+		() => ({ once }) as any // type definition bug
+	);
+
+	watch(
+		() => view.isInView,
+		(isInView) => {
+			if (isInView) {
+				// Element entered view - start color reveal after delay
+				const colorTimeout = setTimeout(() => {
+					showColor = true;
+				}, colorRevealDelay);
+				return () => clearTimeout(colorTimeout);
+			} else if (!once) {
+				// Element left view and once is false - reset animation
+				showColor = false;
+			}
+		}
+	);
+
+	// $inspect(view.isInView, "In View");
 </script>
 
-<div class="relative h-72 w-72 select-none md:h-96 md:w-96">
+<div class="relative h-72 w-72 select-none md:h-96 md:w-96" bind:this={element}>
 	{#each pieces as piece, index}
 		<div
 			class={cn(
 				"absolute inset-0 transition-all ease-out",
-				isVisible ? "opacity-100" : "opacity-0"
+				view.isInView ? "opacity-100" : "opacity-0"
 			)}
 			style="clip-path: {piece.clipPath}; transition-delay: {piece.delay}ms; transition-duration: {pixelFadeInDuration}ms;"
 		>

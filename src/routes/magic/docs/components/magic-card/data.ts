@@ -64,6 +64,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["motion-sv"],
 	installCode: [
 		{
 			filename: "magic-card.svelte",

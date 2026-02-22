@@ -40,6 +40,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: [],
 	installCode: [
 		{
 			filename: "flickering-grid.svelte",

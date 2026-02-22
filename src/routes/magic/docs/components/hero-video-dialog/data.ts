@@ -41,6 +41,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["motion-sv"],
 	installCode: [
 		{
 			filename: "hero-video-dialog.svelte",

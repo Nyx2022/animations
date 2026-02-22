@@ -186,6 +186,10 @@
 		"title": "Pixel Image",
 		"type": "registry:block",
 		"description": "An image component that reveals itself through a pixelated grid animation with optional grayscale to color transition.",
+		"dependencies": [
+			"motion-sv",
+			"runed"
+		],
 		"registryDependencies": [],
 		"relativeUrl": "pixel-image.json"
 	},

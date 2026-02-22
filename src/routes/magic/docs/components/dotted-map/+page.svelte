@@ -11,7 +11,13 @@
 
 	let PreviewComp = $derived(data.preview);
 	let installUrl = $derived(`${page.url.origin}/r/${data.id}.json`);
-	let llmsTxtUrl = $derived(`${page.url}/llms.txt`);
+
+	let getURLPath = (url: string) => {
+		// clean url by removing query params and hash
+		let cleanUrl = url.split("?")[0].split("#")[0];
+		return cleanUrl;
+	};
+	let llmsTxtUrl = $derived(`${getURLPath(page.url.pathname)}/llms.txt`);
 </script>
 
 <SEO title={data.seo.title} description={data.seo.description} keywords={data.seo.keywords} />
@@ -63,22 +69,8 @@
 
 	{#if data.props && data.props.length > 0}
 		<H2 id="props">Props</H2>
-		{#each data.props as propsTable}
-			<div class="my-4">
-				<H3 id={propsTable.name.toLowerCase().replace(/\s+/g, "-")}>
-					{propsTable.name}
-				</H3>
-				{#if propsTable.desc}
-					<Paragraph>{propsTable.desc}</Paragraph>
-				{/if}
-				<div class="my-4">
-					<APITable
-						headers={["Prop", "Type", "Default"]}
-						keys={["name", "type", "default"]}
-						data={propsTable.props}
-					/>
-				</div>
-			</div>
+		{#each data.props as prop}
+			<APITable data={prop} />
 		{/each}
 	{/if}
 </div>

@@ -1,10 +1,6 @@
 ﻿import type { Example } from "$lib/types/examples";
 import type { SEO } from "$lib/types/seo";
 import type { ComponentDoc, ComponentMeta, InstallComponentDocs } from "$lib/types/structure";
-import AnimatedBeamWithCurvature from "./examples/animated-beam-with-curvature.svelte";
-import AnimatedBeamWithCurvatureRaw from "./examples/animated-beam-with-curvature.svelte?raw";
-import AnimatedBeamReverseDirection from "./examples/animated-beam-reverse-direction.svelte";
-import AnimatedBeamReverseDirectionRaw from "./examples/animated-beam-reverse-direction.svelte?raw";
 
 // Preview
 import Preview from "./examples/preview.svelte";
@@ -21,7 +17,20 @@ import UseGradientCoordinates from "$lib/components/magic-ui/animated-beam/use-g
 import UsePathCalculator from "$lib/components/magic-ui/animated-beam/use-path-calculator.svelte.ts?raw";
 import UseResizeObserver from "$lib/components/magic-ui/animated-beam/use-resize-observer.svelte.ts?raw";
 
+// Examples
+import AnimatedBeamWithCurvature from "./examples/animated-beam-with-curvature.svelte";
+import AnimatedBeamWithCurvatureRaw from "./examples/animated-beam-with-curvature.svelte?raw";
+import AnimatedBeamReverseDirection from "./examples/animated-beam-reverse-direction.svelte";
+import AnimatedBeamReverseDirectionRaw from "./examples/animated-beam-reverse-direction.svelte?raw";
+import AnimatedBeamBiDirectional from "./examples/animated-beam-bi-directional.svelte";
+import AnimatedBeamBiDirectionalRaw from "./examples/animated-beam-bi-directional.svelte?raw";
+import AnimatedMultibeamExample from "./examples/animated-multibeam-example.svelte";
+import AnimatedMultibeamExampleRaw from "./examples/animated-multibeam-example.svelte?raw";
+import AnimatedBeamMultipleOutputs from "./examples/animated-beam-multiple-outputs.svelte";
+import AnimatedBeamMultipleOutputsRaw from "./examples/animated-beam-multiple-outputs.svelte?raw";
+
 let installBlock: InstallComponentDocs = {
+	packages: ["motion-sv"],
 	installCode: [
 		{
 			filename: "animated-beam.svelte",
@@ -58,7 +67,6 @@ let installBlock: InstallComponentDocs = {
 			isExpand: true,
 		},
 	],
-	packages: ["motion-sv"],
 	folderStructure: `src/
 └── lib/
     └── components/
@@ -90,6 +98,7 @@ const examples: Example[] = [
 			filename: "animated-beam-with-curvature.svelte",
 			filecode: AnimatedBeamWithCurvatureRaw,
 			lang: "svelte",
+			isExpand: true,
 		},
 	},
 	{
@@ -99,6 +108,37 @@ const examples: Example[] = [
 			filename: "animated-beam-reverse-direction.svelte",
 			filecode: AnimatedBeamReverseDirectionRaw,
 			lang: "svelte",
+			isExpand: true,
+		},
+	},
+	{
+		name: "Bi Directional Beams",
+		preview: AnimatedBeamBiDirectional,
+		code: {
+			filename: "animated-beam-bi-directional.svelte",
+			filecode: AnimatedBeamBiDirectionalRaw,
+			lang: "svelte",
+			isExpand: true,
+		},
+	},
+	{
+		name: "Multiple Beams Inputs",
+		preview: AnimatedMultibeamExample,
+		code: {
+			filename: "animated-multibeam-example.svelte",
+			filecode: AnimatedMultibeamExampleRaw,
+			lang: "svelte",
+			isExpand: true,
+		},
+	},
+	{
+		name: "Multiple Beams Outputs",
+		preview: AnimatedBeamMultipleOutputs,
+		code: {
+			filename: "animated-beam-multiple-outputs.svelte",
+			filecode: AnimatedBeamMultipleOutputsRaw,
+			lang: "svelte",
+			isExpand: true,
 		},
 	},
 ];
