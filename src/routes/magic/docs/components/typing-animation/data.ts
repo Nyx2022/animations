@@ -102,6 +102,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["motion-sv", "runed"],
 	installCode: [
 		{
 			filename: "typing-animation.svelte",

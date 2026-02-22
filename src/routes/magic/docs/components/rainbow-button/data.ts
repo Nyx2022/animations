@@ -39,6 +39,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["bits-ui", "tailwind-variants"],
 	installCode: [
 		{
 			filename: "rainbow-button.svelte",

@@ -72,22 +72,8 @@
 
 	{#if data.props && data.props.length > 0}
 		<H2 id="props" class="mt-6">Props</H2>
-		{#each data.props as propsTable}
-			<div>
-				<H3 id={propsTable.name.toLowerCase().replace(/\s+/g, "-")}>
-					{propsTable.name}
-				</H3>
-				{#if propsTable.desc}
-					<Paragraph class="mt-2 font-light">{propsTable.desc}</Paragraph>
-				{/if}
-				<div class="my-0">
-					<APITable
-						headers={["Prop", "Type", "Default"]}
-						keys={["name", "type", "default"]}
-						data={propsTable.props}
-					/>
-				</div>
-			</div>
+		{#each data.props as prop}
+			<APITable data={prop} />
 		{/each}
 	{/if}
 </div>

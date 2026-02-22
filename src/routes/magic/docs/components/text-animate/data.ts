@@ -141,6 +141,9 @@ export const data: ComponentDoc = {
 	},
 	examples,
 	seo,
+	installBlock: {
+		packages: ["motion-sv"],
+	},
 	packages: ["motion-sv"],
 	props: [
 		{

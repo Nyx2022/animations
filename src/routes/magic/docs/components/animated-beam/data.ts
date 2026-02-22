@@ -26,6 +26,7 @@ import AnimatedBeamBiDirectional from "./examples/animated-beam-bi-directional.s
 import AnimatedBeamBiDirectionalRaw from "./examples/animated-beam-bi-directional.svelte?raw";
 
 let installBlock: InstallComponentDocs = {
+	packages: ["motion-sv"],
 	installCode: [
 		{
 			filename: "animated-beam.svelte",
@@ -62,7 +63,6 @@ let installBlock: InstallComponentDocs = {
 			isExpand: true,
 		},
 	],
-	packages: ["motion-sv"],
 	folderStructure: `src/
 └── lib/
     └── components/

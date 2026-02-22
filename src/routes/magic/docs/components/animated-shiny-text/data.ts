@@ -47,6 +47,7 @@ const tailwind: CodeBlock = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: [],
 	installCode: [
 		{
 			filename: "animated-shiny-text.svelte",

@@ -24,6 +24,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["runed"],
 	installCode: [
 		{
 			filename: "video-text.svelte",

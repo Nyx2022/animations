@@ -10,7 +10,7 @@
 		height={30}
 		x={-1}
 		y={-1}
-		strokeDasharray={"4 2"}
+		strokeDashArray={"4 2"}
 		class="mask-[radial-gradient(300px_circle_at_center,white,transparent)]"
 	/>
 </div>

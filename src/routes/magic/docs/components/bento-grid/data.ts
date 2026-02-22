@@ -43,6 +43,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["@lucide/svelte"],
 	installCode: [
 		{
 			filename: "bento-grid.svelte",

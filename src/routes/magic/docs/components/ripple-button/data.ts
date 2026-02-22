@@ -23,6 +23,7 @@ const seo: SEO = {
 };
 
 let installBlock: InstallComponentDocs = {
+	packages: ["runed"],
 	installCode: [
 		{
 			filename: "ripple-button.svelte",
