@@ -14,7 +14,7 @@
 			"target": "magic/word-rotate/word-rotate.svelte"
 		},
 		{
-			"content": "export { default as WordRotate } from \"./word-rotate.svelte\";\n",
+			"content": "export { default as WordRotate } from \"./word-rotate.svelte\";\nexport { default as RotatingTextContainer } from \"./rotating-text-container.svelte\";\nexport { default as RotatingText } from \"./rotating-text.svelte\";\nexport { useRotatingText } from \"./use-rotating-text-context.svelte\";\n\nexport type {\n\tRotatingTextContextType,\n\tUseIsInViewOptions,\n\tRotatingTextContainerProps,\n\tRotatingTextProps,\n} from \"./types\";\n",
 			"type": "registry:file",
 			"target": "magic/word-rotate/index.ts"
 		}

@@ -496,6 +496,18 @@
 		"relativeUrl": "orbiting-circles.json"
 	},
 	{
+		"name": "pointer",
+		"title": "Pointer",
+		"type": "registry:block",
+		"description": "A component that displays a pointer when hovering over an element",
+		"dependencies": [
+			"motion-sv",
+			"runed"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "pointer.json"
+	},
+	{
 		"name": "progressive-blur",
 		"title": "Progressive Blur",
 		"type": "registry:block",
