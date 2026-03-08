@@ -1294,6 +1294,26 @@
 			}
 		},
 		{
+			"name": "pointer",
+			"type": "registry:block",
+			"title": "Pointer",
+			"description": "A component that displays a pointer when hovering over an element",
+			"files": [
+				{
+					"path": "./src/lib/components/magic-ui/pointer/pointer.svelte",
+					"type": "registry:component",
+					"target": "magic/pointer/pointer.svelte"
+				},
+				{
+					"path": "./src/lib/components/magic-ui/pointer/index.ts",
+					"type": "registry:file",
+					"target": "magic/pointer/index.ts"
+				}
+			],
+			"registryDependencies": [],
+			"dependencies": ["motion-sv", "runed"]
+		},
+		{
 			"name": "progressive-blur",
 			"type": "registry:block",
 			"title": "Progressive Blur",
